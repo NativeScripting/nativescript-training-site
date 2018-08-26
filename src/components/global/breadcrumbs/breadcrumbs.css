@@ -1,0 +1,16 @@
+.breadcrumbs-container ul {
+    display: flex;
+}
+
+.breadcrumbs-container ul li {
+    display: inline-block;
+    margin-right: 25px;
+    position: relative;
+}
+
+.breadcrumbs-container ul li img {
+    transform: rotate(-90deg);
+    position: relative;
+    top: -7px;
+    left: 14px;
+}
