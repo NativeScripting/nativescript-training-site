@@ -1,0 +1,22 @@
+[
+  {
+    "id": "washington_dc",
+    "title": "Washington, DC",
+    "facilityTitle": "Nuvious Cove",
+    "facilityDescHtml": "",
+    "address": "522 F St. NE",
+    "city": "Washington",
+    "state": "DC",
+    "country": "United States"
+  },
+  {
+    "id": "online",
+    "title": "Online",
+    "facilityTitle": "Nuvious Cove",
+    "facilityDescHtml": "",
+    "address": "522 F St. NE",
+    "city": "Washington",
+    "state": "DC",
+    "country": "United States"
+  }
+]

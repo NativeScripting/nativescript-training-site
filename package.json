@@ -1,0 +1,36 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/domain/graphql-types.d.ts"
+  },
+  "dependencies": {
+    "gatsby": "1.9.277",
+    "gatsby-image": "1.0.55",
+    "gatsby-link": "1.6.46",
+    "gatsby-module-loader": "1.0.11",
+    "gatsby-plugin-react-helmet": "2.0.11",
+    "gatsby-plugin-sharp": "1.6.48",
+    "gatsby-plugin-typescript": "1.4.20",
+    "gatsby-source-filesystem": "1.5.39",
+    "gatsby-transformer-json": "1.0.20",
+    "gatsby-transformer-sharp": "1.6.27",
+    "react-helmet": "5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "8.10.7",
+    "@types/prop-types": "15.5.5",
+    "@types/react": "15.0.21",
+    "@types/react-dom": "0.14.23",
+    "@types/react-helmet": "5.0.7",
+    "graphql-code-generator": "0.8.21",
+    "prettier": "1.13.7",
+    "typescript": "3.0.1"
+  }
+}

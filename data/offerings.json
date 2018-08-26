@@ -1,0 +1,111 @@
+[
+  {
+    "id": "public",
+    "order": 1,
+    "title": "Public Open Enrollment Classes",
+    "img": "",
+    "summary": "Open enrollment classes provide a quick and easy way for an individual or a small team to get up speed on a specific product or technology. If you are able to attend one of these class in person, you will be able to interact with the instructor and the other students in the class.",
+    "introHtml": "Our open public enrollment classes with hands-on, instructor led training (ILT) are very similar to the traditional classroom learning experience. Anyone can register for an open enrollment hands-on class. Students attend the class in person in a classroom with a highly skilled and experienced instructor. Most of our classes are taught by the author of the course. This ensures you are not getting someone else’s interpretation of the course, but instead you are getting real world expert instruction and guidance.",
+    "descriptionHtml": "",
+    "sections": [
+      {
+        "id": "1",
+        "title": "What Do You Get?",
+        "contentHtml": "A typical day involves lectures, demos and hands on lab time. Throughout class students are encouraged to ask questions and bring real world experiences to the instructor. Each lecture is filled with multiple instructor led demos so students can see what is being presented in action. At the completion of each lecture, students are given ample time to complete a step-by-step hands-on lab that offers hands on experience. The manual each student receives on the first day includes a copy of all the slides from the lectures as well as the hands-on lab. Students are free to take notes in the manual as the manuals are for the students to keep. In addition, most classes contain an associated ZIP file that includes sample code, utilities and other great assets students use throughout the class (such as in the hands-on labs)."
+      },
+      {
+        "id": "2",
+        "title": "Have a limited travel budget?",
+        "contentHtml": "What if you want to attend one of our classes but you cannot make it in person? That's OK. We understand that traveling to a location is not for all budgets, and we use the latest online learning technology to bring the same training to you with out Remote Classroom Instruction (RCI). This is designed to bring the benefits of traditional instructor-led training to convenient locations on a predictable schedule. Learn more about Remote Classroom Instruction."
+      },
+      {
+        "id": "3",
+        "title": "Need training now and can't wait for the next class?",
+        "contentHtml": "Take a look at our on-demand benefit! When you register for any NativeScript Training class and choose to participate in the on-demand option, we will immediately send you a links to the on-demand video version of the class."
+      }
+    ]
+  },
+  {
+    "id": "remote",
+    "order": 2,
+    "title": "Remote Classroom Instruction",
+    "img": "",
+    "summary": "If you are not able to attend one of our public open enrollment classes in person, we provide you with the ability to attend the class remotely from your home or office (All offerings scheduled for Washington, DC are available via Remote). All you need is a computer and a fast, reliable Internet connection. Using our Remote Class Instruction (RCI) infrastructure, you'll be able to talk to the instructor as well as hear and talk to all the other students in the class. You will also be able to connect to a computer workstation inside the classroom where you can work through lab exercises with the help and guidance of the instructor.",
+    "introHtml": "We understand that sometimes it's just not possible to travel in order to attend a class. That is why NativeScript Training has invested in developing virtual training options that provide you with the ability to gain in-depth knowledge wherever you are based.",
+    "descriptionHtml": "All classes delivered in Washington, DC offer the ability to participate virtually, from anywhere on earth. These solutions blend traditional classroom instruction, multiple training locations, and the best-of-class conferencing technology - into what we refer to as Remote Classroom Instruction (RCI). It was designed from inception to bring the benefits of traditional instructor-led training to convenient locations on a predictable schedule.",
+    "sections": [
+      {
+        "id": "1",
+        "title": "What to Expect in an RCI Class?",
+        "contentHtml": "An RCI class is hands-on, instructor-led training. The training is live and interactive. Before the class begins, you will receive an electronic version of the course manual with slides and lab exercises. While you are working on lab exercises, you can share your screen with the instructor and get help if you run into trouble."
+      },
+      {
+        "id": "2",
+        "title": "What you'll be able to do?",
+        "contentHtml": ""
+      },
+      {
+        "id": "3",
+        "title": "How Does It Work?",
+        "contentHtml": "You’re probably familiar with web conferencing software that lets you meet and collaborate with colleagues in different locations. The same kind of software is used in delivering our RCI classes. Internet conferencing technology lets you to see what is happening on the instructor’s PC as they demonstrate how to use the course software. It’s also used to transmit other aspects of the instructor’s presentation such as PowerPoint slides, whiteboard work, and the instructor’s image on the web camera."
+      },
+      {
+        "id": "4",
+        "title": "Attend Class From Your Home or Office",
+        "contentHtml": "In most circumstances, it's possible to attend one of our RCI classes from a location outside of our training centers such as your home or office. If participating from your home or office is right for you, we'll provide you with all the information you need to get set up for your class. Typical setup time is less than 20 minutes -- that's time you'll get back by not having to commute to the class! Another major advantage of attending class from home is 24/7 access to class labs."
+      }
+    ]
+  },
+  {
+    "id": "private",
+    "order": 3,
+    "title": "Private Onsite Classes",
+    "img": "",
+    "summary": "Private onsite courses provide a more economic and convenient training solutions for companies with 5 or more students. Private onsite courses can also be customized to meet the evolving needs of your team. Contact us to find out more information about onsite pricing and instructor availability.",
+    "introHtml": "A private onsite class might be a good fit for you and your company if you have a larger group of people you need to train and you don't want to spend lots of money on travel for flights, hotels and meals. Private on-sites classes are also ideal for companies who can't afford to have the entire team out of the office for a week. Private onsite courses provide a more economical and convenient training solution for companies with 5 or more students where our instructor visits you at your location to deliver any one of the courses in the NativeScript Training course catalog.",
+    "descriptionHtml": "",
+    "sections": [
+      {
+        "id": "1",
+        "title": "In these classes we literally bring the training to you!",
+        "contentHtml": "The class can be held in your training facilities or you can have your team show up with a bunch of laptops in a conference room or we can work together to find a local training facility... whatever works best for your organization. We'll bring the course manuals and provide the virtual machines for the labs... all you need to do is allocate some time for your employees to break away from their day job and focus on getting up to speed on JavaScript, TypeScript, and NativeScript technologies."
+      },
+      {
+        "id": "2",
+        "title": "We'll work with your organization to make sure your team gets the most out of our classes.",
+        "contentHtml": "Your team will have our instructor's complete focus. We have been told on multiple occasions having a NativeScript Training instructor onsite for the week advanced internal projects by weeks, even months! Once our instructors understand the projects your team is working on, they can add examples to the presentation that make the material contextually relevant to the students."
+      },
+      {
+        "id": "3",
+        "title": "Let's get started!",
+        "contentHtml": "Complete the form below to contact a member of our sales team. We'll get back to you quickly and provide information about our flat, no surprises onsite pricing. It's best to contact us as soon as you are ready. We typically need at least 30 days advance notice to set up a private class."
+      }
+    ]
+  },
+  {
+    "id": "discounts",
+    "order": 4,
+    "title": "Discounts and Promotions",
+    "img": "",
+    "summary": "",
+    "introHtml": "NativeScript Training is happy to extend the following discounts and promotions to students. Please note, all discounts are mutually exclusive and may not be combined. No discount may be combined with any other discount or offer, unless otherwise indicated.",
+    "descriptionHtml": "",
+    "sections": [
+      {
+        "id": "1",
+        "title": "Group Discount for Open Enrollments",
+        "contentHtml": "Available when 2 or more employees from the same company enroll in the same offering and we'll extend to you a 15% discount!"
+      },
+      {
+        "id": "2",
+        "title": "Early Bird Discount",
+        "contentHtml": "This discount is available to students who enroll in a class 30 days or more in advance of a NativeScript Training offering. Discount is based on the date of payment for the class."
+      },
+      {
+        "id": "3",
+        "title": "Non-profit Discount",
+        "contentHtml": "Discounts for the employees of non-profit organizations are handled on a case by case basis. Please contact our sales staff for details."
+      }
+    ]
+  }
+]

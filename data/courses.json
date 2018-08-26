@@ -1,0 +1,48 @@
+[
+  {
+    "id": "comprehensive-nativescript-with-angular",
+    "code": "NSNG-144",
+    "version": "1.0",
+    "length": "5 Days",
+    "price": 2500,
+    "order": 1000,
+    "flavors": [
+      "Angular"
+    ],
+    "label": "NEW",
+    "title": "Comprehensive NativeScript with Angular",
+    "subtitle": "",
+    "descriptionHtml": "NativeScripting’s Comprehensive NativeScript with Angular bootcamp teaches students the basic and advanced skills they need to design, build, and test sophisticated native mobile applications that function well on iOS and Android operating systems.",
+    "prerequisites": "All attendees must have substantial prior experience developing with JavaScript and TypeScript. If attendees will not have prior TypeScript experience, we would be delighted to precede this class with a one- or two-day intensive TypeScript primer.",
+    "products": [
+      {
+        "title": "NativeScript"
+      },
+      {
+        "title": "Angular"
+      },
+      {
+        "title": "TypeScript"
+      }
+    ],
+    "audience": [
+      {
+        "title": "Developers"
+      }
+    ],
+    "curriculum": [
+      {
+        "id": 1,
+        "title": "Introduction to Modern Software Development",
+        "description": "desc",
+        "topics": [
+          {
+            "id": 1,
+            "title": "topic 1"
+          }
+        ],
+        "labsHtml": "labs"
+      }
+    ]
+  }
+]
