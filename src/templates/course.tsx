@@ -10,6 +10,12 @@ import {
 import { Course } from '../domain/models';
 import { sessionFromSessionsJsonEdge } from '../domain/converters/session-types';
 import { CourseUpcomingSessions } from '../components/courses/course-upcoming-sessions';
+import { BreadCrumbs } from '../components/global/breadcrumbs/breadcrumbs';
+import { CourseDetails } from '../components/courses/course-details';
+import { CoursePrerequisites } from '../components/courses/course-prerequisites';
+import { PrivateClassesBox } from '../components/global/privateclassesbox/private-classes-box';
+import { CourseProductsCovered } from '../components/courses/course-products-covered';
+import { CourseCurriculum } from '../components/courses/course-curriculum';
 
 
 interface CourseTemplateProps {
@@ -46,8 +52,9 @@ class CourseTemplate extends React.Component<
 
         const title = this.props.data.courseConnection.title;
         const breadCrumbs = [
-            { name: 'All courses', url: '/' },
-            { name: 'Course details', url: '' }
+            { name: 'Home', url: '/' },
+            { name: 'Courses', url: '/courses' },
+            { name: course.title, url: '' },
         ];
 
         const pageTitle = `${course.title} | NativeScripting`;
@@ -55,9 +62,22 @@ class CourseTemplate extends React.Component<
         return (
             <div className="temp-component">
 
-                <h1>{this.state.course.title}</h1>
+                <BreadCrumbs breadcrumbs={breadCrumbs} />
+
+                <h1>{course.title}</h1>
+
+                <p dangerouslySetInnerHTML={{ __html: course.descriptionHtml }}>
+                </p>
+
+                <CoursePrerequisites course={course} />
+                <CourseCurriculum course={course} />
 
                 <CourseUpcomingSessions sessions={sessions} />
+                <CourseDetails course={course} />
+
+                <CourseProductsCovered course={course} />
+
+                <PrivateClassesBox />
 
             </div>
         );
@@ -70,10 +90,29 @@ export const coursePageQuery = graphql`
     #get current course
     courseConnection: coursesJson(id: { eq: $courseId }) {
       id
+      code
+      version
       title
+      length
+      price
       subtitle
       flavors
       label
+      descriptionHtml
+      prerequisites
+      products {
+          title
+      }
+      curriculum {
+        id
+        title
+        description
+        labsHtml
+        topics {
+            id
+            title
+        }
+      }
     }
 
     #get sessions

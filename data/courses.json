@@ -33,7 +33,7 @@
     "curriculum": [
       {
         "id": 1,
-        "title": "Introduction to Modern Software Development",
+        "title": "Intro to course",
         "description": "desc",
         "topics": [
           {
@@ -41,7 +41,23 @@
             "title": "topic 1"
           }
         ],
-        "labsHtml": "labs"
+        "labsHtml": "<ul><li>Exercise 1: Create a Power BI Development Environment</li><li>Exercise 2: Get Up and Running with Power BI Desktop</li><li>Exercise 3: Create a New App Workspace for a Custom Solution</li><li>Exercise 4: Publish PBIX Project Files to the Power BI Service</li></ul>"
+      },
+      {
+        "id": 2,
+        "title": "Getting Started",
+        "description": "desc",
+        "topics": [
+          {
+            "id": 1,
+            "title": "topic 1"
+          },
+          {
+            "id": 2,
+            "title": "topic 2"
+          }
+        ],
+        "labsHtml": "<ul><li>Exercise 1: Create a Power BI Development Environment</li><li>Exercise 2: Get Up and Running with Power BI Desktop</li><li>Exercise 3: Create a New App Workspace for a Custom Solution</li><li>Exercise 4: Publish PBIX Project Files to the Power BI Service</li></ul>"
       }
     ]
   }

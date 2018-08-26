@@ -16,6 +16,7 @@ export const CourseUpcomingSessions: React.StatelessComponent<
             return (
                 <tr key={i}>
                     <td>{dateFormat(c.dateStart)}</td>
+                    <td></td>
                     <td><a href={c.registerLink}>Register</a></td>
                 </tr>
             );
@@ -28,6 +29,7 @@ export const CourseUpcomingSessions: React.StatelessComponent<
                     <thead>
                         <tr>
                             <th>Date</th>
+                            <th>Location</th>
                             <th>Action</th>
                         </tr>
                     </thead>
