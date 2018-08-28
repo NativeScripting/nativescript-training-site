@@ -11,6 +11,7 @@
     "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/domain/graphql-types.d.ts"
   },
   "dependencies": {
+    "babel-polyfill": "6.26.0",
     "gatsby": "1.9.277",
     "gatsby-image": "1.0.55",
     "gatsby-link": "1.6.46",
@@ -21,7 +22,8 @@
     "gatsby-source-filesystem": "1.5.39",
     "gatsby-transformer-json": "1.0.20",
     "gatsby-transformer-sharp": "1.6.27",
-    "react-helmet": "5.2.0"
+    "react-helmet": "5.2.0",
+    "simple-load-script": "1.0.2"
   },
   "devDependencies": {
     "@types/node": "8.10.7",

@@ -1,0 +1,11 @@
+#theme-main-banner {
+  display: block;
+}
+
+.camera_fakehover {
+  height: 100%;
+  min-height: 60px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}

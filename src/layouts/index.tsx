@@ -4,10 +4,25 @@ import { ReactNode } from 'react';
 import { MainMenu } from '../components/global/menu/main-menu';
 import { Header } from '../components/global/header/header';
 import { Footer } from '../components/global/footer/footer';
-import { OfferingsJsonConnection, CoursesJsonConnection } from '../domain/graphql-types';
-import { courseFromCoursesJsonEdge, offeringFromOfferingsJsonEdge } from '../domain/converters';
+import {
+  OfferingsJsonConnection,
+  CoursesJsonConnection,
+} from '../domain/graphql-types';
+import {
+  courseFromCoursesJsonEdge,
+  offeringFromOfferingsJsonEdge,
+} from '../domain/converters';
+import { getHeader } from './headertemp';
+import { getLoader } from './loadertemp';
+import { getInnerBanner } from './innerbannertemp';
+//import * as loadScript from 'simple-load-script';
+//import 'babel-polyfill'; // must be imported for async/await to work, see e.g. https://github.com/gatsbyjs/gatsby/pull/3369#issuecomment-354599985
 
+import '../css/style.css';
+import '../css/responsive.css';
 import '../css/styles.css';
+import { InnerBanner } from '../components/global/inner-banner/inner-banner';
+import { getNewsletterBanner } from './newsletterbannertemp';
 
 interface IndexLayoutProps {
   children?: any;
@@ -17,33 +32,46 @@ interface IndexLayoutProps {
         siteName: string;
       };
     };
-    offeringsConnection: OfferingsJsonConnection,
-    coursesConnection: CoursesJsonConnection
+    offeringsConnection: OfferingsJsonConnection;
+    coursesConnection: CoursesJsonConnection;
   };
 }
 
-const IndexLayout: React.StatelessComponent<IndexLayoutProps> = ({
-  children,
-  data,
-}) => {
+class IndexLayoutPage extends React.Component<IndexLayoutProps, null> {
+  constructor(props: IndexLayoutProps) {
+    super(props);
+  }
 
-  const offerings = data.offeringsConnection.edges.map(
-    offeringFromOfferingsJsonEdge
-  );
+  async componentDidMount() {
+    console.log('componentn mounted');
+  }
 
-  const courses = data.coursesConnection.edges.map(
-    courseFromCoursesJsonEdge
-  );
+  public render() {
+    const offerings = this.props.data.offeringsConnection.edges.map(
+      offeringFromOfferingsJsonEdge
+    );
 
-  return (
-    <div>
-      <Header siteName={data.site.siteMetadata.siteName} />
-      <MainMenu offerings={offerings} courses={courses} />
-      <main className="temp-main" role="main">{children()}</main>
-      <Footer siteName={data.site.siteMetadata.siteName} />
-    </div>
-  );
-};
+    const courses = this.props.data.coursesConnection.edges.map(
+      courseFromCoursesJsonEdge
+    );
+
+    return (
+      <div className="main-page-wrapper">
+        <Header
+          siteName={this.props.data.site.siteMetadata.siteName}
+          offerings={offerings}
+          courses={courses}
+        />
+
+        <main role="main">{this.props.children()}</main>
+
+        {getNewsletterBanner()}
+
+        <Footer siteName={this.props.data.site.siteMetadata.siteName} />
+      </div>
+    );
+  }
+}
 
 export const indexLayoutQuery = graphql`
   query IndexLayoutQuery {
@@ -53,7 +81,6 @@ export const indexLayoutQuery = graphql`
       }
     }
 
-
     offeringsConnection: allOfferingsJson {
       edges {
         node {
@@ -62,7 +89,6 @@ export const indexLayoutQuery = graphql`
         }
       }
     }
-    
 
     coursesConnection: allCoursesJson {
       edges {
@@ -75,4 +101,4 @@ export const indexLayoutQuery = graphql`
   }
 `;
 
-export default IndexLayout;
+export default IndexLayoutPage;

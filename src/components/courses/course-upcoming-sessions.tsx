@@ -3,38 +3,31 @@ import { Session } from '../../domain/models';
 import { dateFormat } from '../../util/date-utils';
 
 interface CourseUpcomingSessionsProps {
-    sessions: Session[];
+  sessions: Session[];
 }
 
 export const CourseUpcomingSessions: React.StatelessComponent<
-    CourseUpcomingSessionsProps
-    > = (props: CourseUpcomingSessionsProps) => {
-        const sessions = props.sessions;
+  CourseUpcomingSessionsProps
+> = (props: CourseUpcomingSessionsProps) => {
+  const sessions = props.sessions;
 
-        const rowsHtml = sessions.map((c, i) => {
+  const rowsHtml = sessions.map((c, i) => {
+    return (
+      <li key={i}>
+        <img src="images/course/19.jpg" alt="" />
+        <div className="date">
+          <strong>Free</strong>
+          {dateFormat(c.dateStart)}
+        </div>
+        <a href={c.registerLink}>Register for Wash DC class</a>
+      </li>
+    );
+  });
 
-            return (
-                <tr key={i}>
-                    <td>{dateFormat(c.dateStart)}</td>
-                    <td></td>
-                    <td><a href={c.registerLink}>Register</a></td>
-                </tr>
-            );
-        });
-
-        return (
-            <div className="temp-component">
-                <h2>Upcoming Offerings</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Location</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>{rowsHtml}</tbody>
-                </table>
-            </div>
-        );
-    };
+  return (
+    <div className="sidebar-widget sidebar-post-data">
+      <h5>Upcoming Offerings</h5>
+      <ul>{rowsHtml}</ul>
+    </div>
+  );
+};

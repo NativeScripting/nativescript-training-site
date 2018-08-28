@@ -1,30 +1,39 @@
 import * as React from 'react';
 import { Chapter } from '../../domain/models';
 
-
 interface CourseCurriculumLessonsProps {
-    chapter: Chapter;
+  chapter: Chapter;
 }
 
 export const CourseCurriculumLessons: React.StatelessComponent<
-    CourseCurriculumLessonsProps
-    > = (props: CourseCurriculumLessonsProps) => {
-        const chapter = props.chapter;
+  CourseCurriculumLessonsProps
+> = (props: CourseCurriculumLessonsProps) => {
+  const chapter = props.chapter;
 
-        const rowsHtml = chapter.topics.map((c, i) => {
-            return (
-                <li key={i}>
-                    {c.title}
-                </li>
-            );
-        });
+  const rowsHtml = chapter.topics.map((c, i) => {
+    return (
+      <div className="single-course">
+        <ul>
+          <li>{c.title}</li>
+          <li>
+            <a
+              data-fancybox
+              href="https://www.youtube.com/embed/r-AuLm7S3XE?rel=0&amshowinfo=0"
+              className="play-button"
+            >
+              Preview
+            </a>
+          </li>
+          <li>30 Minute</li>
+        </ul>
+        <p>
+          The Australian Qualifications Framework (AQF) provides the framework
+          for qualifications in the school, vocational education and training
+          (VET) and higher education sectors in Australia.
+        </p>
+      </div>
+    );
+  });
 
-        return (
-            <div className="temp-component">
-                <h4>Lecture Topics</h4>
-                <ul>
-                    {rowsHtml}
-                </ul>
-            </div>
-        );
-    };
+  return <div>{rowsHtml}</div>;
+};

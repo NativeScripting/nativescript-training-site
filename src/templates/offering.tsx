@@ -1,63 +1,142 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import {
-    OfferingsJson
-} from '../domain/graphql-types';
+import { OfferingsJson } from '../domain/graphql-types';
 
 import { Offering } from '../domain/models';
 import { offeringFromOfferingsJson } from '../domain/converters';
-
+import { InnerBanner } from '../components/global/inner-banner/inner-banner';
+import { OfferingDetailSection } from '../components/offerings/offering-detail-section';
+import { SidebarPhone } from '../components/global/sidebar-phone/sidebar-phone';
+import { OfferingDetailSidebarPrivateClassesBox } from '../components/offerings/offering-detail-sidebar-private';
+import { OfferingDetailSidebarOnsiteRequestBox } from '../components/offerings/offering-detail-sidebar-onsite-request';
 
 interface OfferingTemplateProps {
-    data: {
-        offeringsConnection: OfferingsJson;
-    };
+  data: {
+    offeringsConnection: OfferingsJson;
+  };
 }
 
 interface OfferingTemplateState {
-    offering: Offering;
+  offering: Offering;
 }
 
 class OfferingTemplate extends React.Component<
-    OfferingTemplateProps,
-    OfferingTemplateState
-    > {
-    constructor(props: OfferingTemplateProps) {
-        super(props);
+  OfferingTemplateProps,
+  OfferingTemplateState
+> {
+  constructor(props: OfferingTemplateProps) {
+    super(props);
 
-        this.state = {
-            offering: offeringFromOfferingsJson(this.props.data.offeringsConnection)
-        };
-    }
+    this.state = {
+      offering: offeringFromOfferingsJson(this.props.data.offeringsConnection),
+    };
+  }
 
-    public render() {
-        const offering = this.state.offering;
-        const title = this.props.data.offeringsConnection.title;
-        const breadCrumbs = [
-            { name: 'All courses', url: '/' },
-            { name: 'Course details', url: '' }
-        ];
+  public render() {
+    const offering = this.state.offering;
+    const pageTitle = `${offering.title} | NativeScripting`;
 
-        const pageTitle = `${offering.title} | NativeScripting`;
+    const sectionsHtml = offering.sections.map((s, i) => {
+      return <OfferingDetailSection key={i} section={s} />;
+    });
 
-        return (
-            <div className="temp-component">
+    return (
+      <div>
+        <InnerBanner title="Training" subtitle={offering.title} />
+        <div className="blog-list section-margin-top section-margin-bottom">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-9 col-md-8 col-xs-12 blog-details-content">
+                <div className="single-blog-list">
+                  <div className="image">
+                    <img src="/images/blog/10.jpg" alt="" />
+                  </div>
+                  <ul className="post-info">
+                    <li>20 March 2017</li>
+                    <li>By Admin R</li>
+                    <li>in English</li>
+                  </ul>
+                  <h3>The Experience Of Studying In The USA</h3>
+                  <p
+                    className="bold-text"
+                    dangerouslySetInnerHTML={{ __html: offering.introHtml }}
+                  />
 
-                <h1>{this.state.offering.title}</h1>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: offering.descriptionHtml,
+                    }}
+                  />
+                  {sectionsHtml}
 
+                  <ul className="text-list">
+                    <li>Money for your future</li>
+                    <li>Do you deserve a vacation?</li>
+                    <li>
+                      We partner with startups and companies, small and large
+                    </li>
+                    <li>
+                      Launching an attractive and scalable website quickly and
+                      affordably is important for modern{' '}
+                    </li>
+                  </ul>
+                </div>
+
+                {offering.id === 'private' && (
+                  <div className="comment-form">
+                    <h5 className="sub-heading">
+                      Onsite training request form
+                    </h5>
+                    <form action="#">
+                      <div className="row">
+                        <div className="col-sm-6 col-xs-12 float-right">
+                          <input type="text" placeholder="Name" />
+                          <input type="text" placeholder="Subject" />
+                          <input type="email" placeholder="Email" />
+                        </div>
+                        <div className="col-sm-6 col-xs-12">
+                          <textarea placeholder="Message " />
+                        </div>
+                      </div>
+                      <button className="theme-solid-button">Submit</button>
+                    </form>
+                  </div>
+                )}
+              </div>
+
+              <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 theme-sidebar">
+                <SidebarPhone />
+                {offering.id !== 'private' && (
+                  <OfferingDetailSidebarPrivateClassesBox />
+                )}
+                {offering.id === 'private' && (
+                  <OfferingDetailSidebarOnsiteRequestBox />
+                )}
+              </div>
             </div>
-        );
-    }
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export const offeringPageQuery = graphql`
   query OfferingPageQuery($offeringId: String) {
-
     #get current offering
     offeringsConnection: offeringsJson(id: { eq: $offeringId }) {
       id
       title
+      img
+      summary
+      introHtml
+      descriptionHtml
+      sections {
+        id
+        title
+        contentHtml
+      }
     }
   }
 `;

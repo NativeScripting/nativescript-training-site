@@ -1,30 +1,27 @@
 import * as React from 'react';
 import { Course } from '../../domain/models';
 
-
 interface CourseProductsCoveredProps {
-    course: Course;
+  course: Course;
 }
 
 export const CourseProductsCovered: React.StatelessComponent<
-    CourseProductsCoveredProps
-    > = (props: CourseProductsCoveredProps) => {
-        const course = props.course;
+  CourseProductsCoveredProps
+> = (props: CourseProductsCoveredProps) => {
+  const course = props.course;
 
-        const rowsHtml = course.products.map((c, i) => {
-            return (
-                <li key={i}>
-                    {c}
-                </li>
-            );
-        });
+  const rowsHtml = course.products.map((c, i) => {
+    return (
+      <li key={i}>
+        <a href="">{c}</a>
+      </li>
+    );
+  });
 
-        return (
-            <div className="temp-component">
-                <h2>Products Covered</h2>
-                <ul>
-                    {rowsHtml}
-                </ul>
-            </div>
-        );
-    };
+  return (
+    <div className="sidebar-widget sidebar-list">
+      <h5>Products Covered</h5>
+      <ul>{rowsHtml}</ul>
+    </div>
+  );
+};
