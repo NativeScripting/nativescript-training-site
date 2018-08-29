@@ -23,6 +23,10 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
 
     this.state = {
       submitted: false,
+      name: '',
+      subject: '',
+      email: '',
+      message: '',
     };
   }
 
@@ -47,6 +51,7 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
       })
       .catch(error => alert(error));
   }
+
   /*
   public handleSubmit(event: React.FormEvent<EventTarget>) {
     handleFormSubmit(event).then(() => {
