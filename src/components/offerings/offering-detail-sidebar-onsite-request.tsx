@@ -8,12 +8,6 @@ interface OfferingDetailSidebarOnsiteRequestState {
   [key: string]: any;
 }
 
-const encode = (data: any) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
-
 export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
   OfferingDetailSidebarOnsiteRequestProps,
   OfferingDetailSidebarOnsiteRequestState
@@ -34,6 +28,12 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  public handleSubmit(event: React.FormEvent<EventTarget>) {
+    handleFormSubmit(event).then(() => {
+      this.setState({ submitted: true });
+    });
+  }
+  /*
   public handleSubmit(e: any) {
     e.preventDefault();
     const form = e.target;
@@ -46,18 +46,11 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
       }),
     })
       .then(() => {
-        //navigateTo(form.getAttribute('action'));
         this.setState({ submitted: true });
       })
       .catch(error => alert(error));
   }
-
-  /*
-  public handleSubmit(event: React.FormEvent<EventTarget>) {
-    handleFormSubmit(event).then(() => {
-      this.setState({ submitted: true });
-    });
-  }*/
+*/
 
   /*
   public handleSubmit(event: React.FormEvent<EventTarget>) {
@@ -110,10 +103,7 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
                     name="form-name"
                     value="private-request-sidebar"
                   />
-                  <input
-                    name="bot-field"
-                    onChange={e => this.handleChange(e)}
-                  />
+
                   <input
                     type="text"
                     placeholder="Name"
@@ -145,6 +135,11 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
                   />
                 </div>
                 <div data-netlify-recaptcha />
+                <input
+                  className="invisible"
+                  name="bot-field"
+                  onChange={e => this.handleChange(e)}
+                />
               </div>
               <div>
                 <button className="theme-solid-button">Submit</button>

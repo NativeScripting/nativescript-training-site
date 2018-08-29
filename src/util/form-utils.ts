@@ -11,6 +11,28 @@ export const inputParsers: any = {
   },
 };
 
+export const encode = (data: any) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
+export function handleFormSubmit(
+  e: React.FormEvent<EventTarget>
+): Promise<Response> {
+  e.preventDefault();
+  const form = e.target as HTMLFontElement;
+  return fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encode({
+      'form-name': form.getAttribute('name'),
+      ...this.state,
+    }),
+  });
+}
+
+/*
 export function handleFormSubmit(
   event: React.FormEvent<EventTarget>
 ): Promise<Response> {
@@ -41,3 +63,4 @@ export function handleFormSubmit(
     body: url,
   });
 }
+*/

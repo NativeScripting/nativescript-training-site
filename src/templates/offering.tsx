@@ -10,6 +10,7 @@ import { OfferingDetailSection } from '../components/offerings/offering-detail-s
 import { SidebarPhone } from '../components/global/sidebar-phone/sidebar-phone';
 import { OfferingDetailSidebarPrivateClassesBox } from '../components/offerings/offering-detail-sidebar-private';
 import { OfferingDetailSidebarOnsiteRequestBox } from '../components/offerings/offering-detail-sidebar-onsite-request';
+import { OfferingDetailOnsiteRequestForm } from '../components/offerings/offering-detail-onsite-request';
 
 interface OfferingTemplateProps {
   data: {
@@ -84,24 +85,7 @@ class OfferingTemplate extends React.Component<
                 </div>
 
                 {offering.id === 'private' && (
-                  <div className="comment-form">
-                    <h5 className="sub-heading">
-                      Onsite training request form
-                    </h5>
-                    <form action="#">
-                      <div className="row">
-                        <div className="col-sm-6 col-xs-12 float-right">
-                          <input type="text" placeholder="Name" />
-                          <input type="text" placeholder="Subject" />
-                          <input type="email" placeholder="Email" />
-                        </div>
-                        <div className="col-sm-6 col-xs-12">
-                          <textarea placeholder="Message " />
-                        </div>
-                      </div>
-                      <button className="theme-solid-button">Submit</button>
-                    </form>
-                  </div>
+                  <OfferingDetailOnsiteRequestForm />
                 )}
               </div>
 
