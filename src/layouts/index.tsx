@@ -1,9 +1,7 @@
 import * as React from 'react';
-import Link from 'gatsby-link';
-import { ReactNode } from 'react';
-import { MainMenu } from '../components/global/menu/main-menu';
 import { Header } from '../components/global/header/header';
 import { Footer } from '../components/global/footer/footer';
+import { NewsletterBanner } from '../components/global/newsletter-banner/newsletter-banner';
 import {
   OfferingsJsonConnection,
   CoursesJsonConnection,
@@ -12,9 +10,7 @@ import {
   courseFromCoursesJsonEdge,
   offeringFromOfferingsJsonEdge,
 } from '../domain/converters';
-import { getHeader } from './headertemp';
-import { getLoader } from './loadertemp';
-import { getInnerBanner } from './innerbannertemp';
+
 //import * as loadScript from 'simple-load-script';
 //import 'babel-polyfill'; // must be imported for async/await to work, see e.g. https://github.com/gatsbyjs/gatsby/pull/3369#issuecomment-354599985
 
@@ -29,10 +25,8 @@ import '../fonts/icon/font/flaticon.css';
 */
 
 //import '../css/style.css';
-import '../css/responsive.css';
+//import '../css/responsive.css';
 import '../css/styles.css';
-import { InnerBanner } from '../components/global/inner-banner/inner-banner';
-import { getNewsletterBanner } from './newsletterbannertemp';
 
 interface IndexLayoutProps {
   children?: any;
@@ -47,13 +41,9 @@ interface IndexLayoutProps {
   };
 }
 
-class IndexLayoutPage extends React.Component<IndexLayoutProps, null> {
+class IndexLayoutPage extends React.Component<IndexLayoutProps, {}> {
   constructor(props: IndexLayoutProps) {
     super(props);
-  }
-
-  async componentDidMount() {
-    console.log('componentn mounted');
   }
 
   public render() {
@@ -75,7 +65,7 @@ class IndexLayoutPage extends React.Component<IndexLayoutProps, null> {
 
         <main role="main">{this.props.children()}</main>
 
-        {getNewsletterBanner()}
+        <NewsletterBanner />
 
         <Footer siteName={this.props.data.site.siteMetadata.siteName} />
       </div>
