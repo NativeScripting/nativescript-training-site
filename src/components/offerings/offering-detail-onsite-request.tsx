@@ -17,10 +17,10 @@ export class OfferingDetailOnsiteRequestForm extends React.Component<
 
     this.state = {
       submitted: false,
-      name: '',
-      subject: '',
-      email: '',
-      message: '',
+      nameBody: '',
+      subjectBody: '',
+      emailBody: '',
+      messageBody: '',
     };
   }
 
@@ -62,21 +62,21 @@ export class OfferingDetailOnsiteRequestForm extends React.Component<
                 <input
                   type="text"
                   placeholder="Name"
-                  name="name"
+                  name="nameBody"
                   required
                   onChange={e => this.handleChange(e)}
                 />
                 <input
                   type="text"
                   placeholder="Subject"
-                  name="subject"
+                  name="subjectBody"
                   required
                   onChange={e => this.handleChange(e)}
                 />
                 <input
                   type="email"
                   placeholder="Email"
-                  name="email"
+                  name="emailBody"
                   required
                   onChange={e => this.handleChange(e)}
                 />
@@ -84,7 +84,7 @@ export class OfferingDetailOnsiteRequestForm extends React.Component<
               <div className="col-sm-6 col-xs-12">
                 <textarea
                   placeholder="Message"
-                  name="message"
+                  name="messageBody"
                   required
                   onChange={e => this.handleChange(e)}
                 />
