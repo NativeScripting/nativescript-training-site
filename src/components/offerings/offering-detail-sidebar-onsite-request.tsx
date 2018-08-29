@@ -5,7 +5,14 @@ interface OfferingDetailSidebarOnsiteRequestProps {}
 
 interface OfferingDetailSidebarOnsiteRequestState {
   submitted: boolean;
+  [key: string]: any;
 }
+
+const encode = (data: any) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 
 export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
   OfferingDetailSidebarOnsiteRequestProps,
@@ -19,11 +26,33 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
     };
   }
 
+  public handleChange(e: any) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  public handleSubmit(e: any) {
+    e.preventDefault();
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
+    })
+      .then(() => {
+        //navigateTo(form.getAttribute('action'));
+        this.setState({ submitted: true });
+      })
+      .catch(error => alert(error));
+  }
+  /*
   public handleSubmit(event: React.FormEvent<EventTarget>) {
     handleFormSubmit(event).then(() => {
       this.setState({ submitted: true });
     });
-  }
+  }*/
 
   /*
   public handleSubmit(event: React.FormEvent<EventTarget>) {
@@ -64,27 +93,51 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
           <div className="comment-form ">
             <form
               name="private-request-sidebar"
+              method="post"
               onSubmit={e => this.handleSubmit(e)}
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
             >
               <div className="">
                 <div className="">
-                  <input type="text" placeholder="Name" name="name" required />
+                  <input
+                    type="hidden"
+                    name="form-name"
+                    value="private-request-sidebar"
+                  />
+                  <input
+                    name="bot-field"
+                    onChange={e => this.handleChange(e)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    required
+                    onChange={e => this.handleChange(e)}
+                  />
                   <input
                     type="text"
                     placeholder="Subject"
                     name="subject"
                     required
+                    onChange={e => this.handleChange(e)}
                   />
                   <input
                     type="email"
                     placeholder="Email"
                     name="email"
                     required
+                    onChange={e => this.handleChange(e)}
                   />
                 </div>
                 <div className="">
-                  <textarea placeholder="Message" name="message" required />
+                  <textarea
+                    placeholder="Message"
+                    name="message"
+                    required
+                    onChange={e => this.handleChange(e)}
+                  />
                 </div>
                 <div data-netlify-recaptcha />
               </div>
