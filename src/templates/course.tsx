@@ -7,12 +7,12 @@ import { Course } from '../domain/models';
 import { sessionFromSessionsJsonEdge } from '../domain/converters/session-types';
 import { CourseUpcomingSessions } from '../components/courses/course-upcoming-sessions';
 
-import { PrivateClassesBox } from '../components/global/privateclassesbox/private-classes-box';
 import { CourseProductsCovered } from '../components/courses/course-products-covered';
 import { CourseCurriculum } from '../components/courses/course-curriculum';
 import { CourseDetailsCard } from '../components/courses/course-details-card';
 import { CourseInstructors } from '../components/courses/course-instructors';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
+import { CourseDetailSidebarPrivateClassesBox } from '../components/courses/course-detail-sidebar-private/course-detail-sidebar-private';
 
 interface CourseTemplateProps {
   data: {
@@ -91,7 +91,7 @@ class CourseTemplate extends React.Component<
                 <CourseUpcomingSessions sessions={sessions} />
                 <CourseProductsCovered course={course} />
 
-                <PrivateClassesBox />
+                <CourseDetailSidebarPrivateClassesBox />
 
                 <div className="sidebar-download">
                   <ul>
