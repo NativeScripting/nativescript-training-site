@@ -18,7 +18,17 @@ import { getInnerBanner } from './innerbannertemp';
 //import * as loadScript from 'simple-load-script';
 //import 'babel-polyfill'; // must be imported for async/await to work, see e.g. https://github.com/gatsbyjs/gatsby/pull/3369#issuecomment-354599985
 
-import '../css/style.css';
+/*
+import '../vendor/bootstrap/bootstrap.css';
+
+import '../vendor/bootstrap-select/dist/css/bootstrap-select.css';
+import '../vendor/bootstrap-mega-menu/css/menu.css';
+import '../fonts/font-awesome/css/font-awesome.min.css';
+import '../vendor/WOW-master/css/libs/animate.css';
+import '../fonts/icon/font/flaticon.css';
+*/
+
+//import '../css/style.css';
 import '../css/responsive.css';
 import '../css/styles.css';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
