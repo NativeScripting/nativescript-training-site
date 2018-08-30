@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'gatsby-link';
 import { Offering, Course } from '../../../domain/models';
 import { MainNav } from '../menu/main-nav';
 
@@ -19,12 +20,6 @@ export const Header: React.StatelessComponent<HeaderProps> = (
             <div className="col-sm-5 col-xs-12 left-list">
               <ul>
                 <li>
-                  <a href="#">Register</a>
-                </li>
-                <li>
-                  <a href="#">Login</a>
-                </li>
-                <li>
                   <a href="#">
                     <i className="fa fa-phone" aria-hidden="true" />{' '}
                     +1-855-656-6884
@@ -35,39 +30,40 @@ export const Header: React.StatelessComponent<HeaderProps> = (
             <div className="col-sm-7 col-xs-12 right-list text-right">
               <ul>
                 <li>
-                  <a href="#">Get Support</a>
+                  <Link to="/contact">Get Support</Link>
                 </li>
+
                 <li>
-                  <a href="#">Our Causes</a>
+                  <Link to="/courses">Our Courses</Link>
                 </li>
-                <li>
-                  <a href="#">Career</a>
-                </li>
+
                 <li>
                   <ul className="social-icon">
                     <li>
-                      <a href="#" className="tran3s">
+                      <a
+                        href="https://www.facebook.com/nativescripting/"
+                        className="tran3s"
+                        target="_blank"
+                      >
                         <i className="fa fa-facebook" aria-hidden="true" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="tran3s">
+                      <a
+                        href="https://twitter.com/nuvious1"
+                        className="tran3s"
+                        target="_blank"
+                      >
                         <i className="fa fa-twitter" aria-hidden="true" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="tran3s">
-                        <i className="fa fa-skype" aria-hidden="true" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="tran3s">
-                        <i className="fa fa-pinterest" aria-hidden="true" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="tran3s">
-                        <i className="fa fa-google-plus" aria-hidden="true" />
+                      <a
+                        href="https://www.linkedin.com/company/nuvious"
+                        className="tran3s"
+                        target="_blank"
+                      >
+                        <i className="fa fa-linkedin" aria-hidden="true" />
                       </a>
                     </li>
                   </ul>
@@ -82,10 +78,10 @@ export const Header: React.StatelessComponent<HeaderProps> = (
         <div className="container">
           <div className="main-content-wrapper clearfix">
             <div className="logo float-left">
-              <a href="index.html">
+              <a href="/">
                 <img
                   src="/images/logo/nativescript-training-logo.png"
-                  alt="Logo"
+                  alt="NativeScript Training Logo"
                 />
               </a>
             </div>
