@@ -143,7 +143,11 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
                   />
                 </div>
                 <div data-netlify-recaptcha />
-                <input name="bot-field" onChange={e => this.handleChange(e)} />
+                <input
+                  className="invisible"
+                  name="bot-field"
+                  onChange={e => this.handleChange(e)}
+                />
               </div>
               <div>
                 <button className="theme-solid-button">Submit</button>
