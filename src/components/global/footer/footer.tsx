@@ -12,7 +12,7 @@ export const Footer: React.StatelessComponent<FooterProps> = (
       <div className="container">
         <div className="top-footer row">
           <div className="col-sm-3 col-xs-12 footer-list">
-            <h6>Use link</h6>
+            <h6>Our Partners</h6>
             <div className="row">
               <div className="col-md-6 col-sm-12 col-xs-6">
                 <ul>
@@ -68,37 +68,44 @@ export const Footer: React.StatelessComponent<FooterProps> = (
                 </a>
               </div>
               <p>
-                We provide expert Business Coaching to both individuals and
-                businesses. With over 30 years of experience we’ll ensure that
-                you’re always getting the best guidance from the top people in
-                the entire industry.
+                NativeScript Training provides expert NativeScript training,
+                code reviews, and mentoring to both individuals and businesses.
+                Our partners provide best in class professional services,
+                consulting, implementation, and team augmentation in mobile and
+                cloud.
               </p>
               <ul>
                 <li>
-                  <i className="flaticon-stopwatch" /> Monday -Sturday at
-                  09am-6pm
+                  <i className="flaticon-stopwatch" /> Monday - Saturday 7am-5pm
+                  EST
                 </li>
                 <li>
-                  <i className="flaticon-map-line" /> 52 Tailstoi Town 546 IT,
-                  NYC{' '}
+                  <i className="flaticon-map-line" /> 2817 Spencer Rd. Chevy
+                  Chase, MD 20815, United States
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-sm-3 col-xs-12 footer-news">
-            <h6>Update News</h6>
+            <h6>Latest Partner Articles</h6>
             <ul>
               <li>
-                <a href="blog-details.html">
-                  Are Performance Appraisals Pre The annual performance{' '}
+                <a
+                  href="https://nativescripting.com/posts/nativescript-network-spy"
+                  target="_blank"
+                >
+                  Easy NativeScript Network Spy Using a Custom Interceptor
                 </a>
-                <div className="date">February 23, 2017</div>
+                <div className="date">August 24, 2018</div>
               </li>
               <li>
-                <a href="blog-details.html">
-                  Increase the value of your business by 71%
+                <a
+                  href="https://nstudio.io/blog/adaptive-icons/"
+                  target="_blank"
+                >
+                  What are Adaptive Icons?
                 </a>
-                <div className="date">February 22, 2017</div>
+                <div className="date">August 13, 2018</div>
               </li>
             </ul>
           </div>
