@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { handleFormSubmit } from '../../util/form-utils';
 
+export const encode = (data: any) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 interface OfferingDetailSidebarOnsiteRequestProps {}
 
 interface OfferingDetailSidebarOnsiteRequestState {
@@ -23,13 +29,13 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
   public handleChange(e: any) {
     this.setState({ [e.target.name]: e.target.value });
   }
-
+  /*
   public handleSubmit(event: React.FormEvent<EventTarget>) {
     handleFormSubmit(event).then(() => {
       this.setState({ submitted: true });
     });
   }
-  /*
+ */
   public handleSubmit(e: any) {
     e.preventDefault();
     const form = e.target;
@@ -46,6 +52,7 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
       })
       .catch(error => alert(error));
   }
+
   /*
   public handleSubmit(event: React.FormEvent<EventTarget>) {
     handleFormSubmit(event).then(() => {
@@ -97,6 +104,8 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
+              <input name="bot-field" onChange={e => this.handleChange(e)} />
+
               <div className="">
                 <div className="">
                   <input
@@ -136,11 +145,6 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
                   />
                 </div>
                 <div data-netlify-recaptcha />
-                <input
-                  className="invisible"
-                  name="bot-field"
-                  onChange={e => this.handleChange(e)}
-                />
               </div>
               <div>
                 <button className="theme-solid-button">Submit</button>
