@@ -55,6 +55,12 @@ export const ContactComponent: React.StatelessComponent<
                   <li>
                     <i className="flaticon-call" /> +1-855-656-6884
                   </li>
+                  <li>
+                    <i className="fa fa-calendar" />
+                    <a href="https://calendly.com/nuvious" target="_blank">
+                      Schedule a quick call
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
