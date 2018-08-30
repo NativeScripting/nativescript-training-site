@@ -104,8 +104,6 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <input name="bot-field" onChange={e => this.handleChange(e)} />
-
               <div className="">
                 <div className="">
                   <input
@@ -145,6 +143,7 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
                   />
                 </div>
                 <div data-netlify-recaptcha />
+                <input name="bot-field" onChange={e => this.handleChange(e)} />
               </div>
               <div>
                 <button className="theme-solid-button">Submit</button>
