@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'gatsby-link';
 import { Offering, Course } from '../../../domain/models';
 import { trainingUrlFromId, courseUrlFromId } from '../../../util/urls';
 
@@ -26,6 +27,11 @@ export const MainNav: React.StatelessComponent<MainNavProps> = (
     );
   });
 
+  const homeClass = location.pathname === '/' ? 'active' : '';
+  const trainingClass = location.pathname.match(/^\/training/) ? 'active' : '';
+  const coursesClass = location.pathname.match(/^\/courses/) ? 'active' : '';
+  const scheduleClass = location.pathname.match(/^\/schedule/) ? 'active' : '';
+
   return (
     <nav className="theme-main-menu navbar float-right" id="mega-menu-wrapper">
       <div className="navbar-header">
@@ -45,24 +51,30 @@ export const MainNav: React.StatelessComponent<MainNavProps> = (
 
       <div className="collapse navbar-collapse" id="navbar-collapse-1">
         <ul className="nav">
-          <li className="dropdown-holder">
-            <a href="/">Home</a>
+          <li className={homeClass}>
+            <Link to="/">Home</Link>
           </li>
-          <li className="dropdown-holder">
-            <a href="/training">Training</a>
+          <li className={'dropdown-holder ' + trainingClass}>
+            <Link activeClassName="active" to="/training">
+              Training
+            </Link>
             <ul className="sub-menu">{offeringsHtml}</ul>
           </li>
-          <li className="dropdown-holder">
-            <a href="/courses">Courses</a>
+          <li className={'dropdown-holder ' + coursesClass}>
+            <Link activeClassName="active" to="/courses">
+              Courses
+            </Link>
             <ul className="sub-menu">{coursesHtml}</ul>
           </li>
-          <li className="dropdown-holder active">
-            <a href="/schedule">Schedule</a>
+          <li className={scheduleClass}>
+            <Link activeClassName="active" to="/schedule">
+              Schedule
+            </Link>
           </li>
           <li className="join-us">
-            <a href="/contact" className="theme-solid-button">
+            <Link className="theme-solid-button" to="/contact">
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

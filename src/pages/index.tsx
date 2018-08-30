@@ -46,20 +46,20 @@ export default class extends React.Component<IndexPageProps, any> {
                   <div className="camera_caption text-center">
                     <div>
                       <div className="container">
-                        <h4 className="">
-                          Help Shape the Future of Education in Remakri
-                        </h4>
-                        <h1 className="">Perfect Education Courses</h1>
+                        <h4 className="">Welcome to NativeScript Training</h4>
+                        <h1 className="">
+                          We Help Businesses Build NativeScript Apps
+                        </h1>
                         <p className="">
-                          New skillsd and knowledge can spark a lifetime of
-                          change. For 60 years, Education Development <br />{' '}
-                          Center (EDC), has designed and delivered programs in
-                          education, health
+                          NativeScript.training provides just-in-time training
+                          on NativeScript all over the world, on-site at your
+                          office, and remotely. <br />We also provide
+                          consulting, mentoring &amp; training options.
                         </p>
-                        <a href="#" className="theme-solid-button">
-                          Get Started
+                        <a href="/training" className="theme-solid-button">
+                          Training
                         </a>
-                        <a href="course-v1.html" className="theme-line-button">
+                        <a href="/courses" className="theme-line-button">
                           Courses
                         </a>
                       </div>
