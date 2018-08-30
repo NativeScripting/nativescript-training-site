@@ -84,7 +84,9 @@ class OfferingTemplate extends React.Component<
                   </ul>
                 </div>
 
-                {offering.id === 'private' && <div />}
+                {offering.id === 'private' && (
+                  <OfferingDetailOnsiteRequestForm />
+                )}
               </div>
 
               <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 theme-sidebar">

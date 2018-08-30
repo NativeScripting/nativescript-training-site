@@ -17,10 +17,10 @@ export class OfferingDetailOnsiteRequestForm extends React.Component<
 
     this.state = {
       submitted: false,
-      nameBody: '',
-      subjectBody: '',
-      emailBody: '',
-      messageBody: '',
+      name: '',
+      subject: '',
+      email: '',
+      message: '',
     };
   }
 
@@ -29,7 +29,7 @@ export class OfferingDetailOnsiteRequestForm extends React.Component<
   }
 
   public handleSubmit(event: React.FormEvent<EventTarget>) {
-    handleFormSubmit(event).then(() => {
+    handleFormSubmit(event, this.state).then(() => {
       this.setState({ submitted: true });
     });
   }
@@ -62,21 +62,21 @@ export class OfferingDetailOnsiteRequestForm extends React.Component<
                 <input
                   type="text"
                   placeholder="Name"
-                  name="nameBody"
+                  name="name"
                   required
                   onChange={e => this.handleChange(e)}
                 />
                 <input
                   type="text"
                   placeholder="Subject"
-                  name="subjectBody"
+                  name="subject"
                   required
                   onChange={e => this.handleChange(e)}
                 />
                 <input
                   type="email"
                   placeholder="Email"
-                  name="emailBody"
+                  name="email"
                   required
                   onChange={e => this.handleChange(e)}
                 />
@@ -84,7 +84,7 @@ export class OfferingDetailOnsiteRequestForm extends React.Component<
               <div className="col-sm-6 col-xs-12">
                 <textarea
                   placeholder="Message"
-                  name="messageBody"
+                  name="message"
                   required
                   onChange={e => this.handleChange(e)}
                 />

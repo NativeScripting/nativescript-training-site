@@ -1,12 +1,6 @@
 import * as React from 'react';
 import { handleFormSubmit } from '../../util/form-utils';
 
-export const encode = (data: any) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
-
 interface OfferingDetailSidebarOnsiteRequestProps {}
 
 interface OfferingDetailSidebarOnsiteRequestState {
@@ -35,58 +29,6 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
       this.setState({ submitted: true });
     });
   }
-
-  /*
-  public handleSubmit(e: any) {
-    e.preventDefault();
-    const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => {
-        this.setState({ submitted: true });
-      })
-      .catch(error => alert(error));
-  }
-  */
-
-  /*
-  public handleSubmit(event: React.FormEvent<EventTarget>) {
-    handleFormSubmit(event).then(() => {
-      this.setState({ submitted: true });
-    });
-  }*/
-
-  /*
-  public handleSubmit(event: React.FormEvent<EventTarget>) {
-    event.preventDefault();
-    const form = event.target as HTMLFormElement;
-    const data = new FormData(form);
-
-    for (let name of (data as any).keys()) {
-      const input = form.elements[name];
-      const parserName = (input as any).dataset.parse;
-
-      if (parserName) {
-        const parser = inputParsers[parserName];
-        const parsedValue = parser(data.get(name));
-        data.set(name, parsedValue);
-      }
-    }
-
-    fetch(form.action, {
-      method: 'POST',
-      body: data,
-    }).then(() => {
-      this.setState({ submitted: true });
-    });
-  }
-  */
 
   public render() {
     return (
