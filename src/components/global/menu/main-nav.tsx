@@ -27,10 +27,21 @@ export const MainNav: React.StatelessComponent<MainNavProps> = (
     );
   });
 
-  const homeClass = location.pathname === '/' ? 'active' : '';
-  const trainingClass = location.pathname.match(/^\/training/) ? 'active' : '';
-  const coursesClass = location.pathname.match(/^\/courses/) ? 'active' : '';
-  const scheduleClass = location.pathname.match(/^\/schedule/) ? 'active' : '';
+  let homeClass = '';
+  let trainingClass = '';
+  let coursesClass = '';
+  let scheduleClass = '';
+
+  if (typeof window !== 'undefined') {
+    homeClass = window.location.pathname === '/' ? 'active' : '';
+    trainingClass = window.location.pathname.match(/^\/training/)
+      ? 'active'
+      : '';
+    coursesClass = window.location.pathname.match(/^\/courses/) ? 'active' : '';
+    scheduleClass = window.location.pathname.match(/^\/schedule/)
+      ? 'active'
+      : '';
+  }
 
   return (
     <nav className="theme-main-menu navbar float-right" id="mega-menu-wrapper">
