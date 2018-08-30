@@ -2,6 +2,7 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import { Offering, Course } from '../../../domain/models';
 import { MainNav } from '../menu/main-nav';
+import { getNSTrainingLogo } from '../svg-logos/ns-training1';
 
 interface HeaderProps {
   siteName: string;
@@ -78,12 +79,7 @@ export const Header: React.StatelessComponent<HeaderProps> = (
         <div className="container">
           <div className="main-content-wrapper clearfix">
             <div className="logo float-left">
-              <a href="/">
-                <img
-                  src="/images/logo/nativescript-training-logo.png"
-                  alt="NativeScript Training Logo"
-                />
-              </a>
+              <Link to="/">{getNSTrainingLogo('#6664D4', '#3C3C3C')}</Link>
             </div>
 
             <MainNav offerings={props.offerings} courses={props.courses} />

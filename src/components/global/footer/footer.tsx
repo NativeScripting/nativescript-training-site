@@ -1,4 +1,10 @@
 import * as React from 'react';
+import Link from 'gatsby-link';
+import { ProgressLogo } from '../svg-logos/progress';
+import { NativeScriptingLogo } from '../svg-logos/nativescripting';
+import { NStudioLogo } from '../svg-logos/nstudio';
+import { NuviousLogo } from '../svg-logos/nuvious';
+import { getNSTrainingLogo } from '../svg-logos/ns-training1';
 
 interface FooterProps {
   siteName: string;
@@ -17,55 +23,34 @@ export const Footer: React.StatelessComponent<FooterProps> = (
               <div className="col-md-6 col-sm-12 col-xs-6">
                 <ul>
                   <li>
-                    <a href="#">Progress</a>
+                    <a href="https://www.progress.com/" target="_blank">
+                      {ProgressLogo}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">nStudio</a>
+                    <a href="https://nstudio.io/" target="_blank">
+                      {NStudioLogo}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Commodity</a>
+                    <a href="https://nativescripting.com" target="_blank">
+                      {NativeScriptingLogo}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Mutual Funds</a>
-                  </li>
-                  <li>
-                    <a href="#">Advisors</a>
+                    <a href="http://www.nuvious.com/" target="_blank">
+                      {NuviousLogo}
+                    </a>
                   </li>
                 </ul>
               </div>
-              <div className="col-md-6 col-sm-12 col-xs-6">
-                <ul>
-                  <li>
-                    <a href="about-us.html">About us</a>
-                  </li>
-                  <li>
-                    <a href="#">Service</a>
-                  </li>
-                  <li>
-                    <a href="#">Case Studies</a>
-                  </li>
-                  <li>
-                    <a href="events.html">Event</a>
-                  </li>
-                  <li>
-                    <a href="contact.html">Contact us</a>
-                  </li>
-                  <li>
-                    <a href="faq.html">Faq</a>
-                  </li>
-                </ul>
-              </div>
+              <div className="col-md-6 col-sm-12 col-xs-6" />
             </div>
           </div>
           <div className="col-sm-6 col-xs-12 footer-logo-widget">
             <div className="wrapper">
               <div className="logo">
-                <a href="index.html">
-                  <img
-                    src="/images/logo/nativescript-training-logo2.png"
-                    alt=""
-                  />
-                </a>
+                <Link to="/">{getNSTrainingLogo('#6664D4', '#6664D4')}</Link>
               </div>
               <p>
                 NativeScript Training provides expert NativeScript training,

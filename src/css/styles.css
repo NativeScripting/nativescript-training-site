@@ -19,3 +19,16 @@
 .fa-check-circle.purple {
   color: #6664d4;
 }
+
+.PRGS-branding-shape {
+  fill: #5ce500;
+}
+.PRGS-branding-text {
+  fill: white;
+}
+
+.nstraining-logo-1 {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
