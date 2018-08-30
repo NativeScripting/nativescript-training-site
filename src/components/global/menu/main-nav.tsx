@@ -2,6 +2,7 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import { Offering, Course } from '../../../domain/models';
 import { trainingUrlFromId, courseUrlFromId } from '../../../util/urls';
+import { withBrowserWindow } from '../../../util/browser-dom';
 
 interface MainNavProps {
   offerings: Offering[];
@@ -32,7 +33,7 @@ export const MainNav: React.StatelessComponent<MainNavProps> = (
   let coursesClass = '';
   let scheduleClass = '';
 
-  if (typeof window !== 'undefined') {
+  withBrowserWindow(() => {
     homeClass = window.location.pathname === '/' ? 'active' : '';
     trainingClass = window.location.pathname.match(/^\/training/)
       ? 'active'
@@ -41,7 +42,7 @@ export const MainNav: React.StatelessComponent<MainNavProps> = (
     scheduleClass = window.location.pathname.match(/^\/schedule/)
       ? 'active'
       : '';
-  }
+  });
 
   return (
     <nav className="theme-main-menu navbar float-right" id="mega-menu-wrapper">
