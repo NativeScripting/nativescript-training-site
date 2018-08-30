@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import Link from 'gatsby-link';
 import './index.css';
 import { HomeFeatures } from '../components/home/home-features';
 import { OfferingsJsonConnection } from '../domain/graphql-types';
@@ -56,12 +56,13 @@ export default class extends React.Component<IndexPageProps, any> {
                           office, and remotely. <br />We also provide
                           consulting, mentoring &amp; training options.
                         </p>
-                        <a href="/training" className="theme-solid-button">
+                        <Link className="theme-solid-button" to="/training">
                           Training
-                        </a>
-                        <a href="/courses" className="theme-line-button">
+                        </Link>
+
+                        <Link className="theme-line-button" to="/courses">
                           Courses
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -75,26 +76,27 @@ export default class extends React.Component<IndexPageProps, any> {
           <div className="container">
             <div className="row">
               <div className="col-md-6 col-xs-12 float-right">
-                <h2>We will give you future</h2>
+                <h2>Training and Mentoring</h2>
                 <div className="mark-text">
-                  It highlights some of the lessons learned and the successes of
-                  the England national pupil data story; by sharing England’s
-                  story we hope that policymakers in other countries where a
-                  national pupil-level data{' '}
+                  NativeScript Training is a leading provider of technical
+                  training and mentoring to teams building for mobile. We
+                  provide guidance, code reviews and ad-hoc pair programming
+                  sessions.
                 </div>
                 <p>
-                  Learn about Superintendent Torlakson's initiatives to improve
-                  schools, including encouraging schools to become "Safe
-                  Havens," promoting teaching, and leading the charge to improve
-                  career technical education and Science Technology Engineering
-                  and Math (STEM) education.
+                  We provide open enrollment and private on-site training for
+                  teams that are just starting out with NativeScript or
+                  developers that are struggling with existing NativeScript
+                  mobile apps. We can set up a remote and offline ad-hoc code
+                  review to help you get over some of those humps and challenges
+                  that endanger project completion.
                 </p>
-                <a
-                  href="#"
+                <Link
                   className="wow fadeInUp animated theme-solid-button theme-button"
+                  to="/contact"
                 >
-                  Know more future
-                </a>
+                  Request Code Review
+                </Link>
               </div>
               <div className="col-md-6 col-xs-12">
                 <img src="/images/home/shape1.png" alt="" />
