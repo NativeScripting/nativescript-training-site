@@ -29,13 +29,14 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
   public handleChange(e: any) {
     this.setState({ [e.target.name]: e.target.value });
   }
-  /*
+
   public handleSubmit(event: React.FormEvent<EventTarget>) {
-    handleFormSubmit(event).then(() => {
+    handleFormSubmit(event, this.state).then(() => {
       this.setState({ submitted: true });
     });
   }
- */
+
+  /*
   public handleSubmit(e: any) {
     e.preventDefault();
     const form = e.target;
@@ -52,6 +53,7 @@ export class OfferingDetailSidebarOnsiteRequestBox extends React.Component<
       })
       .catch(error => alert(error));
   }
+  */
 
   /*
   public handleSubmit(event: React.FormEvent<EventTarget>) {

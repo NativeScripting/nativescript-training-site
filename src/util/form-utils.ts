@@ -18,7 +18,8 @@ export const encode = (data: any) => {
 };
 
 export function handleFormSubmit(
-  e: React.FormEvent<EventTarget>
+  e: React.FormEvent<EventTarget>,
+  formState: { [key: string]: any }
 ): Promise<Response> {
   e.preventDefault();
   const form = e.target as HTMLFontElement;
@@ -27,7 +28,7 @@ export function handleFormSubmit(
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: encode({
       'form-name': form.getAttribute('name'),
-      ...this.state,
+      ...formState,
     }),
   });
 }
