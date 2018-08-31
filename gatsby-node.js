@@ -57,18 +57,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `).then(result => {
-        const offerings = result.data.allOfferingsJson.edges;
-        const courses = result.data.allCoursesJson.edges;
-        const trainers = result.data.allTrainersJson.edges;
-        const locations = result.data.allLocationsJson.edges;
-        const sessions = result.data.allSessionsJson.edges;
+      const offerings = result.data.allOfferingsJson.edges;
+      const courses = result.data.allCoursesJson.edges;
+      const trainers = result.data.allTrainersJson.edges;
+      const locations = result.data.allLocationsJson.edges;
+      const sessions = result.data.allSessionsJson.edges;
 
-        createOfferingPages(createPage, offerings);
-        createCoursePages(createPage, courses);
-        createSessionPages(createPage, sessions);
+      createOfferingPages(createPage, offerings);
+      createCoursePages(createPage, courses);
+      createSessionPages(createPage, sessions);
 
-        resolve('done');
-      });
+      resolve('done');
+    });
   });
 };
 
@@ -81,12 +81,11 @@ const createOfferingPages = (createPage, offerings) => {
       path: `/training/${offering.id}`,
       component: offeringTemplate,
       context: {
-        offeringId: offering.id
-      }
+        offeringId: offering.id,
+      },
     });
   });
 };
-
 
 const createCoursePages = (createPage, courses) => {
   const courseTemplate = path.resolve(`src/templates/course.tsx`);
@@ -97,8 +96,8 @@ const createCoursePages = (createPage, courses) => {
       path: `/course/${course.id}`,
       component: courseTemplate,
       context: {
-        courseId: course.id
-      }
+        courseId: course.id,
+      },
     });
   });
 };
@@ -112,8 +111,8 @@ const createSessionPages = (createPage, sessions) => {
       path: `/session/${session.id}`,
       component: sessionTemplate,
       context: {
-        sessionId: session.id
-      }
+        sessionId: session.id,
+      },
     });
   });
 };
