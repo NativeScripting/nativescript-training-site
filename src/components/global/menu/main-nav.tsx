@@ -46,20 +46,41 @@ export const MainNav: React.StatelessComponent<MainNavProps> = (
 
   return (
     <nav className="theme-main-menu navbar float-right" id="mega-menu-wrapper">
-      <div className="navbar-header">
-        <button
-          type="button"
-          className="navbar-toggle collapsed"
-          data-toggle="collapse"
-          data-target="#navbar-collapse-1"
-          aria-expanded="false"
-        >
-          <span className="sr-only">Toggle navigation</span>
-          <span className="icon-bar" />
-          <span className="icon-bar" />
-          <span className="icon-bar" />
-        </button>
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span />
+        <span />
+        <span />
+
+        <ul id="menu" className="nav">
+          <li className={homeClass}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={'dropdown-holder ' + trainingClass}>
+            <Link activeClassName="active" to="/training">
+              Training
+            </Link>
+          </li>
+          <li className={'dropdown-holder ' + coursesClass}>
+            <Link activeClassName="active" to="/courses">
+              Courses
+            </Link>
+          </li>
+          <li className={scheduleClass}>
+            <Link activeClassName="active" to="/schedule">
+              Schedule
+            </Link>
+          </li>
+          <li className="join-us">
+            <Link className="theme-solid-button" to="/contact">
+              Contact Us
+            </Link>
+          </li>
+        </ul>
       </div>
+
+      <div className="navbar-header" />
 
       <div className="collapse navbar-collapse" id="navbar-collapse-1">
         <ul className="nav">
