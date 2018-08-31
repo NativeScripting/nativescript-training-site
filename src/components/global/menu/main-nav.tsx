@@ -55,27 +55,19 @@ export const MainNav: React.StatelessComponent<MainNavProps> = (
 
         <ul id="menu" className="nav">
           <li className={homeClass}>
-            <Link to="/">Home</Link>
+            <a href="/">Home</a>
           </li>
           <li className={'dropdown-holder ' + trainingClass}>
-            <Link activeClassName="active" to="/training">
-              Training
-            </Link>
+            <a href="/training">Training</a>
           </li>
           <li className={'dropdown-holder ' + coursesClass}>
-            <Link activeClassName="active" to="/courses">
-              Courses
-            </Link>
+            <a href="/courses">Courses</a>
           </li>
           <li className={scheduleClass}>
-            <Link activeClassName="active" to="/schedule">
-              Schedule
-            </Link>
+            <a href="/schedule">Schedule</a>
           </li>
           <li className="join-us">
-            <Link className="theme-solid-button" to="/contact">
-              Contact Us
-            </Link>
+            <a href="/contact">Contact Us</a>
           </li>
         </ul>
       </div>
