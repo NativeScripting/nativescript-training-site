@@ -1,5 +1,13 @@
 import { SessionsJsonEdge, SessionsJson } from '../graphql-types';
-import { Session, Course, SessionLocation, Trainer, getCourseByCourseId, getSessionLocaitonBySessionLocationId, getTrainerByTrainerId } from '../models';
+import {
+  Session,
+  Course,
+  SessionLocation,
+  Trainer,
+  getCourseByCourseId,
+  getSessionLocaitonBySessionLocationId,
+  getTrainerByTrainerId,
+} from '../models';
 
 export function sessionFromSessionsJsonEdge(
   edge: SessionsJsonEdge,
@@ -25,12 +33,12 @@ export function sessionFromSessionsJson(
     descriptionHtml: s.descriptionHtml,
     dateStart: new Date(s.dateStart),
     dateEnd: new Date(s.dateEnd),
-
+    timeStart: s.timeStart,
+    timeEnd: s.timeEnd,
+    price: s.price,
     course: getCourseByCourseId(s.courseId, courses),
     location: getSessionLocaitonBySessionLocationId(s.locationId, locations),
-    trainer: getTrainerByTrainerId(s.trainerId, trainers)
-
+    trainer: getTrainerByTrainerId(s.trainerId, trainers),
   };
   return session;
 }
-

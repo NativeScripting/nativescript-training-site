@@ -1,19 +1,6 @@
-.temp-component {
-  border-width: 1px;
-  border-color: red;
-  border-style: solid;
-  background-color: bisque;
-  padding: 10px;
-  margin: 10px;
-}
-
-.temp-main {
-  border-width: 1px;
-  border-color: blue;
-  border-style: solid;
-  background-color: azure;
-  padding: 10px;
-  margin: 10px;
+.course-search-form a {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .fa-check-circle.purple {

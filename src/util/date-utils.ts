@@ -32,3 +32,7 @@ export function dateFormat(t: Date) {
     MONTH_NAMES_SHORT[t.getMonth()]
   } ${t.getDate()}, ${t.getFullYear()}`;
 }
+
+export function monthNameFromDate(t: Date) {
+  return `${MONTH_NAMES[t.getMonth()]}`;
+}

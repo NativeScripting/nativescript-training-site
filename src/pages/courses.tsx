@@ -61,8 +61,6 @@ export default class extends React.Component<CoursesPageProps, any> {
             </div>
           </div>
         </div>
-
-        <CourseSummariesTable courses={courses} />
       </div>
     );
   }
