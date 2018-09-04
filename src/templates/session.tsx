@@ -29,12 +29,17 @@ interface SessionTemplateProps {
 
 interface SessionTemplateState {
   session: Session;
+  expired: boolean;
+  distance: number;
+  intervalId: number;
 }
 
 class SessionTemplate extends React.Component<
   SessionTemplateProps,
   SessionTemplateState
 > {
+  private countDownDate: number;
+
   constructor(props: SessionTemplateProps) {
     super(props);
 
@@ -48,18 +53,48 @@ class SessionTemplate extends React.Component<
       locationFromLocationsJsonEdge
     );
 
+    const session = sessionFromSessionsJson(
+      this.props.data.sessionsConnection,
+      courses,
+      sessionLocations,
+      trainers
+    );
+
+    this.countDownDate = session.dateStart.getTime();
+    const now = new Date().getTime();
+
     this.state = {
-      session: sessionFromSessionsJson(
-        this.props.data.sessionsConnection,
-        courses,
-        sessionLocations,
-        trainers
-      ),
+      session: session,
+      expired: true,
+      distance: this.countDownDate - now,
+      intervalId: 0,
     };
+  }
+
+  public componentDidMount() {
+    var intervalId = window.setInterval(() => {
+      this.timerFunctionBody();
+    }, 1000);
+    this.setState({ intervalId: intervalId });
+  }
+
+  public componentDidUpdate() {
+    if (this.state.distance < 0) {
+      window.clearInterval(this.state.intervalId);
+    }
   }
 
   public render() {
     const session = this.state.session;
+    const days = Math.floor(this.state.distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (this.state.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (this.state.distance % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const seconds = Math.floor((this.state.distance % (1000 * 60)) / 1000);
+
     const title = this.props.data.sessionsConnection.title;
     const breadCrumbs = [
       { name: 'All courses', url: '/' },
@@ -76,7 +111,7 @@ class SessionTemplate extends React.Component<
             <div className="single-event-figure">
               <h4>{session.title}</h4>
               <div className="image-box">
-                <img src="images/event/5.jpg" alt="" />
+                <img src="/images/event/5.jpg" alt="" />
               </div>
               <div className="row">
                 <div className="col-lg-9 col-md-8 col-xs-12">
@@ -108,7 +143,43 @@ class SessionTemplate extends React.Component<
                       __html: session.course.descriptionHtml,
                     }}
                   />
-                  <div id="count" className="clearfix" />
+
+                  {this.state.expired && (
+                    <div id="count" className="clearfix">
+                      {this.state.expired && (
+                        <div className="col-xs-12">
+                          <div className="wrapper">
+                            <span>This event has already occurred</span>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {!this.state.expired && (
+                    <div id="count" className="clearfix">
+                      <div className="col-xs-3">
+                        <div className="wrapper">
+                          <h3>{days}</h3> <span>days</span>
+                        </div>
+                      </div>{' '}
+                      <div className="col-xs-3">
+                        <div className="wrapper">
+                          <h3>{hours}</h3> <span>Hours</span>
+                        </div>
+                      </div>{' '}
+                      <div className="col-xs-3">
+                        <div className="wrapper">
+                          <h3>{minutes}</h3> <span>Minutes</span>
+                        </div>
+                      </div>
+                      <div className="col-xs-3">
+                        <div className="wrapper">
+                          <h3>{seconds}</h3> <span>Seconds</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div className="event-briefing">
@@ -184,6 +255,17 @@ class SessionTemplate extends React.Component<
         </div>
       </div>
     );
+  }
+
+  private timerFunctionBody() {
+    const now = new Date().getTime();
+    // Find the distance between now an the count down date
+    const distance = this.countDownDate - now;
+    if (distance < 0) {
+      this.setState({ expired: true, distance: distance });
+    } else {
+      this.setState({ expired: false, distance: distance });
+    }
   }
 }
 
