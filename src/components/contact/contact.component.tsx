@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ContactPageForm } from './contact-page-form';
 
 interface ContactComponentProps {}
 
@@ -13,33 +14,7 @@ export const ContactComponent: React.StatelessComponent<
             <div className="col-md-6 col-xs-12">
               <div className="theme-form-style-one">
                 <h3>Let's get your team trained!</h3>
-                <form action="inc/sendemail.php" className="form-validation">
-                  <div className="single-input">
-                    <label>* Name</label>
-                    <input
-                      type="text"
-                      placeholder="Type your name here"
-                      name="name"
-                    />
-                  </div>
-                  <div className="single-input">
-                    <label>* Email</label>
-                    <input
-                      type="email"
-                      placeholder="How to contact you back"
-                      name="email"
-                    />
-                  </div>
-                  <div className="single-input">
-                    <label>* Message</label>
-                    <textarea placeholder="Type something" name="message" />
-                  </div>
-                  <input
-                    type="submit"
-                    value="Get request"
-                    className="theme-solid-button theme-button"
-                  />
-                </form>
+                <ContactPageForm />
               </div>
             </div>
             <div className="col-md-6 col-xs-12">
