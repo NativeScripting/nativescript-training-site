@@ -105,7 +105,11 @@ class SessionTemplate extends React.Component<
 
     return (
       <div>
-        <InnerBanner title="Schedule" subtitle="Session details" />
+        <InnerBanner
+          title="Schedule"
+          subtitle="Session details"
+          bannerImg="/images/event/banner.jpg"
+        />
         <div className="our-events event-details section-margin-top section-margin-bottom">
           <div className="container">
             <div className="single-event-figure">

@@ -50,8 +50,6 @@ class IndexLayoutPage extends React.Component<IndexLayoutProps, {}> {
 
         <main role="main">{this.props.children()}</main>
 
-        <NewsletterBanner />
-
         <Footer siteName={this.props.data.site.siteMetadata.siteName} />
       </div>
     );

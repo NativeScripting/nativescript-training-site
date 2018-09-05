@@ -38,7 +38,10 @@ export const SessionsCard: React.StatelessComponent<SessionsCardProps> = (
         </a>
       </div>
       <div className="col-md-5 col-sm-6 col-xs-12">
-        <img src="images/event/1.jpg" alt="" />
+        <img
+          src="images/event/nativescript_angular_course_event_ticket.png"
+          alt=""
+        />
       </div>
     </div>
   );

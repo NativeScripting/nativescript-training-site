@@ -15,6 +15,7 @@ export default class extends React.Component<ContactPageProps, any> {
         <InnerBanner
           title="Contact Us"
           subtitle="Get in Touch. We'll get back to you within 24 hours."
+          bannerImg="/images/contact/banner.jpg"
         />
         <ContactComponent />
       </div>

@@ -3,7 +3,9 @@
     "id": "public",
     "order": 1,
     "title": "Public Open Enrollment Classes",
-    "img": "flaticon-exam",
+    "img": "/images/training/public.jpg",
+    "imgSmall": "/images/training/sm_public.jpg",
+    "icon": "flaticon-exam",
     "summary":
       "Open enrollment classes provide a quick and easy way for an individual or a small team to get up speed on a specific product or technology. If you are able to attend one of these class in person, you will be able to interact with the instructor and the other students in the class.",
     "introHtml":
@@ -34,7 +36,9 @@
     "id": "remote",
     "order": 2,
     "title": "Remote Classroom Instruction",
-    "img": "flaticon-book4",
+    "img": "/images/training/remote.jpg",
+    "imgSmall": "/images/training/sm_remote.jpg",
+    "icon": "flaticon-book4",
     "summary":
       "If you are not able to attend one of our public open enrollment classes in person, we provide you with the ability to attend the class remotely from your home or office (All offerings scheduled for Washington, DC are available via Remote). All you need is a computer and a fast, reliable Internet connection. Using our Remote Class Instruction (RCI) infrastructure, you'll be able to talk to the instructor as well as hear and talk to all the other students in the class. You will also be able to connect to a computer workstation inside the classroom where you can work through lab exercises with the help and guidance of the instructor.",
     "introHtml":
@@ -71,7 +75,9 @@
     "id": "private",
     "order": 3,
     "title": "Private Onsite Classes",
-    "img": "flaticon-book3",
+    "img": "/images/training/private.jpg",
+    "imgSmall": "/images/training/sm_private.jpg",
+    "icon": "flaticon-book3",
     "summary":
       "Private onsite courses provide a more economic and convenient training solutions for companies with 5 or more students. Private onsite courses can also be customized to meet the evolving needs of your team. Contact us to find out more information about onsite pricing and instructor availability.",
     "introHtml":
@@ -104,6 +110,8 @@
     "order": 4,
     "title": "Discounts and Promotions",
     "img": "",
+    "imgSmall": "/images/training/public.jpg",
+    "icon": "",
     "summary": "",
     "introHtml":
       "NativeScript Training is happy to extend the following discounts and promotions to students. Please note, all discounts are mutually exclusive and may not be combined. No discount may be combined with any other discount or offer, unless otherwise indicated.",

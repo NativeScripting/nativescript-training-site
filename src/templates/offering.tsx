@@ -44,14 +44,18 @@ class OfferingTemplate extends React.Component<
 
     return (
       <div>
-        <InnerBanner title="Training" subtitle={offering.title} />
+        <InnerBanner
+          title="Training"
+          subtitle={offering.title}
+          bannerImg="/images/training/banner.jpg"
+        />
         <div className="blog-list section-margin-top section-margin-bottom">
           <div className="container">
             <div className="row">
               <div className="col-lg-9 col-md-8 col-xs-12 blog-details-content">
                 <div className="single-blog-list">
                   <div className="image">
-                    <img src="/images/blog/10.jpg" alt="" />
+                    <img src={offering.img} alt="" />
                   </div>
                   <ul className="post-info">
                     <li>20 March 2017</li>

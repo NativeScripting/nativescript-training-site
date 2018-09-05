@@ -22,7 +22,7 @@ export const HomeFeatures: React.StatelessComponent<HomeFeaturesProps> = (
           <div className="feature-block">
             <div className="wrapper">
               <div className="icon">
-                <i className={o.img} />
+                <i className={o.icon} />
               </div>
               <h5>
                 <a href={trainingUrlFromId(o.id)}>{o.title}</a>

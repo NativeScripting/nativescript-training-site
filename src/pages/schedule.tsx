@@ -58,6 +58,7 @@ export default class extends React.Component<SchedulePageProps, any> {
         <InnerBanner
           title="Schedule"
           subtitle="NativeScript Training Schedule of Public Classes"
+          bannerImg="/images/event/banner.jpg"
         />
 
         <div className="course-search-form">

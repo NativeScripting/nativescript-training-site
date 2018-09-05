@@ -16,7 +16,7 @@ export const OfferingSummary: React.StatelessComponent<OfferingSummaryProps> = (
     <div className="col-md-4 col-xs-6">
       <div className="single-blog-grid hover-effect-one">
         <div className="image">
-          <img src="/images/blog/1.jpg" alt="" />
+          <img src={offering.imgSmall} alt="" />
           <div className="title">
             <h5>
               <a href={trainingUrlFromId(offering.id)}>{offering.title}</a>

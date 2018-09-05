@@ -25,6 +25,7 @@ export default class extends React.Component<TrainingPageProps, any> {
         <InnerBanner
           title="Training"
           subtitle="NativeScript Training Delivery Options"
+          bannerImg="/images/training/banner.jpg"
         />
 
         <div className="course-search-form">
@@ -54,6 +55,7 @@ export const trainingPageQuery = graphql`
           order
           title
           img
+          imgSmall
           summary
         }
       }

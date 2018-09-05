@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
-import './index.css';
+import '../css/index.css';
 import { HomeFeatures } from '../components/home/home-features';
 import { OfferingsJsonConnection } from '../domain/graphql-types';
 
@@ -30,7 +30,7 @@ export default class extends React.Component<IndexPageProps, any> {
                   className="cameraSlide cameraSlide_1 cameracurrent"
                 >
                   <img
-                    src="/images/home/slide-2.jpg?1535479087400"
+                    src="/images/home/slide-1.jpg?1535479087400"
                     className="imgLoaded"
                   />
                 </div>
@@ -125,6 +125,7 @@ export const indexPageQuery = graphql`
           order
           title
           img
+          icon
           summary
         }
       }

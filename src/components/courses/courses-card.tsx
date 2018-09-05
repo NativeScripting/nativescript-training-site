@@ -15,7 +15,10 @@ export const CoursesCard: React.StatelessComponent<CoursesCardProps> = (
     <div className="col-md-4 col-sm-6 col-xs-12">
       <div className="single-course-block">
         <div className="image">
-          <img src="images/course/1.jpg" alt="" />
+          <img
+            src="images/course/nativescript_angular_course_banner.png"
+            alt=""
+          />
         </div>
         <div className="text-box">
           <h5>
@@ -37,7 +40,7 @@ export const CoursesCard: React.StatelessComponent<CoursesCardProps> = (
               <i className="flaticon-book" />
             </li>
             <li>
-              <img src="images/course/4.jpg" alt="" />
+              <img src="" alt="" />
             </li>
             <li>${course.price}</li>
           </ul>

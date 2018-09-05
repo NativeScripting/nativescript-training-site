@@ -18,6 +18,8 @@ export function offeringFromOfferingsJson(o: OfferingsJson): Offering {
     introHtml: o.introHtml,
     descriptionHtml: o.descriptionHtml,
     img: o.img,
+    imgSmall: o.imgSmall,
+    icon: o.icon,
     summary: o.summary,
     sections: defaultArray(o.sections).map(
       offeringSectionFromOfferingSections_2

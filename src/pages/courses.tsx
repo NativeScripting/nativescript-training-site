@@ -30,6 +30,7 @@ export default class extends React.Component<CoursesPageProps, any> {
         <InnerBanner
           title="Courses"
           subtitle="NativeScript Training Course Catalog"
+          bannerImg="/images/course/banner.jpg"
         />
 
         <div className="course-search-form">

@@ -57,12 +57,19 @@ class CourseTemplate extends React.Component<
 
     return (
       <div>
-        <InnerBanner title="Courses" subtitle="Course details" />
+        <InnerBanner
+          title="Courses"
+          subtitle="Course details"
+          bannerImg="/images/course/banner.jpg"
+        />
         <div className="course-details section-margin-top section-margin-bottom">
           <div className="container">
             <div className="row">
               <div className="col-lg-9 col-md-8 col-xs-12 course-details-content">
-                <img src="images/course/21.jpg" alt="" />
+                <img
+                  src="/images/course/nativescript_angular_course_banner.png"
+                  alt=""
+                />
 
                 <CourseDetailsCard course={course} />
 
