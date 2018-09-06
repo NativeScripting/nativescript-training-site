@@ -14,12 +14,16 @@ export const CourseUpcomingSessions: React.StatelessComponent<
   const rowsHtml = sessions.map((session, i) => {
     return (
       <li key={i}>
-        <img src="images/course/19.jpg" alt="" />
-        <div className="date">
-          <strong>${session.price}</strong>
-          {dateFormat(session.dateStart)}
-        </div>
-        <a href={session.registerLink}>Register for Wash DC class</a>
+        {session.registerLink && (
+          <div>
+            <img src="/images/course/upcoming_sm_banner.jpg" alt="" />
+            <div className="date">
+              <strong>${session.price}</strong>
+              {dateFormat(session.dateStart)}
+            </div>
+            <a href={session.registerLink}>Register for Wash DC class</a>
+          </div>
+        )}
       </li>
     );
   });

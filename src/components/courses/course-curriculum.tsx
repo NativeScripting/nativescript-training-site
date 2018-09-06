@@ -27,7 +27,7 @@ export const CourseCurriculum: React.StatelessComponent<
       <div id="collapse1" className="panel-collapse collapse in">
         <div className="panel-body">
           <div className="course-preview-text">
-            <img src="/images/course/22.jpg" alt="" />
+            <img src="/images/course/curriculum_banner.jpg" alt="" />
 
             {rowsHtml}
           </div>
