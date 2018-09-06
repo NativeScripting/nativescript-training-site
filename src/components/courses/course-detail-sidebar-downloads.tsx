@@ -14,11 +14,18 @@ export const CourseDetailSidebarDownloadsBox: React.StatelessComponent<
     <div>
       {props.course.programFile && (
         <div className="sidebar-download">
+          <h5>Downloads</h5>
           <ul>
             <li>
               <a href={programFileHref} target="_blank">
-                <i className="fa fa-file-pdf-o" aria-hidden="true" /> Download
-                Program
+                <i className="fa fa-file-pdf-o" aria-hidden="true" />
+                This Course Program
+              </a>
+            </li>
+            <li>
+              <a href="/files/all-courses.pdf" target="_blank">
+                <i className="fa fa-file-pdf-o" aria-hidden="true" /> All Course
+                Programs
               </a>
             </li>
           </ul>
