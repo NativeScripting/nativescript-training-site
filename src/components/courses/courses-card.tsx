@@ -42,7 +42,7 @@ export const CoursesCard: React.StatelessComponent<CoursesCardProps> = (
             <li>
               <img src="" alt="" />
             </li>
-            <li>${course.price}</li>
+            <li />
           </ul>
           <h6>Duration : {course.length}</h6>
           <a
