@@ -33,9 +33,11 @@ export const SessionsCard: React.StatelessComponent<SessionsCardProps> = (
           </li>
         </ul>
         <p>{session.descriptionHtml}</p>
-        <a href={session.registerLink} className="theme-solid-button">
-          Join Now
-        </a>
+        {session.registerLink && (
+          <a href={session.registerLink} className="theme-solid-button">
+            Join Now
+          </a>
+        )}
       </div>
       <div className="col-md-5 col-sm-6 col-xs-12">
         <img

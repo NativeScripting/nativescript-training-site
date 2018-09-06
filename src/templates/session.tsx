@@ -134,12 +134,14 @@ class SessionTemplate extends React.Component<
                         {session.timeStart} - {session.timeEnd}
                       </li>
                     </ul>
-                    <a
-                      href={session.registerLink}
-                      className="theme-solid-button float-right"
-                    >
-                      Join Now
-                    </a>
+                    {session.registerLink && (
+                      <a
+                        href={session.registerLink}
+                        className="theme-solid-button float-right"
+                      >
+                        Join Now
+                      </a>
+                    )}
                   </div>
 
                   <p
