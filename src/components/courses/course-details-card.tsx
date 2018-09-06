@@ -21,7 +21,7 @@ export const CourseDetailsCard: React.StatelessComponent<
           <li>
             <i className="flaticon-book" />
           </li>
-          <li />
+          <li>{course.label}</li>
         </ul>
       </div>
 

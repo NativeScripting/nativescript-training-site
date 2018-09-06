@@ -78,6 +78,7 @@ export const coursesPageQuery = graphql`
           title
           length
           price
+          label
           audience {
             title
           }
