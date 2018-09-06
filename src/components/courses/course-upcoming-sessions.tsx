@@ -11,15 +11,15 @@ export const CourseUpcomingSessions: React.StatelessComponent<
 > = (props: CourseUpcomingSessionsProps) => {
   const sessions = props.sessions;
 
-  const rowsHtml = sessions.map((c, i) => {
+  const rowsHtml = sessions.map((session, i) => {
     return (
       <li key={i}>
         <img src="images/course/19.jpg" alt="" />
         <div className="date">
-          <strong>Free</strong>
-          {dateFormat(c.dateStart)}
+          <strong>${session.price}</strong>
+          {dateFormat(session.dateStart)}
         </div>
-        <a href={c.registerLink}>Register for Wash DC class</a>
+        <a href={session.registerLink}>Register for Wash DC class</a>
       </li>
     );
   });
@@ -27,7 +27,15 @@ export const CourseUpcomingSessions: React.StatelessComponent<
   return (
     <div className="sidebar-widget sidebar-post-data">
       <h5>Upcoming Offerings</h5>
-      <ul>{rowsHtml}</ul>
+
+      {props.sessions.length > 0 && <ul>{rowsHtml}</ul>}
+      {!(props.sessions.length > 0) && (
+        <p>
+          There are no public sessions scheduled for this course at the moment.
+          Please <a href="/contact">get in touch</a> with us about arranging a
+          private session.
+        </p>
+      )}
     </div>
   );
 };
