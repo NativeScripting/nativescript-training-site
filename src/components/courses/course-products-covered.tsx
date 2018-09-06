@@ -13,7 +13,7 @@ export const CourseProductsCovered: React.StatelessComponent<
   const rowsHtml = course.products.map((c, i) => {
     return (
       <li key={i}>
-        <a href="">{c}</a>
+        <a>{c}</a>
       </li>
     );
   });
