@@ -17,6 +17,10 @@ import {
 } from '../domain/converters';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
 import { monthNameFromDate, dateFormat } from '../util/date-utils';
+import {
+  EMAIL_TRAINING_NUVIOUS,
+  CONST_PHONE_NUMBER,
+} from '../constants/constants';
 
 interface SessionTemplateProps {
   data: {
@@ -102,6 +106,8 @@ class SessionTemplate extends React.Component<
     ];
 
     const pageTitle = `${session.title} | NativeScripting`;
+    const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email`;
+    const telLink = `tel:${CONST_PHONE_NUMBER}`;
 
     return (
       <div>
@@ -246,8 +252,12 @@ class SessionTemplate extends React.Component<
                         <li>
                           <i className="fa fa-phone" aria-hidden="true" />
                         </li>
-                        <li>+1-855-656-6884</li>
-                        <li>training@nuvious.com</li>
+                        <li>
+                          <a href={telLink}>+{CONST_PHONE_NUMBER}</a>
+                        </li>
+                        <li>
+                          <a href={mailtoLink}>{EMAIL_TRAINING_NUVIOUS}</a>
+                        </li>
                       </ul>
                     </div>
                     <div className="col-md-6 col-xs-12">

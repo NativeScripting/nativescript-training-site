@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import { Offering, Course } from '../../../domain/models';
 import { MainNav } from '../menu/main-nav';
 import { getNSTrainingLogo } from '../svg-logos/ns-training1';
+import { CONST_PHONE_NUMBER } from '../../../constants/constants';
 
 interface HeaderProps {
   siteName: string;
@@ -22,8 +23,9 @@ export const Header: React.StatelessComponent<HeaderProps> = (
               <ul>
                 <li>
                   <a href="#">
-                    <i className="fa fa-phone" aria-hidden="true" />{' '}
-                    +1-855-656-6884
+                    <i className="fa fa-phone" aria-hidden="true" /> +{
+                      CONST_PHONE_NUMBER
+                    }
                   </a>
                 </li>
               </ul>

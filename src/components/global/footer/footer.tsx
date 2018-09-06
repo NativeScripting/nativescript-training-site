@@ -5,6 +5,7 @@ import { NativeScriptingLogo } from '../svg-logos/nativescripting';
 import { NStudioLogo } from '../svg-logos/nstudio';
 import { NuviousLogo } from '../svg-logos/nuvious';
 import { getNSTrainingLogo } from '../svg-logos/ns-training1';
+import { PHYSICAL_ADDRESS_ONE_LINE } from '../../../constants/constants';
 
 interface FooterProps {
   siteName: string;
@@ -65,8 +66,8 @@ export const Footer: React.StatelessComponent<FooterProps> = (
                   EST
                 </li>
                 <li>
-                  <i className="flaticon-map-line" /> 2817 Spencer Rd. Chevy
-                  Chase, MD 20815, United States
+                  <i className="flaticon-map-line" />{' '}
+                  {PHYSICAL_ADDRESS_ONE_LINE}
                 </li>
               </ul>
             </div>

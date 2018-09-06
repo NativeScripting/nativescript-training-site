@@ -1,11 +1,19 @@
 import * as React from 'react';
 import { ContactPageForm } from './contact-page-form';
+import {
+  PHYSICAL_ADDRESS_ONE_LINE,
+  EMAIL_TRAINING_NUVIOUS,
+  CONST_PHONE_NUMBER,
+} from '../../constants/constants';
 
 interface ContactComponentProps {}
 
 export const ContactComponent: React.StatelessComponent<
   ContactComponentProps
 > = (props: ContactComponentProps) => {
+  const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email`;
+  const telLink = `tel:${CONST_PHONE_NUMBER}`;
+
   return (
     <div className="contact-page">
       <div className="container">
@@ -21,18 +29,16 @@ export const ContactComponent: React.StatelessComponent<
               <div className="contact-address">
                 <ul className="address">
                   <li>
-                    <i className="flaticon-map-bold" /> 2817 Spencer Rd. Chevy
-                    Chase, MD 20815, United States
+                    <i className="flaticon-map-bold" />{' '}
+                    {PHYSICAL_ADDRESS_ONE_LINE}
                   </li>
                   <li>
                     <i className="flaticon-email" />{' '}
-                    <a href="mailto:training@nuvious.com?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email">
-                      training@nuvious.com
-                    </a>
+                    <a href={mailtoLink}>{EMAIL_TRAINING_NUVIOUS}</a>
                   </li>
                   <li>
                     <i className="flaticon-call" />
-                    <a href="tel:1-855-656-6884">+1-855-656-6884</a>
+                    <a href={telLink}>+{CONST_PHONE_NUMBER}</a>
                   </li>
                   <li>
                     <i className="fa fa-calendar" />
