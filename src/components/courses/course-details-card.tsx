@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Course } from '../../domain/models';
+import { Course, Session } from '../../domain/models';
 
 interface CourseDetailsCardProps {
   course: Course;
+  nextSession: Session;
 }
 
 export const CourseDetailsCard: React.StatelessComponent<
@@ -20,7 +21,7 @@ export const CourseDetailsCard: React.StatelessComponent<
           <li>
             <i className="flaticon-book" />
           </li>
-          <li>${course.price}</li>
+          <li />
         </ul>
       </div>
 
@@ -50,9 +51,14 @@ export const CourseDetailsCard: React.StatelessComponent<
             </ul>
           </li>
         </ul>
-        <a href="#" className="float-right theme-line-button">
-          Join Now
-        </a>
+        {props.nextSession && (
+          <a
+            href={props.nextSession.registerLink}
+            className="float-right theme-line-button"
+          >
+            Join Now
+          </a>
+        )}
       </div>
     </div>
   );

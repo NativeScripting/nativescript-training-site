@@ -45,6 +45,7 @@ class CourseTemplate extends React.Component<
       .map(s => {
         return sessionFromSessionsJsonEdge(s, [], [], []);
       });
+    const [nextSession] = sessions;
 
     const title = this.props.data.courseConnection.title;
     const breadCrumbs = [
@@ -71,7 +72,7 @@ class CourseTemplate extends React.Component<
                   alt=""
                 />
 
-                <CourseDetailsCard course={course} />
+                <CourseDetailsCard course={course} nextSession={nextSession} />
 
                 <div className="course-description">
                   <h5>COURSE DESCRIPTION</h5>
@@ -162,6 +163,7 @@ export const coursePageQuery = graphql`
           id
           courseId
           dateStart
+          price
           registerLink
         }
       }
