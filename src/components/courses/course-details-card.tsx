@@ -56,7 +56,7 @@ export const CourseDetailsCard: React.StatelessComponent<
             href={props.nextSession.registerLink}
             className="float-right theme-line-button"
           >
-            Join Now
+            Register for Next Session
           </a>
         )}
       </div>

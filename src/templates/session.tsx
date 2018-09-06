@@ -139,7 +139,7 @@ class SessionTemplate extends React.Component<
                         href={session.registerLink}
                         className="theme-solid-button float-right"
                       >
-                        Join Now
+                        Register Now
                       </a>
                     )}
                   </div>
