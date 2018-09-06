@@ -90,8 +90,6 @@ class CourseTemplate extends React.Component<
                 <div className="course-panel">
                   <div className="panel-group theme-accordion" id="accordion">
                     <CourseCurriculum course={course} />
-
-                    <CourseInstructors course={course} />
                   </div>
                 </div>
               </div>
