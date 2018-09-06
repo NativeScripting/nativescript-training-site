@@ -25,7 +25,10 @@ export const ContactComponent: React.StatelessComponent<
                     Chase, MD 20815, United States
                   </li>
                   <li>
-                    <i className="flaticon-email" /> training@nuvious.com
+                    <i className="flaticon-email" />{' '}
+                    <a href="mailto:training@nuvious.com?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email">
+                      training@nuvious.com
+                    </a>
                   </li>
                   <li>
                     <i className="flaticon-call" /> +1-855-656-6884
