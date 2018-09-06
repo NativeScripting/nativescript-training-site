@@ -22,6 +22,8 @@ interface HtmlProps {
 
 // Use `module.exports` to be compliante with `webpack-require` import method
 module.exports = React.createClass<HtmlProps, void>({
+  componentDidMount() {},
+
   render() {
     const head = Helmet.rewind();
 
@@ -90,6 +92,20 @@ module.exports = React.createClass<HtmlProps, void>({
           <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
 
           {css}
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-98718768-2"
+          />
+          <script>
+            {`
+      window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-98718768-2');
+  `}
+          </script>
         </head>
         <body>
           <div
