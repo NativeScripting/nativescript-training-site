@@ -31,7 +31,8 @@ export const ContactComponent: React.StatelessComponent<
                     </a>
                   </li>
                   <li>
-                    <i className="flaticon-call" /> +1-855-656-6884
+                    <i className="flaticon-call" />
+                    <a href="tel:1-855-656-6884">+1-855-656-6884</a>
                   </li>
                   <li>
                     <i className="fa fa-calendar" />
