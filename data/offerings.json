@@ -3,6 +3,7 @@
     "id": "public",
     "order": 1,
     "title": "Public Open Enrollment Classes",
+    "subtitle": "Learn and Interact with Local Developers",
     "img": "/images/training/public.jpg",
     "imgSmall": "/images/training/sm_public.jpg",
     "icon": "flaticon-exam",
@@ -16,19 +17,19 @@
         "id": "1",
         "title": "What Do You Get?",
         "contentHtml":
-          "A typical day involves lectures, demos and hands on lab time. Throughout class students are encouraged to ask questions and bring real world experiences to the instructor. Each lecture is filled with multiple instructor led demos so students can see what is being presented in action. At the completion of each lecture, students are given ample time to complete a step-by-step hands-on lab that offers hands on experience. The manual each student receives on the first day includes a copy of all the slides from the lectures as well as the hands-on lab. Students are free to take notes in the manual as the manuals are for the students to keep. In addition, most classes contain an associated ZIP file that includes sample code, utilities and other great assets students use throughout the class (such as in the hands-on labs)."
+          "<p>A typical day involves lectures, demos and hands on lab time. Throughout class students are encouraged to ask questions and bring real world experiences to the instructor. Each lecture is filled with multiple instructor led demos so students can see what is being presented in action. At the completion of each lecture, students are given ample time to complete a step-by-step hands-on lab that offers hands on experience. The manual each student receives on the first day includes a copy of all the slides from the lectures as well as the hands-on lab. Students are free to take notes in the manual as the manuals are for the students to keep. In addition, most classes contain an associated ZIP file that includes sample code, utilities and other great assets students use throughout the class (such as in the hands-on labs).</p>"
       },
       {
         "id": "2",
         "title": "Have a limited travel budget?",
         "contentHtml":
-          "What if you want to attend one of our classes but you cannot make it in person? That's OK. We understand that traveling to a location is not for all budgets, and we use the latest online learning technology to bring the same training to you with out Remote Classroom Instruction (RCI). This is designed to bring the benefits of traditional instructor-led training to convenient locations on a predictable schedule. Learn more about Remote Classroom Instruction."
+          "<p>What if you want to attend one of our classes but you cannot make it in person? That's OK. We understand that traveling to a location is not for all budgets, and we use the latest online learning technology to bring the same training to you with out Remote Classroom Instruction (RCI). This is designed to bring the benefits of traditional instructor-led training to convenient locations on a predictable schedule. Learn more about Remote Classroom Instruction.</p>"
       },
       {
         "id": "3",
         "title": "Need training now and can't wait for the next class?",
         "contentHtml":
-          "Take a look at our on-demand benefit! When you register for any NativeScript Training class and choose to participate in the on-demand option, we will immediately send you a links to the on-demand video version of the class."
+          "<p>Take a look at our on-demand benefit! When you register for any NativeScript Training class and choose to participate in the on-demand option, we will immediately send you a links to the on-demand video version of the class provided by our partner <a href=\"https://nativescripting.com\" target=\"_blank\">NativeScripting.com</a></p>"
       }
     ]
   },
@@ -36,6 +37,7 @@
     "id": "remote",
     "order": 2,
     "title": "Remote Classroom Instruction",
+    "subtitle": "The Most Convenient Option",
     "img": "/images/training/remote.jpg",
     "imgSmall": "/images/training/sm_remote.jpg",
     "icon": "flaticon-book4",
@@ -50,24 +52,25 @@
         "id": "1",
         "title": "What to Expect in an RCI Class?",
         "contentHtml":
-          "An RCI class is hands-on, instructor-led training. The training is live and interactive. Before the class begins, you will receive an electronic version of the course manual with slides and lab exercises. While you are working on lab exercises, you can share your screen with the instructor and get help if you run into trouble."
+          "<p>An RCI class is hands-on, instructor-led training. The training is live and interactive. Before the class begins, you will receive an electronic version of the course manual with slides and lab exercises. While you are working on lab exercises, you can share your screen with the instructor and get help if you run into trouble.</p>"
       },
       {
         "id": "2",
         "title": "What you'll be able to do?",
-        "contentHtml": ""
+        "contentHtml":
+          "<p><ul class=\"text-list\"><li>View the Instructor’s Presentation: Using Web conferencing tools, you are able to see the instructor’s desktop as he or she steps you through demonstrations or displays PowerPoint presentations.</li><li>Listen and Participate: Using voice over IP (VOIP) technology, you can listen to the instructor and participate, just as in a regular class!</li><li>Get help from the Instructor: Web conferencing software enables the instructor to access to your computer and view your desktop.</li><li>Have Face-to-Face Interaction: Web cameras are positioned in the classroom so you can view your instructor. And of course, if there are others attending at your location, you’ll be able to interact with those students.</li></ul></p>"
       },
       {
         "id": "3",
         "title": "How Does It Work?",
         "contentHtml":
-          "You’re probably familiar with web conferencing software that lets you meet and collaborate with colleagues in different locations. The same kind of software is used in delivering our RCI classes. Internet conferencing technology lets you to see what is happening on the instructor’s PC as they demonstrate how to use the course software. It’s also used to transmit other aspects of the instructor’s presentation such as PowerPoint slides, whiteboard work, and the instructor’s image on the web camera."
+          "<p>You’re probably familiar with web conferencing software that lets you meet and collaborate with colleagues in different locations. The same kind of software is used in delivering our RCI classes. Internet conferencing technology lets you to see what is happening on the instructor’s PC as they demonstrate how to use the course software. It’s also used to transmit other aspects of the instructor’s presentation such as PowerPoint slides, whiteboard work, and the instructor’s image on the web camera.</p>"
       },
       {
         "id": "4",
         "title": "Attend Class From Your Home or Office",
         "contentHtml":
-          "In most circumstances, it's possible to attend one of our RCI classes from a location outside of our training centers such as your home or office. If participating from your home or office is right for you, we'll provide you with all the information you need to get set up for your class. Typical setup time is less than 20 minutes -- that's time you'll get back by not having to commute to the class! Another major advantage of attending class from home is 24/7 access to class labs."
+          "<p>In most circumstances, it's possible to attend one of our RCI classes from a location outside of our training centers such as your home or office. If participating from your home or office is right for you, we'll provide you with all the information you need to get set up for your class. Typical setup time is less than 20 minutes -- that's time you'll get back by not having to commute to the class! Another major advantage of attending class from home is 24/7 access to class labs.</p><p>At a minimum, you'll need the following components:</p><ul class=\"text-list\"><li>A computer running Windows 7/8 or Mac OS X 10.6 or later; if available, an additional computer may be used so that you can see the broadcast of the instructor presentation alongside of the classroom image that you'll be working on to perform the exercises and labs</li><li>A high speed Internet connection (DSL or faster)</li><li>A hands-free headset with head piece and microphone or a standalone microphone and computer speakers</li></ul>"
       }
     ]
   },
@@ -75,6 +78,7 @@
     "id": "private",
     "order": 3,
     "title": "Private Onsite Classes",
+    "subtitle": "We Train Your Team at Your Location",
     "img": "/images/training/private.jpg",
     "imgSmall": "/images/training/sm_private.jpg",
     "icon": "flaticon-book3",
@@ -88,20 +92,20 @@
         "id": "1",
         "title": "In these classes we literally bring the training to you!",
         "contentHtml":
-          "The class can be held in your training facilities or you can have your team show up with a bunch of laptops in a conference room or we can work together to find a local training facility... whatever works best for your organization. We'll bring the course manuals and provide the virtual machines for the labs... all you need to do is allocate some time for your employees to break away from their day job and focus on getting up to speed on JavaScript, TypeScript, and NativeScript technologies."
+          "<p>The class can be held in your training facilities or you can have your team show up with a bunch of laptops in a conference room or we can work together to find a local training facility... whatever works best for your organization. We'll bring the course manuals and provide the virtual machines for the labs... all you need to do is allocate some time for your employees to break away from their day job and focus on getting up to speed on JavaScript, TypeScript, and NativeScript technologies.<p>"
       },
       {
         "id": "2",
         "title":
           "We'll work with your organization to make sure your team gets the most out of our classes.",
         "contentHtml":
-          "Your team will have our instructor's complete focus. We have been told on multiple occasions having a NativeScript Training instructor onsite for the week advanced internal projects by weeks, even months! Once our instructors understand the projects your team is working on, they can add examples to the presentation that make the material contextually relevant to the students."
+          "<p>Your team will have our instructor's complete focus. We have been told on multiple occasions having a NativeScript Training instructor onsite for the week advanced internal projects by weeks, even months! Once our instructors understand the projects your team is working on, they can add examples to the presentation that make the material contextually relevant to the students.</p>"
       },
       {
         "id": "3",
         "title": "Let's get started!",
         "contentHtml":
-          "Complete the form below to contact a member of our sales team. We'll get back to you quickly and provide information about our flat, no surprises onsite pricing. It's best to contact us as soon as you are ready. We typically need at least 30 days advance notice to set up a private class."
+          "<p>Complete the form below to contact a member of our sales team. We'll get back to you quickly and provide information about our flat, no surprises onsite pricing. It's best to contact us as soon as you are ready. We typically need at least 30 days advance notice to set up a private class.</p>"
       }
     ]
   },
@@ -109,6 +113,7 @@
     "id": "discounts",
     "order": 4,
     "title": "Discounts and Promotions",
+    "subtitle": "We Offer these Discount Options",
     "img": "",
     "imgSmall": "/images/training/public.jpg",
     "icon": "",
@@ -121,19 +126,19 @@
         "id": "1",
         "title": "Group Discount for Open Enrollments",
         "contentHtml":
-          "Available when 2 or more employees from the same company enroll in the same offering and we'll extend to you a 15% discount!"
+          "<p>Available when 2 or more employees from the same company enroll in the same offering and we'll extend to you a 15% discount!</p>"
       },
       {
         "id": "2",
         "title": "Early Bird Discount",
         "contentHtml":
-          "This discount is available to students who enroll in a class 30 days or more in advance of a NativeScript Training offering. Discount is based on the date of payment for the class."
+          "<p>This discount is available to students who enroll in a class 30 days or more in advance of a NativeScript Training offering. Discount is based on the date of payment for the class.</p>"
       },
       {
         "id": "3",
         "title": "Non-profit Discount",
         "contentHtml":
-          "Discounts for the employees of non-profit organizations are handled on a case by case basis. Please contact our sales staff for details."
+          "<p>Discounts for the employees of non-profit organizations are handled on a case by case basis. Please contact our sales staff for details.</p>"
       }
     ]
   }

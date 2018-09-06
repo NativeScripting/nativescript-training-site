@@ -17,8 +17,8 @@ export interface RootQueryType {
   allTrainersJson?: TrainersJsonConnection | null /* Connection to all TrainersJson nodes */;
   allLocationsJson?: LocationsJsonConnection | null /* Connection to all LocationsJson nodes */;
   allSessionsJson?: SessionsJsonConnection | null /* Connection to all SessionsJson nodes */;
-  allOfferingsJson?: OfferingsJsonConnection | null /* Connection to all OfferingsJson nodes */;
   allCoursesJson?: CoursesJsonConnection | null /* Connection to all CoursesJson nodes */;
+  allOfferingsJson?: OfferingsJsonConnection | null /* Connection to all OfferingsJson nodes */;
   sitePage?: SitePage | null;
   sitePlugin?: SitePlugin | null;
   site?: Site | null;
@@ -27,8 +27,8 @@ export interface RootQueryType {
   trainersJson?: TrainersJson | null;
   locationsJson?: LocationsJson | null;
   sessionsJson?: SessionsJson | null;
-  offeringsJson?: OfferingsJson | null;
   coursesJson?: CoursesJson | null;
+  offeringsJson?: OfferingsJson | null;
 }
 /* A connection to a list of items. */
 export interface SitePageConnection {
@@ -370,6 +370,7 @@ export interface OfferingsJson extends Node {
   children?: Node[] | null /* The children of this node. */;
   order?: number | null;
   title?: string | null;
+  subtitle?: string | null;
   img?: string | null;
   imgSmall?: string | null;
   icon?: string | null;
@@ -561,34 +562,6 @@ export interface sessionsJsonGroupConnectionEdge {
   previous?: SessionsJson | null /* The previous edge in the connection */;
 }
 /* A connection to a list of items. */
-export interface OfferingsJsonConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: OfferingsJsonEdge[] | null /* A list of edges. */;
-  totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: offeringsJsonGroupConnectionConnection[] | null;
-}
-/* An edge in a connection. */
-export interface OfferingsJsonEdge {
-  node?: OfferingsJson | null /* The item at the end of the edge */;
-  next?: OfferingsJson | null /* The next edge in the connection */;
-  previous?: OfferingsJson | null /* The previous edge in the connection */;
-}
-/* A connection to a list of items. */
-export interface offeringsJsonGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: offeringsJsonGroupConnectionEdge[] | null /* A list of edges. */;
-  field?: string | null;
-  fieldValue?: string | null;
-  totalCount?: number | null;
-}
-/* An edge in a connection. */
-export interface offeringsJsonGroupConnectionEdge {
-  node?: OfferingsJson | null /* The item at the end of the edge */;
-  next?: OfferingsJson | null /* The next edge in the connection */;
-  previous?: OfferingsJson | null /* The previous edge in the connection */;
-}
-/* A connection to a list of items. */
 export interface CoursesJsonConnection {
   pageInfo: PageInfo /* Information to aid in pagination. */;
   edges?: CoursesJsonEdge[] | null /* A list of edges. */;
@@ -615,6 +588,34 @@ export interface coursesJsonGroupConnectionEdge {
   node?: CoursesJson | null /* The item at the end of the edge */;
   next?: CoursesJson | null /* The next edge in the connection */;
   previous?: CoursesJson | null /* The previous edge in the connection */;
+}
+/* A connection to a list of items. */
+export interface OfferingsJsonConnection {
+  pageInfo: PageInfo /* Information to aid in pagination. */;
+  edges?: OfferingsJsonEdge[] | null /* A list of edges. */;
+  totalCount?: number | null;
+  distinct?: string[] | null;
+  group?: offeringsJsonGroupConnectionConnection[] | null;
+}
+/* An edge in a connection. */
+export interface OfferingsJsonEdge {
+  node?: OfferingsJson | null /* The item at the end of the edge */;
+  next?: OfferingsJson | null /* The next edge in the connection */;
+  previous?: OfferingsJson | null /* The previous edge in the connection */;
+}
+/* A connection to a list of items. */
+export interface offeringsJsonGroupConnectionConnection {
+  pageInfo: PageInfo /* Information to aid in pagination. */;
+  edges?: offeringsJsonGroupConnectionEdge[] | null /* A list of edges. */;
+  field?: string | null;
+  fieldValue?: string | null;
+  totalCount?: number | null;
+}
+/* An edge in a connection. */
+export interface offeringsJsonGroupConnectionEdge {
+  node?: OfferingsJson | null /* The item at the end of the edge */;
+  next?: OfferingsJson | null /* The next edge in the connection */;
+  previous?: OfferingsJson | null /* The previous edge in the connection */;
 }
 /* Node of type Site */
 export interface Site extends Node {
@@ -2317,148 +2318,6 @@ export interface sessionsJsonConnectionInternalOwnerQueryString_2 {
   glob?: string | null;
 }
 
-export interface offeringsJsonConnectionSort {
-  fields: OfferingsJsonConnectionSortByFieldsEnum[];
-  order?: offeringsJsonConnectionSortOrderValues | null;
-}
-/* Filter connection on its fields */
-export interface filterOfferingsJson {
-  id?: offeringsJsonConnectionIdQueryString_2 | null;
-  order?: offeringsJsonConnectionOrderQueryInteger_2 | null;
-  title?: offeringsJsonConnectionTitleQueryString_2 | null;
-  img?: offeringsJsonConnectionImgQueryString_2 | null;
-  imgSmall?: offeringsJsonConnectionImgSmallQueryString_2 | null;
-  icon?: offeringsJsonConnectionIconQueryString_2 | null;
-  summary?: offeringsJsonConnectionSummaryQueryString_2 | null;
-  introHtml?: offeringsJsonConnectionIntroHtmlQueryString_2 | null;
-  descriptionHtml?: offeringsJsonConnectionDescriptionHtmlQueryString_2 | null;
-  sections?: offeringsJsonConnectionSectionsQueryList_2 | null;
-  internal?: offeringsJsonConnectionInternalInputObject_2 | null;
-}
-
-export interface offeringsJsonConnectionIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionOrderQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface offeringsJsonConnectionTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionImgQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionImgSmallQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionIconQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionSummaryQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionIntroHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionDescriptionHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionSectionsQueryList_2 {
-  in?: offeringsJsonConnectionSectionsInputObject_2[] | null;
-}
-
-export interface offeringsJsonConnectionSectionsInputObject_2 {
-  id?: offeringsJsonConnectionSectionsIdQueryString_2 | null;
-  title?: offeringsJsonConnectionSectionsTitleQueryString_2 | null;
-  contentHtml?: offeringsJsonConnectionSectionsContentHtmlQueryString_2 | null;
-}
-
-export interface offeringsJsonConnectionSectionsIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionSectionsTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionSectionsContentHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionInternalInputObject_2 {
-  contentDigest?: offeringsJsonConnectionInternalContentDigestQueryString_2 | null;
-  type?: offeringsJsonConnectionInternalTypeQueryString_2 | null;
-  owner?: offeringsJsonConnectionInternalOwnerQueryString_2 | null;
-}
-
-export interface offeringsJsonConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionInternalTypeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonConnectionInternalOwnerQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface coursesJsonConnectionSort {
   fields: CoursesJsonConnectionSortByFieldsEnum[];
   order?: coursesJsonConnectionSortOrderValues | null;
@@ -2680,6 +2539,156 @@ export interface coursesJsonConnectionInternalTypeQueryString_2 {
 }
 
 export interface coursesJsonConnectionInternalOwnerQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionSort {
+  fields: OfferingsJsonConnectionSortByFieldsEnum[];
+  order?: offeringsJsonConnectionSortOrderValues | null;
+}
+/* Filter connection on its fields */
+export interface filterOfferingsJson {
+  id?: offeringsJsonConnectionIdQueryString_2 | null;
+  order?: offeringsJsonConnectionOrderQueryInteger_2 | null;
+  title?: offeringsJsonConnectionTitleQueryString_2 | null;
+  subtitle?: offeringsJsonConnectionSubtitleQueryString_2 | null;
+  img?: offeringsJsonConnectionImgQueryString_2 | null;
+  imgSmall?: offeringsJsonConnectionImgSmallQueryString_2 | null;
+  icon?: offeringsJsonConnectionIconQueryString_2 | null;
+  summary?: offeringsJsonConnectionSummaryQueryString_2 | null;
+  introHtml?: offeringsJsonConnectionIntroHtmlQueryString_2 | null;
+  descriptionHtml?: offeringsJsonConnectionDescriptionHtmlQueryString_2 | null;
+  sections?: offeringsJsonConnectionSectionsQueryList_2 | null;
+  internal?: offeringsJsonConnectionInternalInputObject_2 | null;
+}
+
+export interface offeringsJsonConnectionIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionOrderQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface offeringsJsonConnectionTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionSubtitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionImgQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionImgSmallQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionIconQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionSummaryQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionIntroHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionDescriptionHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionSectionsQueryList_2 {
+  in?: offeringsJsonConnectionSectionsInputObject_2[] | null;
+}
+
+export interface offeringsJsonConnectionSectionsInputObject_2 {
+  id?: offeringsJsonConnectionSectionsIdQueryString_2 | null;
+  title?: offeringsJsonConnectionSectionsTitleQueryString_2 | null;
+  contentHtml?: offeringsJsonConnectionSectionsContentHtmlQueryString_2 | null;
+}
+
+export interface offeringsJsonConnectionSectionsIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionSectionsTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionSectionsContentHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionInternalInputObject_2 {
+  contentDigest?: offeringsJsonConnectionInternalContentDigestQueryString_2 | null;
+  type?: offeringsJsonConnectionInternalTypeQueryString_2 | null;
+  owner?: offeringsJsonConnectionInternalOwnerQueryString_2 | null;
+}
+
+export interface offeringsJsonConnectionInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonConnectionInternalOwnerQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4263,129 +4272,6 @@ export interface sessionsJsonInternalOwnerQueryString_2 {
   glob?: string | null;
 }
 
-export interface offeringsJsonIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonOrderQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface offeringsJsonTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonImgQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonImgSmallQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonIconQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonSummaryQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonIntroHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonDescriptionHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonSectionsQueryList_2 {
-  in?: offeringsJsonSectionsInputObject_2[] | null;
-}
-
-export interface offeringsJsonSectionsInputObject_2 {
-  id?: offeringsJsonSectionsIdQueryString_2 | null;
-  title?: offeringsJsonSectionsTitleQueryString_2 | null;
-  contentHtml?: offeringsJsonSectionsContentHtmlQueryString_2 | null;
-}
-
-export interface offeringsJsonSectionsIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonSectionsTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonSectionsContentHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonInternalInputObject_2 {
-  contentDigest?: offeringsJsonInternalContentDigestQueryString_2 | null;
-  type?: offeringsJsonInternalTypeQueryString_2 | null;
-  owner?: offeringsJsonInternalOwnerQueryString_2 | null;
-}
-
-export interface offeringsJsonInternalContentDigestQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonInternalTypeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface offeringsJsonInternalOwnerQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface coursesJsonIdQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -4587,6 +4473,136 @@ export interface coursesJsonInternalOwnerQueryString_2 {
   regex?: string | null;
   glob?: string | null;
 }
+
+export interface offeringsJsonIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonOrderQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface offeringsJsonTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonSubtitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonImgQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonImgSmallQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonIconQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonSummaryQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonIntroHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonDescriptionHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonSectionsQueryList_2 {
+  in?: offeringsJsonSectionsInputObject_2[] | null;
+}
+
+export interface offeringsJsonSectionsInputObject_2 {
+  id?: offeringsJsonSectionsIdQueryString_2 | null;
+  title?: offeringsJsonSectionsTitleQueryString_2 | null;
+  contentHtml?: offeringsJsonSectionsContentHtmlQueryString_2 | null;
+}
+
+export interface offeringsJsonSectionsIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonSectionsTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonSectionsContentHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonInternalInputObject_2 {
+  contentDigest?: offeringsJsonInternalContentDigestQueryString_2 | null;
+  type?: offeringsJsonInternalTypeQueryString_2 | null;
+  owner?: offeringsJsonInternalOwnerQueryString_2 | null;
+}
+
+export interface offeringsJsonInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface offeringsJsonInternalOwnerQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
 export interface AllSitePageRootQueryTypeArgs {
   skip?: number | null;
   limit?: number | null;
@@ -4629,17 +4645,17 @@ export interface AllSessionsJsonRootQueryTypeArgs {
   sort?: sessionsJsonConnectionSort | null;
   filter?: filterSessionsJson | null;
 }
-export interface AllOfferingsJsonRootQueryTypeArgs {
-  skip?: number | null;
-  limit?: number | null;
-  sort?: offeringsJsonConnectionSort | null;
-  filter?: filterOfferingsJson | null;
-}
 export interface AllCoursesJsonRootQueryTypeArgs {
   skip?: number | null;
   limit?: number | null;
   sort?: coursesJsonConnectionSort | null;
   filter?: filterCoursesJson | null;
+}
+export interface AllOfferingsJsonRootQueryTypeArgs {
+  skip?: number | null;
+  limit?: number | null;
+  sort?: offeringsJsonConnectionSort | null;
+  filter?: filterOfferingsJson | null;
 }
 export interface SitePageRootQueryTypeArgs {
   layout?: sitePageLayoutQueryString | null;
@@ -4788,19 +4804,6 @@ export interface SessionsJsonRootQueryTypeArgs {
   registerLink?: sessionsJsonRegisterLinkQueryString_2 | null;
   internal?: sessionsJsonInternalInputObject_2 | null;
 }
-export interface OfferingsJsonRootQueryTypeArgs {
-  id?: offeringsJsonIdQueryString_2 | null;
-  order?: offeringsJsonOrderQueryInteger_2 | null;
-  title?: offeringsJsonTitleQueryString_2 | null;
-  img?: offeringsJsonImgQueryString_2 | null;
-  imgSmall?: offeringsJsonImgSmallQueryString_2 | null;
-  icon?: offeringsJsonIconQueryString_2 | null;
-  summary?: offeringsJsonSummaryQueryString_2 | null;
-  introHtml?: offeringsJsonIntroHtmlQueryString_2 | null;
-  descriptionHtml?: offeringsJsonDescriptionHtmlQueryString_2 | null;
-  sections?: offeringsJsonSectionsQueryList_2 | null;
-  internal?: offeringsJsonInternalInputObject_2 | null;
-}
 export interface CoursesJsonRootQueryTypeArgs {
   id?: coursesJsonIdQueryString_2 | null;
   code?: coursesJsonCodeQueryString_2 | null;
@@ -4819,6 +4822,20 @@ export interface CoursesJsonRootQueryTypeArgs {
   audience?: coursesJsonAudienceQueryList_2 | null;
   curriculum?: coursesJsonCurriculumQueryList_2 | null;
   internal?: coursesJsonInternalInputObject_2 | null;
+}
+export interface OfferingsJsonRootQueryTypeArgs {
+  id?: offeringsJsonIdQueryString_2 | null;
+  order?: offeringsJsonOrderQueryInteger_2 | null;
+  title?: offeringsJsonTitleQueryString_2 | null;
+  subtitle?: offeringsJsonSubtitleQueryString_2 | null;
+  img?: offeringsJsonImgQueryString_2 | null;
+  imgSmall?: offeringsJsonImgSmallQueryString_2 | null;
+  icon?: offeringsJsonIconQueryString_2 | null;
+  summary?: offeringsJsonSummaryQueryString_2 | null;
+  introHtml?: offeringsJsonIntroHtmlQueryString_2 | null;
+  descriptionHtml?: offeringsJsonDescriptionHtmlQueryString_2 | null;
+  sections?: offeringsJsonSectionsQueryList_2 | null;
+  internal?: offeringsJsonInternalInputObject_2 | null;
 }
 export interface DistinctSitePageConnectionArgs {
   field?: sitePageDistinctEnum | null;
@@ -5100,14 +5117,6 @@ export interface GroupSessionsJsonConnectionArgs {
   limit?: number | null;
   field?: sessionsJsonGroupEnum | null;
 }
-export interface DistinctOfferingsJsonConnectionArgs {
-  field?: offeringsJsonDistinctEnum | null;
-}
-export interface GroupOfferingsJsonConnectionArgs {
-  skip?: number | null;
-  limit?: number | null;
-  field?: offeringsJsonGroupEnum | null;
-}
 export interface DistinctCoursesJsonConnectionArgs {
   field?: coursesJsonDistinctEnum | null;
 }
@@ -5115,6 +5124,14 @@ export interface GroupCoursesJsonConnectionArgs {
   skip?: number | null;
   limit?: number | null;
   field?: coursesJsonGroupEnum | null;
+}
+export interface DistinctOfferingsJsonConnectionArgs {
+  field?: offeringsJsonDistinctEnum | null;
+}
+export interface GroupOfferingsJsonConnectionArgs {
+  skip?: number | null;
+  limit?: number | null;
+  field?: offeringsJsonGroupEnum | null;
 }
 export interface PortSiteArgs {
   formatString?:
@@ -5727,62 +5744,6 @@ export enum sessionsJsonGroupEnum {
   internal___owner = 'internal___owner',
 }
 
-export enum OfferingsJsonConnectionSortByFieldsEnum {
-  id = 'id',
-  order = 'order',
-  title = 'title',
-  img = 'img',
-  imgSmall = 'imgSmall',
-  icon = 'icon',
-  summary = 'summary',
-  introHtml = 'introHtml',
-  descriptionHtml = 'descriptionHtml',
-  sections = 'sections',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
-}
-
-export enum offeringsJsonConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
-}
-
-export enum offeringsJsonDistinctEnum {
-  id = 'id',
-  order = 'order',
-  title = 'title',
-  img = 'img',
-  imgSmall = 'imgSmall',
-  icon = 'icon',
-  summary = 'summary',
-  introHtml = 'introHtml',
-  descriptionHtml = 'descriptionHtml',
-  sections = 'sections',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
-}
-
-export enum offeringsJsonGroupEnum {
-  id = 'id',
-  order = 'order',
-  title = 'title',
-  img = 'img',
-  imgSmall = 'imgSmall',
-  icon = 'icon',
-  summary = 'summary',
-  introHtml = 'introHtml',
-  descriptionHtml = 'descriptionHtml',
-  sections = 'sections',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
-}
-
 export enum CoursesJsonConnectionSortByFieldsEnum {
   id = 'id',
   code = 'code',
@@ -5851,6 +5812,65 @@ export enum coursesJsonGroupEnum {
   products = 'products',
   audience = 'audience',
   curriculum = 'curriculum',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum OfferingsJsonConnectionSortByFieldsEnum {
+  id = 'id',
+  order = 'order',
+  title = 'title',
+  subtitle = 'subtitle',
+  img = 'img',
+  imgSmall = 'imgSmall',
+  icon = 'icon',
+  summary = 'summary',
+  introHtml = 'introHtml',
+  descriptionHtml = 'descriptionHtml',
+  sections = 'sections',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum offeringsJsonConnectionSortOrderValues {
+  ASC = 'ASC',
+  DESC = 'DESC',
+}
+
+export enum offeringsJsonDistinctEnum {
+  id = 'id',
+  order = 'order',
+  title = 'title',
+  subtitle = 'subtitle',
+  img = 'img',
+  imgSmall = 'imgSmall',
+  icon = 'icon',
+  summary = 'summary',
+  introHtml = 'introHtml',
+  descriptionHtml = 'descriptionHtml',
+  sections = 'sections',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum offeringsJsonGroupEnum {
+  id = 'id',
+  order = 'order',
+  title = 'title',
+  subtitle = 'subtitle',
+  img = 'img',
+  imgSmall = 'imgSmall',
+  icon = 'icon',
+  summary = 'summary',
+  introHtml = 'introHtml',
+  descriptionHtml = 'descriptionHtml',
+  sections = 'sections',
   parent = 'parent',
   internal___contentDigest = 'internal___contentDigest',
   internal___type = 'internal___type',

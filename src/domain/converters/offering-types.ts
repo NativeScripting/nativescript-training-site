@@ -14,6 +14,7 @@ export function offeringFromOfferingsJson(o: OfferingsJson): Offering {
   const offering: Offering = {
     id: o.id,
     title: o.title,
+    subtitle: o.subtitle,
     order: o.order,
     introHtml: o.introHtml,
     descriptionHtml: o.descriptionHtml,

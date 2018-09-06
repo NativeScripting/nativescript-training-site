@@ -57,12 +57,11 @@ class OfferingTemplate extends React.Component<
                   <div className="image">
                     <img src={offering.img} alt="" />
                   </div>
+
                   <ul className="post-info">
-                    <li>20 March 2017</li>
-                    <li>By Admin R</li>
-                    <li>in English</li>
+                    <li> </li>
                   </ul>
-                  <h3>The Experience Of Studying In The USA</h3>
+                  <h3>{offering.subtitle}</h3>
                   <p
                     className="bold-text"
                     dangerouslySetInnerHTML={{ __html: offering.introHtml }}
@@ -74,18 +73,6 @@ class OfferingTemplate extends React.Component<
                     }}
                   />
                   {sectionsHtml}
-
-                  <ul className="text-list">
-                    <li>Money for your future</li>
-                    <li>Do you deserve a vacation?</li>
-                    <li>
-                      We partner with startups and companies, small and large
-                    </li>
-                    <li>
-                      Launching an attractive and scalable website quickly and
-                      affordably is important for modern{' '}
-                    </li>
-                  </ul>
                 </div>
 
                 {offering.id === 'private' && (
@@ -116,6 +103,7 @@ export const offeringPageQuery = graphql`
     offeringsConnection: offeringsJson(id: { eq: $offeringId }) {
       id
       title
+      subtitle
       img
       summary
       introHtml

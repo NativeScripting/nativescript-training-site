@@ -8,6 +8,7 @@ export interface Offering {
   icon: string;
   summary: string;
   title: string;
+  subtitle: string;
   introHtml: string;
   descriptionHtml: string;
   sections: OfferingSection[];
