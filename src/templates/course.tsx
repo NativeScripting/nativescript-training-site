@@ -13,6 +13,7 @@ import { CourseDetailsCard } from '../components/courses/course-details-card';
 import { CourseInstructors } from '../components/courses/course-instructors';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
 import { CourseDetailSidebarPrivateClassesBox } from '../components/courses/course-detail-sidebar-private/course-detail-sidebar-private';
+import { CourseDetailSidebarDownloadsBox } from '../components/courses/course-detail-sidebar-downloads';
 
 interface CourseTemplateProps {
   data: {
@@ -100,23 +101,7 @@ class CourseTemplate extends React.Component<
                 <CourseProductsCovered course={course} />
 
                 <CourseDetailSidebarPrivateClassesBox />
-
-                <div className="sidebar-download">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i className="fa fa-file-pdf-o" aria-hidden="true" />{' '}
-                        Download Program
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fa fa-file-pdf-o" aria-hidden="true" />{' '}
-                        Download Materials
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <CourseDetailSidebarDownloadsBox course={course} />
               </div>
             </div>
           </div>
@@ -137,6 +122,7 @@ export const coursePageQuery = graphql`
       length
       price
       subtitle
+      programFile
       flavors
       label
       descriptionHtml

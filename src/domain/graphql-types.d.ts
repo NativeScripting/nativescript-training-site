@@ -333,6 +333,7 @@ export interface CoursesJson extends Node {
   label?: string | null;
   title?: string | null;
   subtitle?: string | null;
+  programFile?: string | null;
   descriptionHtml?: string | null;
   prerequisites?: string | null;
   products?: products_2[] | null;
@@ -354,13 +355,7 @@ export interface curriculum_2 {
   title?: string | null;
   description?: string | null;
   lessonsHtml?: string | null;
-  topics?: topics_2[] | null;
   labsHtml?: string | null;
-}
-
-export interface topics_2 {
-  title?: string | null;
-  id?: number | null;
 }
 
 export interface internal_15 {
@@ -2480,6 +2475,7 @@ export interface filterCoursesJson {
   label?: coursesJsonConnectionLabelQueryString_2 | null;
   title?: coursesJsonConnectionTitleQueryString_2 | null;
   subtitle?: coursesJsonConnectionSubtitleQueryString_2 | null;
+  programFile?: coursesJsonConnectionProgramFileQueryString_2 | null;
   descriptionHtml?: coursesJsonConnectionDescriptionHtmlQueryString_2 | null;
   prerequisites?: coursesJsonConnectionPrerequisitesQueryString_2 | null;
   products?: coursesJsonConnectionProductsQueryList_2 | null;
@@ -2563,6 +2559,13 @@ export interface coursesJsonConnectionSubtitleQueryString_2 {
   glob?: string | null;
 }
 
+export interface coursesJsonConnectionProgramFileQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface coursesJsonConnectionDescriptionHtmlQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -2616,7 +2619,6 @@ export interface coursesJsonConnectionCurriculumInputObject_2 {
   title?: coursesJsonConnectionCurriculumTitleQueryString_2 | null;
   description?: coursesJsonConnectionCurriculumDescriptionQueryString_2 | null;
   lessonsHtml?: coursesJsonConnectionCurriculumLessonsHtmlQueryString_2 | null;
-  topics?: coursesJsonConnectionCurriculumTopicsQueryList_2 | null;
   labsHtml?: coursesJsonConnectionCurriculumLabsHtmlQueryString_2 | null;
 }
 
@@ -2648,31 +2650,6 @@ export interface coursesJsonConnectionCurriculumLessonsHtmlQueryString_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-}
-
-export interface coursesJsonConnectionCurriculumTopicsQueryList_2 {
-  in?: coursesJsonConnectionCurriculumTopicsInputObject_2[] | null;
-}
-
-export interface coursesJsonConnectionCurriculumTopicsInputObject_2 {
-  title?: coursesJsonConnectionCurriculumTopicsTitleQueryString_2 | null;
-  id?: coursesJsonConnectionCurriculumTopicsIdQueryInteger_2 | null;
-}
-
-export interface coursesJsonConnectionCurriculumTopicsTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionCurriculumTopicsIdQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
 }
 
 export interface coursesJsonConnectionCurriculumLabsHtmlQueryString_2 {
@@ -4484,6 +4461,13 @@ export interface coursesJsonSubtitleQueryString_2 {
   glob?: string | null;
 }
 
+export interface coursesJsonProgramFileQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface coursesJsonDescriptionHtmlQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -4537,7 +4521,6 @@ export interface coursesJsonCurriculumInputObject_2 {
   title?: coursesJsonCurriculumTitleQueryString_2 | null;
   description?: coursesJsonCurriculumDescriptionQueryString_2 | null;
   lessonsHtml?: coursesJsonCurriculumLessonsHtmlQueryString_2 | null;
-  topics?: coursesJsonCurriculumTopicsQueryList_2 | null;
   labsHtml?: coursesJsonCurriculumLabsHtmlQueryString_2 | null;
 }
 
@@ -4569,31 +4552,6 @@ export interface coursesJsonCurriculumLessonsHtmlQueryString_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-}
-
-export interface coursesJsonCurriculumTopicsQueryList_2 {
-  in?: coursesJsonCurriculumTopicsInputObject_2[] | null;
-}
-
-export interface coursesJsonCurriculumTopicsInputObject_2 {
-  title?: coursesJsonCurriculumTopicsTitleQueryString_2 | null;
-  id?: coursesJsonCurriculumTopicsIdQueryInteger_2 | null;
-}
-
-export interface coursesJsonCurriculumTopicsTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonCurriculumTopicsIdQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
 }
 
 export interface coursesJsonCurriculumLabsHtmlQueryString_2 {
@@ -4854,6 +4812,7 @@ export interface CoursesJsonRootQueryTypeArgs {
   label?: coursesJsonLabelQueryString_2 | null;
   title?: coursesJsonTitleQueryString_2 | null;
   subtitle?: coursesJsonSubtitleQueryString_2 | null;
+  programFile?: coursesJsonProgramFileQueryString_2 | null;
   descriptionHtml?: coursesJsonDescriptionHtmlQueryString_2 | null;
   prerequisites?: coursesJsonPrerequisitesQueryString_2 | null;
   products?: coursesJsonProductsQueryList_2 | null;
@@ -5835,6 +5794,7 @@ export enum CoursesJsonConnectionSortByFieldsEnum {
   label = 'label',
   title = 'title',
   subtitle = 'subtitle',
+  programFile = 'programFile',
   descriptionHtml = 'descriptionHtml',
   prerequisites = 'prerequisites',
   products = 'products',
@@ -5862,6 +5822,7 @@ export enum coursesJsonDistinctEnum {
   label = 'label',
   title = 'title',
   subtitle = 'subtitle',
+  programFile = 'programFile',
   descriptionHtml = 'descriptionHtml',
   prerequisites = 'prerequisites',
   products = 'products',
@@ -5884,6 +5845,7 @@ export enum coursesJsonGroupEnum {
   label = 'label',
   title = 'title',
   subtitle = 'subtitle',
+  programFile = 'programFile',
   descriptionHtml = 'descriptionHtml',
   prerequisites = 'prerequisites',
   products = 'products',

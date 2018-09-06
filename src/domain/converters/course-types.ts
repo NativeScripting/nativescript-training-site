@@ -18,6 +18,7 @@ export function courseFromCoursesJson(c: CoursesJson): Course {
     label: c.label,
     title: c.title,
     subtitle: c.subtitle,
+    programFile: c.programFile,
     descriptionHtml: c.descriptionHtml,
     prerequisites: c.prerequisites,
     audience: defaultArray(c.audience).map(a => a.title),

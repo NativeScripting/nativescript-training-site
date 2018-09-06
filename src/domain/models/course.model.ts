@@ -11,6 +11,7 @@ export interface Course {
   label: string;
   title: string;
   subtitle: string;
+  programFile: string;
   descriptionHtml: string;
   prerequisites: string;
   products: string[];
@@ -18,6 +19,9 @@ export interface Course {
   curriculum: Chapter[];
 }
 
-export function getCourseByCourseId(courseId: string, courses: Course[]): Course {
+export function getCourseByCourseId(
+  courseId: string,
+  courses: Course[]
+): Course {
   return courses.find(c => c.id === courseId);
 }
