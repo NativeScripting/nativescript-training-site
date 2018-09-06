@@ -35,7 +35,7 @@
       {
         "id": 1,
         "title": "Getting Started",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> What is NativeScript? </li><li> How NativeScript works </li><li> Resources </li><li> Documentation </li><li> API </li><li> App folder structure </li></ul>",
         "topics": [],
@@ -44,7 +44,7 @@
       {
         "id": 2,
         "title": "Configuration",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Setting up the environment </li><li> Knowing your tools </li><li> Using TypeScript </li></ul>",
         "topics": [],
@@ -53,7 +53,7 @@
       {
         "id": 3,
         "title": "NativeScript CLI",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> What is the CLI </li><li> How to use the CLI </li><li> Commands </li><li> Solving common problems </li></ul>",
         "topics": [],
@@ -63,7 +63,7 @@
       {
         "id": 4,
         "title": "Core Concepts",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Bootstrapping </li><li> Application configuration </li><li> App skeleton </li><li> Components </li><li> Component life cycle </li><li> Error handling </li><li> Application Life Cycle </li><li> iOS UIApplicationDelegate </li><li> Android Activity Events </li><li> Project Status Bar utils </li></ul>",
         "topics": [],
@@ -72,7 +72,7 @@
       {
         "id": 5,
         "title": "UI Basics",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> UI Hierarchy </li><li> Pages vs Components </li><li> Layouts </li><li> Data-binding </li><li> NgModel </li><li> Event handling </li><li> Gestures </li><li> CSS Styling </li></ul>",
         "topics": [],
@@ -81,7 +81,7 @@
       {
         "id": 6,
         "title": "Working with Data",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Forms </li><li> File system </li><li> Remote server </li><li> Local storage </li></ul>",
         "topics": [],
@@ -90,7 +90,7 @@
       {
         "id": 7,
         "title": "Routing and Navigation",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Declarative routing Approach </li><li> Programmatic Routing Approach </li><li> RouterExtensions </li><li> Routing parameters </li></ul>",
         "topics": [],
@@ -100,7 +100,7 @@
       {
         "id": 8,
         "title": "Animations",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> CSS Animations </li><li> The animate method </li><li> AnimationDefinition </li><li> Curves </li><li> Chaining with Promises </li></ul>",
         "topics": [],
@@ -145,7 +145,7 @@
       {
         "id": 1,
         "title": "Getting Started",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> tns-platform-declarations </li><li> Project dependencies </li><li> High level app folder structure </li><li> API Server </li><li> Consuming the API </li><li> Code Style and Tools </li></ul>",
         "topics": [],
@@ -154,7 +154,7 @@
       {
         "id": 2,
         "title": "Application Management",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Bootstrapping options </li><li> Application configuration </li><li> Application Logging </li><li> Error handling </li><li> Application Life Cycle </li><li> iOS UIApplicationDelegate </li><li> Android Activity Events </li></ul>",
         "topics": [],
@@ -163,7 +163,7 @@
       {
         "id": 3,
         "title": "Application State",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Methodology </li><li> Reactive Store and State </li><li> Smart and Presentation Components </li><li> Persisting State </li><li> Ngrx intro </li></ul>",
         "topics": [],
@@ -173,7 +173,7 @@
       {
         "id": 4,
         "title": "Advanced Routing",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Combining Routing outlet options </li><li> Lazy loading </li><li> Navigation Directive </li></ul>",
         "topics": [],
@@ -182,7 +182,7 @@
       {
         "id": 5,
         "title": "Debugging",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Debugging with Visual Studio Code </li><li> Debugging with Chrome </li><li> Http Debugging </li></ul>",
         "topics": [],
@@ -191,7 +191,7 @@
       {
         "id": 6,
         "title": "Testing",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Configuring your project </li><li> Creating tests </li><li> Running tests </li><li> Configuring the Karma server </li><li> Continuous Integration </li></ul>",
         "topics": [],
@@ -200,7 +200,7 @@
       {
         "id": 7,
         "title": "Webpack Bundling",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> AOT </li><li> Configuring WebPack </li><li> Bundling with WebPack </li><li> Bundling Extra Assets </li></ul>",
         "topics": [],
@@ -245,7 +245,7 @@
       {
         "id": 1,
         "title": "Getting Started",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> tns-platform-declarations </li><li> Project Dependencies </li><li> High Level App Folder Structure </li><li> API Server </li><li> Consuming the API </li><li> Code Style and Tools </li></ul>",
         "topics": [],
@@ -254,7 +254,7 @@
       {
         "id": 2,
         "title": "Application Management",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Bootstrapping Options </li><li> Application Configuration </li><li> Auto Injection </li><li> Application Internationalization </li><li> Console Visualization </li><li> Application Logging </li><li> Error Handling </li><li> Application Life Cycle </li><li> iOS UIApplicationDelegate </li><li> Android Activity Events </li><li> Project Status Bar Utils </li></ul>",
         "topics": [],
@@ -263,7 +263,7 @@
       {
         "id": 3,
         "title": "Application State",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Methodology </li><li> Reactive Store and State </li><li> Smart and Presentation Components </li><li> Persisting State </li><li> Ngrx Intro </li></ul>",
         "topics": [],
@@ -272,7 +272,7 @@
       {
         "id": 4,
         "title": "Routing and Navigation",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Declarative Routing Approach </li><li> Programmatic Routing Approach </li><li> RouterExtensions </li><li> Navigation Service </li><li> NavigationOptions </li><li> Route Guards </li><li> Combining Routing Outlet Options </li><li> Routing Parameters </li><li> Lazy Loading </li><li> Navigation Directive </li></ul>",
         "topics": [],
@@ -281,7 +281,7 @@
       {
         "id": 5,
         "title": "Deeper UI",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Frames </li><li> Using the Page </li><li> View Life Cycle </li><li> Dialogs </li><li> Modals </li><li> Multiple ListView Templates </li><li> FormattedString </li><li> ActionBar </li><li> Local Notifications </li><li> Controlling the Keyboard </li><li> Using Icon Fonts </li><li> Lower Cased and Dashed Components </li><li> Programmatic Components </li><li> Custom Components </li><li> Platform Specific Declarations </li><li> Screen Size Qualifiers </li><li> Platform Qualifiers </li><li> Orientation Qualifiers </li></ul>",
         "topics": [],
@@ -290,7 +290,7 @@
       {
         "id": 6,
         "title": "Hardware Access",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Using Location </li><li> Accessing the Camera </li></ul>",
         "topics": [],
@@ -299,7 +299,7 @@
       {
         "id": 7,
         "title": "Tracing and Debugging",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Setting up Tracing </li><li> Using Tracing </li><li> Debugging Options </li><li> Debugging Commands </li><li> Debugging with Visual Studio Code </li><li> Debugging with Chrome </li><li> Http Debugging </li></ul>",
         "topics": [],
@@ -308,7 +308,7 @@
       {
         "id": 8,
         "title": "Testing",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> Configuring Your Project </li><li> Creating Tests </li><li> Running Tests </li><li> Configuring the Karma Server </li><li> Continuous Integration </li></ul>",
         "topics": [],
@@ -317,7 +317,7 @@
       {
         "id": 9,
         "title": "Preparing for Deployment",
-        "description": "desc",
+        "description": "",
         "lessonsHtml":
           "<ul> <li> AOT </li><li> Configuring WebPack </li><li> Bundling with WebPack </li><li> Bundling Extra Assets </li><li> Advanced WebPack </li><li> iOS Launch Screen </li><li> iOS App Icons </li><li> iOS Publishing </li><li> Android Launch Screen </li><li> Android App Icons </li><li> Android Publishing </li></ul>",
         "topics": [],
