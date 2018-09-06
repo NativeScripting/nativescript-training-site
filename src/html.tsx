@@ -87,6 +87,10 @@ module.exports = React.createClass<HtmlProps, void>({
             name="twitter:image"
             content="https://nativescripting.com/img/course_banners/nativescript_core_ng_course_banner_bg.png"
           />
+          <meta
+            name="google-site-verification"
+            content="y95Ku2hQnzaNGEeozgrk9QQZslcy_M_DUtpypkd6hw4"
+          />
 
           <link rel="stylesheet" type="text/css" href="/css/style.css" />
           <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
