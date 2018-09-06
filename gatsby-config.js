@@ -28,6 +28,16 @@ module.exports = {
         exclude: [],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: 'UA-98718768-2',
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+      },
+    },
     'gatsby-plugin-react-helmet',
     // Parse all images files
     `gatsby-transformer-sharp`,
