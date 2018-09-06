@@ -1,10 +1,218 @@
 [
   {
+    "id": "introduction-to-nativescript-with-angular",
+    "code": "NSNG-111",
+    "version": "1.0",
+    "length": "3 Days",
+    "price": 600,
+    "order": 900,
+    "flavors": ["Angular"],
+    "label": "NEW",
+    "title": "Introduction to NativeScript with Angular",
+    "subtitle": "",
+    "descriptionHtml":
+      "<h6> Overview</h6><p> NativeScripting’s Introduction to NativeScript with Angular course teaches developers with zero NativeScript and Angular experience how to start from scratch and develop an application that will run on iOS and Android.</p><h6> Training Materials</h6><p> All attendees receive courseware and the latest/best NativeScript textbook as of the date of training.</p><h6> Software Needed on Each Student Machine</h6><p><ul> <li> Google Chrome </li><li> Visual Studio Code </li><li> Node.js installed </li><li> Android tools set up and working </li><li> If developing for iOS, a Mac is required with XCode installed and configured </li><li> Other free software and lab files that Nuvious will specify </li></ul></p><h6> Training Objectives</h6><p><ul> <li> Use industry best practices to architect an Angular mobile application with NativeScript </li><li> Configure the development environment and set up the CLI </li><li> Use industry standard tools for NativeScript development, including TypeScript </li><li> Learning the core NativeScript concepts </li><li> Create, debug, and build a NativeScript with Angular application using the CLI approach </li></ul></p>",
+    "prerequisites":
+      "All attendees must have strong prior JavaScript and TypeScript experience. No prior NativeScript experience is necessary, but Angular experience is recommended.",
+    "products": [
+      {
+        "title": "NativeScript"
+      },
+      {
+        "title": "Angular"
+      },
+      {
+        "title": "TypeScript"
+      }
+    ],
+    "audience": [
+      {
+        "title": "Developers"
+      }
+    ],
+    "curriculum": [
+      {
+        "id": 1,
+        "title": "Getting Started",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> What is NativeScript? </li><li> How NativeScript works </li><li> Resources </li><li> Documentation </li><li> API </li><li> App folder structure </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 2,
+        "title": "Configuration",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Setting up the environment </li><li> Knowing your tools </li><li> Using TypeScript </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 3,
+        "title": "NativeScript CLI",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> What is the CLI </li><li> How to use the CLI </li><li> Commands </li><li> Solving common problems </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+
+      {
+        "id": 4,
+        "title": "Core Concepts",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Bootstrapping </li><li> Application configuration </li><li> App skeleton </li><li> Components </li><li> Component life cycle </li><li> Error handling </li><li> Application Life Cycle </li><li> iOS UIApplicationDelegate </li><li> Android Activity Events </li><li> Project Status Bar utils </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 5,
+        "title": "UI Basics",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> UI Hierarchy </li><li> Pages vs Components </li><li> Layouts </li><li> Data-binding </li><li> NgModel </li><li> Event handling </li><li> Gestures </li><li> CSS Styling </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 6,
+        "title": "Working with Data",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Forms </li><li> File system </li><li> Remote server </li><li> Local storage </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 7,
+        "title": "Routing and Navigation",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Declarative routing Approach </li><li> Programmatic Routing Approach </li><li> RouterExtensions </li><li> Routing parameters </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+
+      {
+        "id": 8,
+        "title": "Animations",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> CSS Animations </li><li> The animate method </li><li> AnimationDefinition </li><li> Curves </li><li> Chaining with Promises </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      }
+    ]
+  },
+
+  {
+    "id": "advanced-nativescript-with-angular",
+    "code": "NSNG-142",
+    "version": "1.0",
+    "length": "2 Days",
+    "price": 600,
+    "order": 950,
+    "flavors": ["Angular"],
+    "label": "NEW",
+    "title": "Advanced NativeScript with Angular",
+    "subtitle": "",
+    "descriptionHtml":
+      "<h6> Overview</h6><p> NativeScripting’s Advanced NativeScript with Angular course teaches developers with some NativeScript and Angular experience how to take advantage of the framework’s more sophisticated features.</p><h6> Training Prerequisites</h6><p> All attendees must have strong prior JavaScript and TypeScript experience and experience with NativeScript and Angular equivalent to NativeScripting’s Introduction to NativeScript with Angular class.</p><h6> Training Materials</h6><p> All attendees receive courseware and the latest/best NativeScript textbook as of the date of training.</p><h6> Software Needed on Each Student Machine</h6><p> <ul> <li> Google Chrome </li><li> Visual Studio Code </li><li> Node.js installed </li><li> Android tools set up and working </li><li> If developing for iOS, a Mac is required with XCode installed and configured </li><li> All installation steps must have been completed as described in the installation section of <a href=\"http://www.nativescript.org\" target=\"_blank\">www.nativescript.org (https://docs.nativescript.org/start/quick-setup)</a> </li><li> Other free software and lab files that Nuvious will specify </li></ul></p><h6> Training Objectives</h6><p> <ul> <li>Use industry best practices to architect an Angular mobile application with NativeScript</li><li>Manage the state of a modern mobile application using the latest technologies such as @ngrx</li><li>Unit test all the parts of an Angular application including Modules, Components, Services, and Pipes</li><li>Create, build, and package a NativeScript with Angular application using the CLI approach</li><li>Develop dynamic Model-driven forms that are easier to unit test</li></ul></p>",
+    "prerequisites":
+      "All attendees must have strong prior JavaScript and TypeScript experience and experience with NativeScript and Angular equivalent to NativeScripting’s Introduction to NativeScript with Angular class.",
+    "products": [
+      {
+        "title": "NativeScript"
+      },
+      {
+        "title": "Angular"
+      },
+      {
+        "title": "TypeScript"
+      }
+    ],
+    "audience": [
+      {
+        "title": "Developers"
+      }
+    ],
+    "curriculum": [
+      {
+        "id": 1,
+        "title": "Getting Started",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> tns-platform-declarations </li><li> Project dependencies </li><li> High level app folder structure </li><li> API Server </li><li> Consuming the API </li><li> Code Style and Tools </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 2,
+        "title": "Application Management",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Bootstrapping options </li><li> Application configuration </li><li> Application Logging </li><li> Error handling </li><li> Application Life Cycle </li><li> iOS UIApplicationDelegate </li><li> Android Activity Events </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 3,
+        "title": "Application State",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Methodology </li><li> Reactive Store and State </li><li> Smart and Presentation Components </li><li> Persisting State </li><li> Ngrx intro </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+
+      {
+        "id": 4,
+        "title": "Advanced Routing",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Combining Routing outlet options </li><li> Lazy loading </li><li> Navigation Directive </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 5,
+        "title": "Debugging",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Debugging with Visual Studio Code </li><li> Debugging with Chrome </li><li> Http Debugging </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 6,
+        "title": "Testing",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Configuring your project </li><li> Creating tests </li><li> Running tests </li><li> Configuring the Karma server </li><li> Continuous Integration </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 7,
+        "title": "Webpack Bundling",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> AOT </li><li> Configuring WebPack </li><li> Bundling with WebPack </li><li> Bundling Extra Assets </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      }
+    ]
+  },
+
+  {
     "id": "comprehensive-nativescript-with-angular",
     "code": "NSNG-144",
     "version": "1.0",
     "length": "5 Days",
-    "price": 2500,
+    "price": 1500,
     "order": 1000,
     "flavors": ["Angular"],
     "label": "NEW",
@@ -33,33 +241,84 @@
     "curriculum": [
       {
         "id": 1,
-        "title": "Intro to course",
+        "title": "Getting Started",
         "description": "desc",
-        "topics": [
-          {
-            "id": 1,
-            "title": "topic 1"
-          }
-        ],
-        "labsHtml":
-          "<ul><li>Exercise 1: Create a Power BI Development Environment</li><li>Exercise 2: Get Up and Running with Power BI Desktop</li><li>Exercise 3: Create a New App Workspace for a Custom Solution</li><li>Exercise 4: Publish PBIX Project Files to the Power BI Service</li></ul>"
+        "lessonsHtml":
+          "<ul> <li> tns-platform-declarations </li><li> Project Dependencies </li><li> High Level App Folder Structure </li><li> API Server </li><li> Consuming the API </li><li> Code Style and Tools </li></ul>",
+        "topics": [],
+        "labsHtml": ""
       },
       {
         "id": 2,
-        "title": "Getting Started",
+        "title": "Application Management",
         "description": "desc",
-        "topics": [
-          {
-            "id": 1,
-            "title": "topic 1"
-          },
-          {
-            "id": 2,
-            "title": "topic 2"
-          }
-        ],
-        "labsHtml":
-          "<ul><li>Exercise 1: Create a Power BI Development Environment</li><li>Exercise 2: Get Up and Running with Power BI Desktop</li><li>Exercise 3: Create a New App Workspace for a Custom Solution</li><li>Exercise 4: Publish PBIX Project Files to the Power BI Service</li></ul>"
+        "lessonsHtml":
+          "<ul> <li> Bootstrapping Options </li><li> Application Configuration </li><li> Auto Injection </li><li> Application Internationalization </li><li> Console Visualization </li><li> Application Logging </li><li> Error Handling </li><li> Application Life Cycle </li><li> iOS UIApplicationDelegate </li><li> Android Activity Events </li><li> Project Status Bar Utils </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 3,
+        "title": "Application State",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Methodology </li><li> Reactive Store and State </li><li> Smart and Presentation Components </li><li> Persisting State </li><li> Ngrx Intro </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 4,
+        "title": "Routing and Navigation",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Declarative Routing Approach </li><li> Programmatic Routing Approach </li><li> RouterExtensions </li><li> Navigation Service </li><li> NavigationOptions </li><li> Route Guards </li><li> Combining Routing Outlet Options </li><li> Routing Parameters </li><li> Lazy Loading </li><li> Navigation Directive </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 5,
+        "title": "Deeper UI",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Frames </li><li> Using the Page </li><li> View Life Cycle </li><li> Dialogs </li><li> Modals </li><li> Multiple ListView Templates </li><li> FormattedString </li><li> ActionBar </li><li> Local Notifications </li><li> Controlling the Keyboard </li><li> Using Icon Fonts </li><li> Lower Cased and Dashed Components </li><li> Programmatic Components </li><li> Custom Components </li><li> Platform Specific Declarations </li><li> Screen Size Qualifiers </li><li> Platform Qualifiers </li><li> Orientation Qualifiers </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 6,
+        "title": "Hardware Access",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Using Location </li><li> Accessing the Camera </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 7,
+        "title": "Tracing and Debugging",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Setting up Tracing </li><li> Using Tracing </li><li> Debugging Options </li><li> Debugging Commands </li><li> Debugging with Visual Studio Code </li><li> Debugging with Chrome </li><li> Http Debugging </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 8,
+        "title": "Testing",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> Configuring Your Project </li><li> Creating Tests </li><li> Running Tests </li><li> Configuring the Karma Server </li><li> Continuous Integration </li></ul>",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 9,
+        "title": "Preparing for Deployment",
+        "description": "desc",
+        "lessonsHtml":
+          "<ul> <li> AOT </li><li> Configuring WebPack </li><li> Bundling with WebPack </li><li> Bundling Extra Assets </li><li> Advanced WebPack </li><li> iOS Launch Screen </li><li> iOS App Icons </li><li> iOS Publishing </li><li> Android Launch Screen </li><li> Android App Icons </li><li> Android Publishing </li></ul>",
+        "topics": [],
+        "labsHtml": ""
       }
     ]
   }
