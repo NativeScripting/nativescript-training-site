@@ -15,20 +15,20 @@ export interface RootQueryType {
   allDirectory?: DirectoryConnection | null /* Connection to all Directory nodes */;
   allFile?: FileConnection | null /* Connection to all File nodes */;
   allTrainersJson?: TrainersJsonConnection | null /* Connection to all TrainersJson nodes */;
-  allCoursesJson?: CoursesJsonConnection | null /* Connection to all CoursesJson nodes */;
   allLocationsJson?: LocationsJsonConnection | null /* Connection to all LocationsJson nodes */;
   allSessionsJson?: SessionsJsonConnection | null /* Connection to all SessionsJson nodes */;
   allOfferingsJson?: OfferingsJsonConnection | null /* Connection to all OfferingsJson nodes */;
+  allCoursesJson?: CoursesJsonConnection | null /* Connection to all CoursesJson nodes */;
   sitePage?: SitePage | null;
   sitePlugin?: SitePlugin | null;
   site?: Site | null;
   directory?: Directory | null;
   file?: File | null;
   trainersJson?: TrainersJson | null;
-  coursesJson?: CoursesJson | null;
   locationsJson?: LocationsJson | null;
   sessionsJson?: SessionsJson | null;
   offeringsJson?: OfferingsJson | null;
+  coursesJson?: CoursesJson | null;
 }
 /* A connection to a list of items. */
 export interface SitePageConnection {
@@ -268,7 +268,9 @@ export interface File extends Node {
   id: string /* The id of this node. */;
   parent?: Node | null /* The parent of this node. */;
   children?: Node[] | null /* The children of this node. */;
-  childCoursesJson?: CoursesJson | null /* The child of this node of type coursesJson */;
+  childrenCoursesJson?:
+    | CoursesJson[]
+    | null /* The children of this node of type coursesJson */;
   childrenOfferingsJson?:
     | OfferingsJson[]
     | null /* The children of this node of type offeringsJson */;
@@ -351,13 +353,14 @@ export interface curriculum_2 {
   id?: number | null;
   title?: string | null;
   description?: string | null;
+  lessonsHtml?: string | null;
   topics?: topics_2[] | null;
   labsHtml?: string | null;
 }
 
 export interface topics_2 {
-  id?: number | null;
   title?: string | null;
+  id?: number | null;
 }
 
 export interface internal_15 {
@@ -507,34 +510,6 @@ export interface trainersJsonGroupConnectionEdge {
   previous?: TrainersJson | null /* The previous edge in the connection */;
 }
 /* A connection to a list of items. */
-export interface CoursesJsonConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: CoursesJsonEdge[] | null /* A list of edges. */;
-  totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: coursesJsonGroupConnectionConnection[] | null;
-}
-/* An edge in a connection. */
-export interface CoursesJsonEdge {
-  node?: CoursesJson | null /* The item at the end of the edge */;
-  next?: CoursesJson | null /* The next edge in the connection */;
-  previous?: CoursesJson | null /* The previous edge in the connection */;
-}
-/* A connection to a list of items. */
-export interface coursesJsonGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: coursesJsonGroupConnectionEdge[] | null /* A list of edges. */;
-  field?: string | null;
-  fieldValue?: string | null;
-  totalCount?: number | null;
-}
-/* An edge in a connection. */
-export interface coursesJsonGroupConnectionEdge {
-  node?: CoursesJson | null /* The item at the end of the edge */;
-  next?: CoursesJson | null /* The next edge in the connection */;
-  previous?: CoursesJson | null /* The previous edge in the connection */;
-}
-/* A connection to a list of items. */
 export interface LocationsJsonConnection {
   pageInfo: PageInfo /* Information to aid in pagination. */;
   edges?: LocationsJsonEdge[] | null /* A list of edges. */;
@@ -617,6 +592,34 @@ export interface offeringsJsonGroupConnectionEdge {
   node?: OfferingsJson | null /* The item at the end of the edge */;
   next?: OfferingsJson | null /* The next edge in the connection */;
   previous?: OfferingsJson | null /* The previous edge in the connection */;
+}
+/* A connection to a list of items. */
+export interface CoursesJsonConnection {
+  pageInfo: PageInfo /* Information to aid in pagination. */;
+  edges?: CoursesJsonEdge[] | null /* A list of edges. */;
+  totalCount?: number | null;
+  distinct?: string[] | null;
+  group?: coursesJsonGroupConnectionConnection[] | null;
+}
+/* An edge in a connection. */
+export interface CoursesJsonEdge {
+  node?: CoursesJson | null /* The item at the end of the edge */;
+  next?: CoursesJson | null /* The next edge in the connection */;
+  previous?: CoursesJson | null /* The previous edge in the connection */;
+}
+/* A connection to a list of items. */
+export interface coursesJsonGroupConnectionConnection {
+  pageInfo: PageInfo /* Information to aid in pagination. */;
+  edges?: coursesJsonGroupConnectionEdge[] | null /* A list of edges. */;
+  field?: string | null;
+  fieldValue?: string | null;
+  totalCount?: number | null;
+}
+/* An edge in a connection. */
+export interface coursesJsonGroupConnectionEdge {
+  node?: CoursesJson | null /* The item at the end of the edge */;
+  next?: CoursesJson | null /* The next edge in the connection */;
+  previous?: CoursesJson | null /* The previous edge in the connection */;
 }
 /* Node of type Site */
 export interface Site extends Node {
@@ -2075,243 +2078,6 @@ export interface trainersJsonConnectionInternalOwnerQueryString_2 {
   glob?: string | null;
 }
 
-export interface coursesJsonConnectionSort {
-  fields: CoursesJsonConnectionSortByFieldsEnum[];
-  order?: coursesJsonConnectionSortOrderValues | null;
-}
-/* Filter connection on its fields */
-export interface filterCoursesJson {
-  id?: coursesJsonConnectionIdQueryString_2 | null;
-  code?: coursesJsonConnectionCodeQueryString_2 | null;
-  version?: coursesJsonConnectionVersionQueryString_2 | null;
-  length?: coursesJsonConnectionLengthQueryString_2 | null;
-  price?: coursesJsonConnectionPriceQueryInteger_2 | null;
-  order?: coursesJsonConnectionOrderQueryInteger_2 | null;
-  flavors?: coursesJsonConnectionFlavorsQueryList_2 | null;
-  label?: coursesJsonConnectionLabelQueryString_2 | null;
-  title?: coursesJsonConnectionTitleQueryString_2 | null;
-  subtitle?: coursesJsonConnectionSubtitleQueryString_2 | null;
-  descriptionHtml?: coursesJsonConnectionDescriptionHtmlQueryString_2 | null;
-  prerequisites?: coursesJsonConnectionPrerequisitesQueryString_2 | null;
-  products?: coursesJsonConnectionProductsQueryList_2 | null;
-  audience?: coursesJsonConnectionAudienceQueryList_2 | null;
-  curriculum?: coursesJsonConnectionCurriculumQueryList_2 | null;
-  internal?: coursesJsonConnectionInternalInputObject_2 | null;
-}
-
-export interface coursesJsonConnectionIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionCodeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionVersionQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionLengthQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionPriceQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface coursesJsonConnectionOrderQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface coursesJsonConnectionFlavorsQueryList_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface coursesJsonConnectionLabelQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionSubtitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionDescriptionHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionPrerequisitesQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionProductsQueryList_2 {
-  in?: coursesJsonConnectionProductsInputObject_2[] | null;
-}
-
-export interface coursesJsonConnectionProductsInputObject_2 {
-  title?: coursesJsonConnectionProductsTitleQueryString_2 | null;
-}
-
-export interface coursesJsonConnectionProductsTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionAudienceQueryList_2 {
-  in?: coursesJsonConnectionAudienceInputObject_2[] | null;
-}
-
-export interface coursesJsonConnectionAudienceInputObject_2 {
-  title?: coursesJsonConnectionAudienceTitleQueryString_2 | null;
-}
-
-export interface coursesJsonConnectionAudienceTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionCurriculumQueryList_2 {
-  in?: coursesJsonConnectionCurriculumInputObject_2[] | null;
-}
-
-export interface coursesJsonConnectionCurriculumInputObject_2 {
-  id?: coursesJsonConnectionCurriculumIdQueryInteger_2 | null;
-  title?: coursesJsonConnectionCurriculumTitleQueryString_2 | null;
-  description?: coursesJsonConnectionCurriculumDescriptionQueryString_2 | null;
-  topics?: coursesJsonConnectionCurriculumTopicsQueryList_2 | null;
-  labsHtml?: coursesJsonConnectionCurriculumLabsHtmlQueryString_2 | null;
-}
-
-export interface coursesJsonConnectionCurriculumIdQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface coursesJsonConnectionCurriculumTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionCurriculumDescriptionQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionCurriculumTopicsQueryList_2 {
-  in?: coursesJsonConnectionCurriculumTopicsInputObject_2[] | null;
-}
-
-export interface coursesJsonConnectionCurriculumTopicsInputObject_2 {
-  id?: coursesJsonConnectionCurriculumTopicsIdQueryInteger_2 | null;
-  title?: coursesJsonConnectionCurriculumTopicsTitleQueryString_2 | null;
-}
-
-export interface coursesJsonConnectionCurriculumTopicsIdQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface coursesJsonConnectionCurriculumTopicsTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionCurriculumLabsHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionInternalInputObject_2 {
-  contentDigest?: coursesJsonConnectionInternalContentDigestQueryString_2 | null;
-  type?: coursesJsonConnectionInternalTypeQueryString_2 | null;
-  owner?: coursesJsonConnectionInternalOwnerQueryString_2 | null;
-}
-
-export interface coursesJsonConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionInternalTypeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonConnectionInternalOwnerQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface locationsJsonConnectionSort {
   fields: LocationsJsonConnectionSortByFieldsEnum[];
   order?: locationsJsonConnectionSortOrderValues | null;
@@ -2692,6 +2458,251 @@ export interface offeringsJsonConnectionInternalTypeQueryString_2 {
 }
 
 export interface offeringsJsonConnectionInternalOwnerQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionSort {
+  fields: CoursesJsonConnectionSortByFieldsEnum[];
+  order?: coursesJsonConnectionSortOrderValues | null;
+}
+/* Filter connection on its fields */
+export interface filterCoursesJson {
+  id?: coursesJsonConnectionIdQueryString_2 | null;
+  code?: coursesJsonConnectionCodeQueryString_2 | null;
+  version?: coursesJsonConnectionVersionQueryString_2 | null;
+  length?: coursesJsonConnectionLengthQueryString_2 | null;
+  price?: coursesJsonConnectionPriceQueryInteger_2 | null;
+  order?: coursesJsonConnectionOrderQueryInteger_2 | null;
+  flavors?: coursesJsonConnectionFlavorsQueryList_2 | null;
+  label?: coursesJsonConnectionLabelQueryString_2 | null;
+  title?: coursesJsonConnectionTitleQueryString_2 | null;
+  subtitle?: coursesJsonConnectionSubtitleQueryString_2 | null;
+  descriptionHtml?: coursesJsonConnectionDescriptionHtmlQueryString_2 | null;
+  prerequisites?: coursesJsonConnectionPrerequisitesQueryString_2 | null;
+  products?: coursesJsonConnectionProductsQueryList_2 | null;
+  audience?: coursesJsonConnectionAudienceQueryList_2 | null;
+  curriculum?: coursesJsonConnectionCurriculumQueryList_2 | null;
+  internal?: coursesJsonConnectionInternalInputObject_2 | null;
+}
+
+export interface coursesJsonConnectionIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionCodeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionVersionQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionLengthQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionPriceQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface coursesJsonConnectionOrderQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface coursesJsonConnectionFlavorsQueryList_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface coursesJsonConnectionLabelQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionSubtitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionDescriptionHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionPrerequisitesQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionProductsQueryList_2 {
+  in?: coursesJsonConnectionProductsInputObject_2[] | null;
+}
+
+export interface coursesJsonConnectionProductsInputObject_2 {
+  title?: coursesJsonConnectionProductsTitleQueryString_2 | null;
+}
+
+export interface coursesJsonConnectionProductsTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionAudienceQueryList_2 {
+  in?: coursesJsonConnectionAudienceInputObject_2[] | null;
+}
+
+export interface coursesJsonConnectionAudienceInputObject_2 {
+  title?: coursesJsonConnectionAudienceTitleQueryString_2 | null;
+}
+
+export interface coursesJsonConnectionAudienceTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionCurriculumQueryList_2 {
+  in?: coursesJsonConnectionCurriculumInputObject_2[] | null;
+}
+
+export interface coursesJsonConnectionCurriculumInputObject_2 {
+  id?: coursesJsonConnectionCurriculumIdQueryInteger_2 | null;
+  title?: coursesJsonConnectionCurriculumTitleQueryString_2 | null;
+  description?: coursesJsonConnectionCurriculumDescriptionQueryString_2 | null;
+  lessonsHtml?: coursesJsonConnectionCurriculumLessonsHtmlQueryString_2 | null;
+  topics?: coursesJsonConnectionCurriculumTopicsQueryList_2 | null;
+  labsHtml?: coursesJsonConnectionCurriculumLabsHtmlQueryString_2 | null;
+}
+
+export interface coursesJsonConnectionCurriculumIdQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface coursesJsonConnectionCurriculumTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionCurriculumDescriptionQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionCurriculumLessonsHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionCurriculumTopicsQueryList_2 {
+  in?: coursesJsonConnectionCurriculumTopicsInputObject_2[] | null;
+}
+
+export interface coursesJsonConnectionCurriculumTopicsInputObject_2 {
+  title?: coursesJsonConnectionCurriculumTopicsTitleQueryString_2 | null;
+  id?: coursesJsonConnectionCurriculumTopicsIdQueryInteger_2 | null;
+}
+
+export interface coursesJsonConnectionCurriculumTopicsTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionCurriculumTopicsIdQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface coursesJsonConnectionCurriculumLabsHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionInternalInputObject_2 {
+  contentDigest?: coursesJsonConnectionInternalContentDigestQueryString_2 | null;
+  type?: coursesJsonConnectionInternalTypeQueryString_2 | null;
+  owner?: coursesJsonConnectionInternalOwnerQueryString_2 | null;
+}
+
+export interface coursesJsonConnectionInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonConnectionInternalOwnerQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4070,219 +4081,6 @@ export interface trainersJsonInternalOwnerQueryString_2 {
   glob?: string | null;
 }
 
-export interface coursesJsonIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonCodeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonVersionQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonLengthQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonPriceQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface coursesJsonOrderQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface coursesJsonFlavorsQueryList_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface coursesJsonLabelQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonSubtitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonDescriptionHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonPrerequisitesQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonProductsQueryList_2 {
-  in?: coursesJsonProductsInputObject_2[] | null;
-}
-
-export interface coursesJsonProductsInputObject_2 {
-  title?: coursesJsonProductsTitleQueryString_2 | null;
-}
-
-export interface coursesJsonProductsTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonAudienceQueryList_2 {
-  in?: coursesJsonAudienceInputObject_2[] | null;
-}
-
-export interface coursesJsonAudienceInputObject_2 {
-  title?: coursesJsonAudienceTitleQueryString_2 | null;
-}
-
-export interface coursesJsonAudienceTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonCurriculumQueryList_2 {
-  in?: coursesJsonCurriculumInputObject_2[] | null;
-}
-
-export interface coursesJsonCurriculumInputObject_2 {
-  id?: coursesJsonCurriculumIdQueryInteger_2 | null;
-  title?: coursesJsonCurriculumTitleQueryString_2 | null;
-  description?: coursesJsonCurriculumDescriptionQueryString_2 | null;
-  topics?: coursesJsonCurriculumTopicsQueryList_2 | null;
-  labsHtml?: coursesJsonCurriculumLabsHtmlQueryString_2 | null;
-}
-
-export interface coursesJsonCurriculumIdQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface coursesJsonCurriculumTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonCurriculumDescriptionQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonCurriculumTopicsQueryList_2 {
-  in?: coursesJsonCurriculumTopicsInputObject_2[] | null;
-}
-
-export interface coursesJsonCurriculumTopicsInputObject_2 {
-  id?: coursesJsonCurriculumTopicsIdQueryInteger_2 | null;
-  title?: coursesJsonCurriculumTopicsTitleQueryString_2 | null;
-}
-
-export interface coursesJsonCurriculumTopicsIdQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-  gt?: number | null;
-  gte?: number | null;
-  lt?: number | null;
-  lte?: number | null;
-}
-
-export interface coursesJsonCurriculumTopicsTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonCurriculumLabsHtmlQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonInternalInputObject_2 {
-  contentDigest?: coursesJsonInternalContentDigestQueryString_2 | null;
-  type?: coursesJsonInternalTypeQueryString_2 | null;
-  owner?: coursesJsonInternalOwnerQueryString_2 | null;
-}
-
-export interface coursesJsonInternalContentDigestQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonInternalTypeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface coursesJsonInternalOwnerQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface locationsJsonIdQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -4610,6 +4408,227 @@ export interface offeringsJsonInternalOwnerQueryString_2 {
   regex?: string | null;
   glob?: string | null;
 }
+
+export interface coursesJsonIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonCodeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonVersionQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonLengthQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonPriceQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface coursesJsonOrderQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface coursesJsonFlavorsQueryList_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface coursesJsonLabelQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonSubtitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonDescriptionHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonPrerequisitesQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonProductsQueryList_2 {
+  in?: coursesJsonProductsInputObject_2[] | null;
+}
+
+export interface coursesJsonProductsInputObject_2 {
+  title?: coursesJsonProductsTitleQueryString_2 | null;
+}
+
+export interface coursesJsonProductsTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonAudienceQueryList_2 {
+  in?: coursesJsonAudienceInputObject_2[] | null;
+}
+
+export interface coursesJsonAudienceInputObject_2 {
+  title?: coursesJsonAudienceTitleQueryString_2 | null;
+}
+
+export interface coursesJsonAudienceTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonCurriculumQueryList_2 {
+  in?: coursesJsonCurriculumInputObject_2[] | null;
+}
+
+export interface coursesJsonCurriculumInputObject_2 {
+  id?: coursesJsonCurriculumIdQueryInteger_2 | null;
+  title?: coursesJsonCurriculumTitleQueryString_2 | null;
+  description?: coursesJsonCurriculumDescriptionQueryString_2 | null;
+  lessonsHtml?: coursesJsonCurriculumLessonsHtmlQueryString_2 | null;
+  topics?: coursesJsonCurriculumTopicsQueryList_2 | null;
+  labsHtml?: coursesJsonCurriculumLabsHtmlQueryString_2 | null;
+}
+
+export interface coursesJsonCurriculumIdQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface coursesJsonCurriculumTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonCurriculumDescriptionQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonCurriculumLessonsHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonCurriculumTopicsQueryList_2 {
+  in?: coursesJsonCurriculumTopicsInputObject_2[] | null;
+}
+
+export interface coursesJsonCurriculumTopicsInputObject_2 {
+  title?: coursesJsonCurriculumTopicsTitleQueryString_2 | null;
+  id?: coursesJsonCurriculumTopicsIdQueryInteger_2 | null;
+}
+
+export interface coursesJsonCurriculumTopicsTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonCurriculumTopicsIdQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface coursesJsonCurriculumLabsHtmlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonInternalInputObject_2 {
+  contentDigest?: coursesJsonInternalContentDigestQueryString_2 | null;
+  type?: coursesJsonInternalTypeQueryString_2 | null;
+  owner?: coursesJsonInternalOwnerQueryString_2 | null;
+}
+
+export interface coursesJsonInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface coursesJsonInternalOwnerQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
 export interface AllSitePageRootQueryTypeArgs {
   skip?: number | null;
   limit?: number | null;
@@ -4640,12 +4659,6 @@ export interface AllTrainersJsonRootQueryTypeArgs {
   sort?: trainersJsonConnectionSort | null;
   filter?: filterTrainersJson | null;
 }
-export interface AllCoursesJsonRootQueryTypeArgs {
-  skip?: number | null;
-  limit?: number | null;
-  sort?: coursesJsonConnectionSort | null;
-  filter?: filterCoursesJson | null;
-}
 export interface AllLocationsJsonRootQueryTypeArgs {
   skip?: number | null;
   limit?: number | null;
@@ -4663,6 +4676,12 @@ export interface AllOfferingsJsonRootQueryTypeArgs {
   limit?: number | null;
   sort?: offeringsJsonConnectionSort | null;
   filter?: filterOfferingsJson | null;
+}
+export interface AllCoursesJsonRootQueryTypeArgs {
+  skip?: number | null;
+  limit?: number | null;
+  sort?: coursesJsonConnectionSort | null;
+  filter?: filterCoursesJson | null;
 }
 export interface SitePageRootQueryTypeArgs {
   layout?: sitePageLayoutQueryString | null;
@@ -4784,24 +4803,6 @@ export interface TrainersJsonRootQueryTypeArgs {
   twitter?: trainersJsonTwitterQueryString_2 | null;
   internal?: trainersJsonInternalInputObject_2 | null;
 }
-export interface CoursesJsonRootQueryTypeArgs {
-  id?: coursesJsonIdQueryString_2 | null;
-  code?: coursesJsonCodeQueryString_2 | null;
-  version?: coursesJsonVersionQueryString_2 | null;
-  length?: coursesJsonLengthQueryString_2 | null;
-  price?: coursesJsonPriceQueryInteger_2 | null;
-  order?: coursesJsonOrderQueryInteger_2 | null;
-  flavors?: coursesJsonFlavorsQueryList_2 | null;
-  label?: coursesJsonLabelQueryString_2 | null;
-  title?: coursesJsonTitleQueryString_2 | null;
-  subtitle?: coursesJsonSubtitleQueryString_2 | null;
-  descriptionHtml?: coursesJsonDescriptionHtmlQueryString_2 | null;
-  prerequisites?: coursesJsonPrerequisitesQueryString_2 | null;
-  products?: coursesJsonProductsQueryList_2 | null;
-  audience?: coursesJsonAudienceQueryList_2 | null;
-  curriculum?: coursesJsonCurriculumQueryList_2 | null;
-  internal?: coursesJsonInternalInputObject_2 | null;
-}
 export interface LocationsJsonRootQueryTypeArgs {
   id?: locationsJsonIdQueryString_2 | null;
   title?: locationsJsonTitleQueryString_2 | null;
@@ -4841,6 +4842,24 @@ export interface OfferingsJsonRootQueryTypeArgs {
   descriptionHtml?: offeringsJsonDescriptionHtmlQueryString_2 | null;
   sections?: offeringsJsonSectionsQueryList_2 | null;
   internal?: offeringsJsonInternalInputObject_2 | null;
+}
+export interface CoursesJsonRootQueryTypeArgs {
+  id?: coursesJsonIdQueryString_2 | null;
+  code?: coursesJsonCodeQueryString_2 | null;
+  version?: coursesJsonVersionQueryString_2 | null;
+  length?: coursesJsonLengthQueryString_2 | null;
+  price?: coursesJsonPriceQueryInteger_2 | null;
+  order?: coursesJsonOrderQueryInteger_2 | null;
+  flavors?: coursesJsonFlavorsQueryList_2 | null;
+  label?: coursesJsonLabelQueryString_2 | null;
+  title?: coursesJsonTitleQueryString_2 | null;
+  subtitle?: coursesJsonSubtitleQueryString_2 | null;
+  descriptionHtml?: coursesJsonDescriptionHtmlQueryString_2 | null;
+  prerequisites?: coursesJsonPrerequisitesQueryString_2 | null;
+  products?: coursesJsonProductsQueryList_2 | null;
+  audience?: coursesJsonAudienceQueryList_2 | null;
+  curriculum?: coursesJsonCurriculumQueryList_2 | null;
+  internal?: coursesJsonInternalInputObject_2 | null;
 }
 export interface DistinctSitePageConnectionArgs {
   field?: sitePageDistinctEnum | null;
@@ -5106,14 +5125,6 @@ export interface GroupTrainersJsonConnectionArgs {
   limit?: number | null;
   field?: trainersJsonGroupEnum | null;
 }
-export interface DistinctCoursesJsonConnectionArgs {
-  field?: coursesJsonDistinctEnum | null;
-}
-export interface GroupCoursesJsonConnectionArgs {
-  skip?: number | null;
-  limit?: number | null;
-  field?: coursesJsonGroupEnum | null;
-}
 export interface DistinctLocationsJsonConnectionArgs {
   field?: locationsJsonDistinctEnum | null;
 }
@@ -5137,6 +5148,14 @@ export interface GroupOfferingsJsonConnectionArgs {
   skip?: number | null;
   limit?: number | null;
   field?: offeringsJsonGroupEnum | null;
+}
+export interface DistinctCoursesJsonConnectionArgs {
+  field?: coursesJsonDistinctEnum | null;
+}
+export interface GroupCoursesJsonConnectionArgs {
+  skip?: number | null;
+  limit?: number | null;
+  field?: coursesJsonGroupEnum | null;
 }
 export interface PortSiteArgs {
   formatString?:
@@ -5634,77 +5653,6 @@ export enum trainersJsonGroupEnum {
   internal___owner = 'internal___owner',
 }
 
-export enum CoursesJsonConnectionSortByFieldsEnum {
-  id = 'id',
-  code = 'code',
-  version = 'version',
-  length = 'length',
-  price = 'price',
-  order = 'order',
-  flavors = 'flavors',
-  label = 'label',
-  title = 'title',
-  subtitle = 'subtitle',
-  descriptionHtml = 'descriptionHtml',
-  prerequisites = 'prerequisites',
-  products = 'products',
-  audience = 'audience',
-  curriculum = 'curriculum',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
-}
-
-export enum coursesJsonConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
-}
-
-export enum coursesJsonDistinctEnum {
-  id = 'id',
-  code = 'code',
-  version = 'version',
-  length = 'length',
-  price = 'price',
-  order = 'order',
-  flavors = 'flavors',
-  label = 'label',
-  title = 'title',
-  subtitle = 'subtitle',
-  descriptionHtml = 'descriptionHtml',
-  prerequisites = 'prerequisites',
-  products = 'products',
-  audience = 'audience',
-  curriculum = 'curriculum',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
-}
-
-export enum coursesJsonGroupEnum {
-  id = 'id',
-  code = 'code',
-  version = 'version',
-  length = 'length',
-  price = 'price',
-  order = 'order',
-  flavors = 'flavors',
-  label = 'label',
-  title = 'title',
-  subtitle = 'subtitle',
-  descriptionHtml = 'descriptionHtml',
-  prerequisites = 'prerequisites',
-  products = 'products',
-  audience = 'audience',
-  curriculum = 'curriculum',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
-}
-
 export enum LocationsJsonConnectionSortByFieldsEnum {
   id = 'id',
   title = 'title',
@@ -5870,6 +5818,77 @@ export enum offeringsJsonGroupEnum {
   introHtml = 'introHtml',
   descriptionHtml = 'descriptionHtml',
   sections = 'sections',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum CoursesJsonConnectionSortByFieldsEnum {
+  id = 'id',
+  code = 'code',
+  version = 'version',
+  length = 'length',
+  price = 'price',
+  order = 'order',
+  flavors = 'flavors',
+  label = 'label',
+  title = 'title',
+  subtitle = 'subtitle',
+  descriptionHtml = 'descriptionHtml',
+  prerequisites = 'prerequisites',
+  products = 'products',
+  audience = 'audience',
+  curriculum = 'curriculum',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum coursesJsonConnectionSortOrderValues {
+  ASC = 'ASC',
+  DESC = 'DESC',
+}
+
+export enum coursesJsonDistinctEnum {
+  id = 'id',
+  code = 'code',
+  version = 'version',
+  length = 'length',
+  price = 'price',
+  order = 'order',
+  flavors = 'flavors',
+  label = 'label',
+  title = 'title',
+  subtitle = 'subtitle',
+  descriptionHtml = 'descriptionHtml',
+  prerequisites = 'prerequisites',
+  products = 'products',
+  audience = 'audience',
+  curriculum = 'curriculum',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum coursesJsonGroupEnum {
+  id = 'id',
+  code = 'code',
+  version = 'version',
+  length = 'length',
+  price = 'price',
+  order = 'order',
+  flavors = 'flavors',
+  label = 'label',
+  title = 'title',
+  subtitle = 'subtitle',
+  descriptionHtml = 'descriptionHtml',
+  prerequisites = 'prerequisites',
+  products = 'products',
+  audience = 'audience',
+  curriculum = 'curriculum',
   parent = 'parent',
   internal___contentDigest = 'internal___contentDigest',
   internal___type = 'internal___type',

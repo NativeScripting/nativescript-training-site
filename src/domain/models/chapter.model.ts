@@ -4,6 +4,7 @@ export interface Chapter {
   id: number;
   title: string;
   description: string;
-  topics: Lesson[];
+  lessonsHtml: string;
+
   labsHtml: string;
 }

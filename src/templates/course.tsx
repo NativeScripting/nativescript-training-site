@@ -149,10 +149,7 @@ export const coursePageQuery = graphql`
         title
         description
         labsHtml
-        topics {
-          id
-          title
-        }
+        lessonsHtml
       }
     }
 

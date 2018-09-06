@@ -10,11 +10,11 @@ export const CourseCurriculumLessons: React.StatelessComponent<
 > = (props: CourseCurriculumLessonsProps) => {
   const chapter = props.chapter;
 
-  const rowsHtml = chapter.topics.map((c, i) => {
-    return (
+  return (
+    <div>
       <div className="single-course">
         <ul>
-          <li>{c.title}</li>
+          <li>Topic</li>
           <li>
             <a
               data-fancybox
@@ -32,8 +32,6 @@ export const CourseCurriculumLessons: React.StatelessComponent<
           (VET) and higher education sectors in Australia.
         </p>
       </div>
-    );
-  });
-
-  return <div>{rowsHtml}</div>;
+    </div>
+  );
 };

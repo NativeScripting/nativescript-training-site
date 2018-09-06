@@ -26,7 +26,7 @@ export const CourseInstructors: React.StatelessComponent<
           <div className="instructor-panel">
             <div className="row">
               <div className="col-sm-3 col-xs-12 name">
-                <img src="images/course/5.jpg" alt="" />
+                <img src="/images/course/5.jpg" alt="" />
                 <h6>Saruta Janifao</h6>
                 <p>Web Developer</p>
               </div>
@@ -54,7 +54,7 @@ export const CourseInstructors: React.StatelessComponent<
             </div>
             <div className="row">
               <div className="col-sm-3 col-xs-12 name">
-                <img src="images/course/6.jpg" alt="" />
+                <img src="/images/course/6.jpg" alt="" />
                 <h6>Mahfuz Riad</h6>
                 <p>Web Developer</p>
               </div>
