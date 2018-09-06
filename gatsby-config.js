@@ -6,6 +6,36 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     `gatsby-transformer-json`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-remove-trailing-slashes`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://nativescript.training`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+                {
+                  site {
+                    siteMetadata {
+                      siteUrl
+                    }
+                  }
+        
+                  allSitePage {
+                    edges {
+                      node {
+                        path
+                      }
+                    }
+                  }
+              }`,
+      },
+    },
     // Expose `/data` to graphQL layer
     {
       resolve: `gatsby-source-filesystem`,
