@@ -26,7 +26,7 @@ export const CourseUpcomingSessions: React.StatelessComponent<
 
   return (
     <div className="sidebar-widget sidebar-post-data">
-      <h5>Upcoming Offerings</h5>
+      <h5>Upcoming Sessions</h5>
 
       {props.sessions.length > 0 && <ul>{rowsHtml}</ul>}
       {!(props.sessions.length > 0) && (
