@@ -28,7 +28,7 @@
     "gatsby-source-filesystem": "1.5.39",
     "gatsby-transformer-json": "1.0.20",
     "gatsby-transformer-sharp": "1.6.27",
-    "react-helmet": "5.2.0",
+    "react-helmet": "5.0.3",
     "simple-load-script": "1.0.2"
   },
   "devDependencies": {
@@ -36,7 +36,7 @@
     "@types/prop-types": "15.5.5",
     "@types/react": "15.0.21",
     "@types/react-dom": "15.5.8",
-    "@types/react-helmet": "5.0.7",
+    "@types/react-helmet": "5.0.0",
     "graphql-code-generator": "0.8.21",
     "prettier": "1.13.7",
     "typescript": "3.0.3"
