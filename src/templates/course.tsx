@@ -55,10 +55,14 @@ class CourseTemplate extends React.Component<
       { name: course.title, url: '' },
     ];
 
-    const pageTitle = `${course.title} | NativeScripting`;
+    const pageTitle = `${course.title} | NativeScript Training`;
 
     return (
       <div>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <InnerBanner
           title="Courses"
           subtitle="Course details"

@@ -101,6 +101,9 @@ export const Footer: React.StatelessComponent<FooterProps> = (
       <div className="bottom-footer">
         <div className="container">
           <p>Copyright &copy; {new Date().getFullYear()} Nuvious</p>
+          <p>
+            <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a>
+          </p>
         </div>
       </div>
     </footer>

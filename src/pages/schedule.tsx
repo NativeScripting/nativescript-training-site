@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   SessionsJsonConnection,
   CoursesJsonConnection,
@@ -53,8 +54,14 @@ export default class extends React.Component<SchedulePageProps, any> {
       return <SessionsCard key={i} session={s} />;
     });
 
+    const pageTitle = `Schedule | NativeScript Training`;
+
     return (
       <div>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <InnerBanner
           title="Schedule"
           subtitle="NativeScript Training Schedule of Public Classes"

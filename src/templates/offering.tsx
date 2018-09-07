@@ -36,7 +36,7 @@ class OfferingTemplate extends React.Component<
 
   public render() {
     const offering = this.state.offering;
-    const pageTitle = `${offering.title} | NativeScripting`;
+    const pageTitle = `${offering.title} | NativeScript Training`;
 
     const sectionsHtml = offering.sections.map((s, i) => {
       return <OfferingDetailSection key={i} section={s} />;
@@ -44,6 +44,10 @@ class OfferingTemplate extends React.Component<
 
     return (
       <div>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <InnerBanner
           title="Training"
           subtitle={offering.title}

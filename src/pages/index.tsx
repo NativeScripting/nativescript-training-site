@@ -1,8 +1,10 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
-import '../css/index.css';
+import { Helmet } from 'react-helmet';
 import { HomeFeatures } from '../components/home/home-features';
 import { OfferingsJsonConnection } from '../domain/graphql-types';
+
+import '../css/index.css';
 
 interface IndexPageProps {
   data: {
@@ -16,8 +18,14 @@ export default class extends React.Component<IndexPageProps, any> {
   }
 
   public render() {
+    const pageTitle = `NativeScript Training`;
+
     return (
       <div>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <div
           id="theme-main-banner"
           className="banner-one section-margin-bottom"

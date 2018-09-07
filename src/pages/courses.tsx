@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
+
 import { CoursesJsonConnection } from '../domain/graphql-types';
 import { courseFromCoursesJsonEdge } from '../domain/converters';
 import { CourseSummariesTable } from '../components/courses/course-summaries-table';
@@ -25,8 +27,14 @@ export default class extends React.Component<CoursesPageProps, any> {
       return <CoursesCard key={i} course={c} />;
     });
 
+    const pageTitle = `Courses | NativeScript Training`;
+
     return (
       <div>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <InnerBanner
           title="Courses"
           subtitle="NativeScript Training Course Catalog"

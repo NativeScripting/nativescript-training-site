@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 import { OfferingsJsonConnection } from '../domain/graphql-types';
 import { offeringFromOfferingsJsonEdge } from '../domain/converters';
 import { OfferingSummaries } from '../components/offerings/offering-summaries';
@@ -20,8 +21,14 @@ export default class extends React.Component<TrainingPageProps, any> {
       offeringFromOfferingsJsonEdge
     );
 
+    const pageTitle = `Training | NativeScript Training`;
+
     return (
       <div>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <InnerBanner
           title="Training"
           subtitle="NativeScript Training Delivery Options"

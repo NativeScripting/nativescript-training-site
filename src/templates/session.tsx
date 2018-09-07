@@ -105,12 +105,19 @@ class SessionTemplate extends React.Component<
       { name: 'Course details', url: '' },
     ];
 
-    const pageTitle = `${session.title} | NativeScripting`;
+    const pageTitle = `${session.title} - ${dateFormat(
+      session.dateStart
+    )} | NativeScript Training`;
+
     const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email`;
     const telLink = `tel:${CONST_PHONE_NUMBER}`;
 
     return (
       <div>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <InnerBanner
           title="Schedule"
           subtitle="Session details"
