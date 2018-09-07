@@ -100,12 +100,7 @@ export const Footer: React.StatelessComponent<FooterProps> = (
 
       <div className="bottom-footer">
         <div className="container">
-          <p>
-            Copyright &copy; 2018{' '}
-            <a href="http://www.nuvious.com" className="tran3s">
-              Nuvious
-            </a>
-          </p>
+          <p>Copyright &copy; {new Date().getFullYear()} Nuvious</p>
         </div>
       </div>
     </footer>
