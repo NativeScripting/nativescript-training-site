@@ -1,10 +1,10 @@
 [
   {
-    "id": "washington_dc",
+    "id": "washington_dc_carr_penn",
     "title": "Washington, DC",
-    "facilityTitle": "Nuvious Cove",
+    "facilityTitle": "Carr at Pennsylvania Ave",
     "facilityDescHtml": "This is a placeholder for Nuvious Cove",
-    "address": "522 F St. NE",
+    "address": "1701 Pennsylvania Ave NW",
     "city": "Washington",
     "state": "DC",
     "country": "United States"
