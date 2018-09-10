@@ -32,7 +32,8 @@ export const SessionsCard: React.StatelessComponent<SessionsCardProps> = (
             {session.timeStart} - {session.timeEnd}
           </li>
         </ul>
-        <p>{session.descriptionHtml}</p>
+        <p dangerouslySetInnerHTML={{ __html: session.descriptionHtml }} />
+
         {session.registerLink && (
           <a href={session.registerLink} className="theme-solid-button">
             Register Now
