@@ -98,7 +98,7 @@ export default class extends React.Component<SchedulePageProps, any> {
 export const schedulePageQuery = graphql`
   query SchedulePageQuery {
     #get sessions
-    sessionsConnection: allSessionsJson {
+    sessionsConnection: allSessionsJson(sort: { fields: [order], order: ASC }) {
       edges {
         node {
           id
