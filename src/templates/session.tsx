@@ -163,6 +163,15 @@ class SessionTemplate extends React.Component<
                     }}
                   />
 
+                  <p>
+                    <a
+                      href={`/course/${session.course.id}`}
+                      className="theme-solid-button"
+                    >
+                      Full Course Agenda
+                    </a>
+                  </p>
+
                   {this.state.expired && (
                     <div id="count" className="clearfix">
                       {this.state.expired && (
@@ -207,7 +216,7 @@ class SessionTemplate extends React.Component<
                         <span>PRICE :</span> ${session.price}
                       </li>
                       <li>
-                        <span>Total Slots :</span> 12
+                        <span>Total Slots :</span> {session.totalSlots}
                       </li>
                       <li>
                         <span>Start Date :</span>{' '}
@@ -308,6 +317,7 @@ export const sessionPageQuery = graphql`
       courseId
       registerLink
       price
+      totalSlots
     }
 
     #get all courses
