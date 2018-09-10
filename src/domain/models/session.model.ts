@@ -14,6 +14,7 @@ export interface Session {
   registerLink: string;
 
   price: number;
+  totalSlots: number;
 
   course: Course;
   trainer: Trainer;

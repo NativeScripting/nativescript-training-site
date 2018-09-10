@@ -36,6 +36,7 @@ export function sessionFromSessionsJson(
     timeStart: s.timeStart,
     timeEnd: s.timeEnd,
     price: s.price,
+    totalSlots: s.totalSlots,
     course: getCourseByCourseId(s.courseId, courses),
     location: getSessionLocaitonBySessionLocationId(s.locationId, locations),
     trainer: getTrainerByTrainerId(s.trainerId, trainers),
