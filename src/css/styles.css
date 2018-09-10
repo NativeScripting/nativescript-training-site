@@ -24,6 +24,17 @@
   width: 100%;
 }
 
+.event-details .single-event-figure h6 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #151515;
+  margin: 30px 10px 10px 0px;
+}
+
+.event-details .single-event-figure p {
+  margin: 0;
+}
+
 #mega-menu-wrapper {
   position: relative;
 }
