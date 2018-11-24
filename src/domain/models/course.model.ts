@@ -1,5 +1,8 @@
 import { Chapter } from './chapter.model';
 import { CourseFlavorType } from './course-flavor.model';
+import { CourseTypeType } from './course-type.model';
+
+
 
 export interface Course {
   id: string;
@@ -10,6 +13,8 @@ export interface Course {
   flavors: CourseFlavorType[];
   label: string;
   title: string;
+  order: number;
+  courseType: CourseTypeType;
   subtitle: string;
   programFile: string;
   descriptionHtml: string;

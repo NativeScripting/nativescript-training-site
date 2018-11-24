@@ -56,6 +56,7 @@ class CourseTemplate extends React.Component<
     ];
 
     const pageTitle = `${course.title} | NativeScript Training`;
+    const subTitle = course.courseType === 'course' ? 'Course Details' : 'Workshop Details';
 
     return (
       <div>
@@ -65,7 +66,7 @@ class CourseTemplate extends React.Component<
 
         <InnerBanner
           title="Courses"
-          subtitle="Course details"
+          subtitle={subTitle}
           bannerImg="/images/course/banner.jpg"
         />
         <div className="course-details section-margin-top section-margin-bottom">
@@ -129,6 +130,7 @@ export const coursePageQuery = graphql`
       subtitle
       programFile
       flavors
+      courseType
       label
       descriptionHtml
       prerequisites

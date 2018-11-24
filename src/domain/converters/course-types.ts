@@ -2,6 +2,7 @@ import { defaultArray } from '../core';
 import { CoursesJsonEdge, CoursesJson } from '../graphql-types';
 import { Course, asCourseFlavorType } from '../models';
 import { chapterFromCurriculum_2 } from './chapter-types';
+import { asCourseTypeType } from '../models/course-type.model';
 
 export function courseFromCoursesJsonEdge(edge: CoursesJsonEdge): Course {
   const c = edge.node;
@@ -16,6 +17,8 @@ export function courseFromCoursesJson(c: CoursesJson): Course {
     version: c.version,
     price: c.price,
     label: c.label,
+    order: c.order,
+    courseType: asCourseTypeType(c.courseType),
     title: c.title,
     subtitle: c.subtitle,
     programFile: c.programFile,

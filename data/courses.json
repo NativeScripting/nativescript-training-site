@@ -1,11 +1,136 @@
 [
   {
+    "id": "workshop-nativescript-with-angular",
+    "code": "NSNGW-100",
+    "version": "1.0",
+    "length": "1 Day",
+    "price": 690,
+    "order": 800,
+    "courseType": "workshop",
+    "flavors": [
+      "Angular"
+    ],
+    "label": "NEW",
+    "title": "One Day Workshop: NativeScript with Angular",
+    "subtitle": "",
+    "programFile": "",
+    "descriptionHtml": "<div><p>Welcome to the one-day NativeScript with Angular workshop. Below you’ll find the prerequisites, schedule, and instructions for the hands-on activities being held throughout the day.</p><h5>STUDENT PREREQUISITES</h5><p>All attendees must have strong prior JavaScript, TypeScript, and some Angular experience. No prior NativeScript experience is necessary. All attendees must have the NativeScript CLI installed, and all system requirements in place to develop for <em>either</em> iOS or Android. If you haven’t already, complete the installation instructions using the link below.</p><ul><li><a href=\"http://docs.nativescript.org/angular/start/quick-setup.html\">Complete the NativeScript installation guide</a></li></ul><blockquote><p><strong>TIP</strong>: If you run into issues completing the setup instructions, try <a href=\"http://developer.telerik.com/wp-login.php?action=slack-invitation\">joining the NativeScript Slack</a> and asking questions in the #getting-started channel.</p></blockquote><p>Additionally, please also <a href=\"https://code.visualstudio.com/download\">download and install Visual Studio Code</a>, and then <a href=\"https://docs.nativescript.org/tooling/visual-studio-code-extension#installation\">install the editor’s NativeScript extension</a>. You’ll be using NativeScript’s Visual Studio Code extension as you complete this guide.</p></div>",
+    "prerequisites": "",
+    "products": [
+      {
+        "title": "NativeScript"
+      },
+      {
+        "title": "Angular"
+      },
+      {
+        "title": "TypeScript"
+      }
+    ],
+    "audience": [
+      {
+        "title": "Developers"
+      }
+    ],
+    "curriculum": [
+      {
+        "id": 1,
+        "title": "Introduction",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 2,
+        "title": "What is NativeScript",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 3,
+        "title": "Project Setup",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 4,
+        "title": "UI",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 5,
+        "title": "Navigation",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 6,
+        "title": "Components and Services",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 7,
+        "title": "Plugins",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 8,
+        "title": "App Challenge 1: Build a List",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 8,
+        "title": "App Challenge 2: Master-Detail Pages",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 8,
+        "title": "App Challenge 3: Setting Up a Form",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      },
+      {
+        "id": 8,
+        "title": "What's Next?",
+        "description": "",
+        "lessonsHtml": "",
+        "topics": [],
+        "labsHtml": ""
+      }
+    ]
+  },
+  {
     "id": "introduction-to-nativescript-with-angular",
     "code": "NSNG-111",
     "version": "1.0",
     "length": "3 Days",
     "price": 1900,
     "order": 900,
+    "courseType": "course",
     "flavors": [
       "Angular"
     ],
@@ -105,6 +230,7 @@
     "length": "2 Days",
     "price": 1600,
     "order": 950,
+    "courseType": "course",
     "flavors": [
       "Angular"
     ],
@@ -196,6 +322,7 @@
     "length": "5 Days",
     "price": 3500,
     "order": 1000,
+    "courseType": "course",
     "flavors": [
       "Angular"
     ],
