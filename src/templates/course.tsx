@@ -29,7 +29,7 @@ interface CourseTemplateState {
 class CourseTemplate extends React.Component<
   CourseTemplateProps,
   CourseTemplateState
-> {
+  > {
   constructor(props: CourseTemplateProps) {
     super(props);
 
@@ -80,16 +80,19 @@ class CourseTemplate extends React.Component<
                 <CourseDetailsCard course={course} nextSession={nextSession} />
 
                 <div className="course-description">
-                  <h5>COURSE DESCRIPTION</h5>
+                  <h5>DESCRIPTION</h5>
                   <p
                     dangerouslySetInnerHTML={{ __html: course.descriptionHtml }}
                   />
                 </div>
 
-                <div className="course-description">
-                  <h5>STUDENT PREREQUISITES</h5>
-                  <p>{course.prerequisites}</p>
-                </div>
+                {(course.prerequisites && (
+                  <div className="course-description">
+                    <h5>STUDENT PREREQUISITES</h5>
+                    <p>{course.prerequisites}</p>
+                  </div>
+                ))}
+
 
                 <div className="course-panel">
                   <div className="panel-group theme-accordion" id="accordion">
