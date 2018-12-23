@@ -13,7 +13,7 @@
     "label": "NEW",
     "title": "One Day Workshop: NativeScript with Angular",
     "subtitle": "",
-    "programFile": "",
+    "programFile": "workshop-nativescript-with-angular.pdf",
     "descriptionHtml": "<div><p>Welcome to the one-day NativeScript with Angular workshop. Below you’ll find the prerequisites, schedule, and instructions for the hands-on activities being held throughout the day.</p><h5>STUDENT PREREQUISITES</h5><p>All attendees must have strong prior JavaScript, TypeScript, and some Angular experience. No prior NativeScript experience is necessary. All attendees must have the NativeScript CLI installed, and all system requirements in place to develop for <em>either</em> iOS or Android. If you haven’t already, complete the installation instructions using the link below.</p><ul><li><a href=\"http://docs.nativescript.org/angular/start/quick-setup.html\">Complete the NativeScript installation guide</a></li></ul><blockquote><p><strong>TIP</strong>: If you run into issues completing the setup instructions, try <a href=\"http://developer.telerik.com/wp-login.php?action=slack-invitation\">joining the NativeScript Slack</a> and asking questions in the #getting-started channel.</p></blockquote><p>Additionally, please also <a href=\"https://code.visualstudio.com/download\">download and install Visual Studio Code</a>, and then <a href=\"https://docs.nativescript.org/tooling/visual-studio-code-extension#installation\">install the editor’s NativeScript extension</a>. You’ll be using NativeScript’s Visual Studio Code extension as you complete this guide.</p></div>",
     "prerequisites": "",
     "products": [
@@ -35,89 +35,81 @@
     "curriculum": [
       {
         "id": 1,
-        "title": "Introduction",
+        "title": "Getting Started",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Prerequisites</li><li>NativeScript Introduction</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
         "id": 2,
-        "title": "What is NativeScript",
+        "title": "Project Setup",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>CLI</li><li>Debugging</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
         "id": 3,
-        "title": "Project Setup",
+        "title": "User Interface",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Data and Event Binding</li><li>Theme</li><li>Animations</li><li>NativeScript UI</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
         "id": 4,
-        "title": "UI",
+        "title": "Navigation",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Routing</li><li>Template Navigation</li><li>Programmatic Navigation</li><li>Passing Data</li><li>Transitions</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
         "id": 5,
-        "title": "Navigation",
+        "title": "Components and Services",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Components</li><li>Services</li><li>HttpClient</li><li>Custom Events</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
         "id": 6,
-        "title": "Components and Services",
+        "title": "Plugins",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Camera</li><li>Social Share</li><li>Pull to Refresh</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
         "id": 7,
-        "title": "Plugins",
+        "title": "Bonus Challenge 1: List",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Building a List</li><li>Requirements</li><li>Tips</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
         "id": 8,
-        "title": "App Challenge 1: Build a List",
+        "title": "Bonus Challenge 2: Master-Details",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Building the Pages</li><li>Requirements</li><li>Tips</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
-        "id": 8,
-        "title": "App Challenge 2: Master-Detail Pages",
+        "id": 9,
+        "title": "Bonus Challenge 3: Form",
         "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Building a Form</li><li>Requirements</li><li>Tips</li></ul>",
         "topics": [],
         "labsHtml": ""
       },
       {
-        "id": 8,
-        "title": "App Challenge 3: Setting Up a Form",
+        "id": 10,
+        "title": "Next Steps",
         "description": "",
-        "lessonsHtml": "",
-        "topics": [],
-        "labsHtml": ""
-      },
-      {
-        "id": 8,
-        "title": "What's Next?",
-        "description": "",
-        "lessonsHtml": "",
+        "lessonsHtml": "<ul><li>Where to go from here?</li><li>Resources</li></ul>",
         "topics": [],
         "labsHtml": ""
       }
