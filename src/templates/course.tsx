@@ -42,7 +42,8 @@ class CourseTemplate extends React.Component<
     const course = this.state.course;
 
     const sessions = this.props.data.sessionsConnection.edges
-      .filter(s => s.node.courseId === this.state.course.id)
+      .filter(s => s.node.courseId === this.state.course.id &&
+        new Date(s.node.dateStart) > new Date())
       .map(s => {
         return sessionFromSessionsJsonEdge(s, [], [], []);
       });
