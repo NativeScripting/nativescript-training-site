@@ -77,21 +77,22 @@ export const Footer: React.StatelessComponent<FooterProps> = (
             <ul>
               <li>
                 <a
-                  href="https://nativescripting.com/posts/nativescript-network-spy"
+                  href="https://nativescripting.com/posts/how-to-add-shadows-in-ios"
                   target="_blank"
                 >
-                  Easy NativeScript Network Spy Using a Custom Interceptor
+                  How to Add Shadows in iOS
                 </a>
-                <div className="date">August 24, 2018</div>
+                <div className="date">September 22, 2019</div>
               </li>
+
               <li>
                 <a
-                  href="https://nstudio.io/blog/adaptive-icons/"
+                  href="https://nativescripting.com/posts/google-login-with-oauth2-in-nativescript"
                   target="_blank"
                 >
-                  What are Adaptive Icons?
+                  Google Login with OAuth2 in NativeScript
                 </a>
-                <div className="date">August 13, 2018</div>
+                <div className="date">September 14, 2019</div>
               </li>
             </ul>
           </div>
