@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { handleFormSubmit } from '../../util/form-utils';
 
-interface ContactPageFormProps {}
+interface ContactPageFormProps { }
 
 interface ContactPageFormState {
   submitted: boolean;
@@ -11,7 +11,7 @@ interface ContactPageFormState {
 export class ContactPageForm extends React.Component<
   ContactPageFormProps,
   ContactPageFormState
-> {
+  > {
   constructor(props: ContactPageFormProps) {
     super(props);
 
@@ -89,7 +89,7 @@ export class ContactPageForm extends React.Component<
 
             <input
               type="submit"
-              value="Get request"
+              value="Send request"
               className="theme-solid-button theme-button"
             />
           </form>
