@@ -2157,6 +2157,15 @@ header .theme-menu-wrapper .main-content-wrapper {
 .blog-list .blog-details-content .single-blog-list {
   margin-bottom: 55px;
 }
+
+.blog-details-content a h5 {
+  color: #337ab7;
+}
+
+.blog-details-content a:hover h5 {
+  color: #23527c;
+}
+
 .blog-details-content .single-blog-list .bold-text {
   font-size: 18px;
   font-weight: 600;

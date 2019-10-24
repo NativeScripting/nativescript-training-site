@@ -18,7 +18,7 @@ export const HomeFeatures: React.StatelessComponent<HomeFeaturesProps> = (
     .filter(o => o.id !== 'discounts')
     .map((o, i) => {
       return (
-        <div key={i} className="col-md-4 col-sm-6 col-xs-12">
+        <div key={i} className="col-md-6 col-sm-6 col-xs-12">
           <div className="feature-block">
             <div className="wrapper">
               <div className="icon">
