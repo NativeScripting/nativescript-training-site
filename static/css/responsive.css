@@ -43,7 +43,11 @@
   .short-banner {margin-top: 70px;}
   header .theme-menu-wrapper .logo {position: relative;z-index: 99;margin: 0;}
   #mega-menu-wrapper {position: absolute;top:0;left:0;z-index: 9;margin: 0;}
-  header .theme-menu-wrapper,.theme-menu-wrapper.fixed {padding: 10px 0;}
+  header .theme-menu-wrapper,.theme-menu-wrapper.fixed {
+    padding: 25px 0 15px 0;
+
+  }
+
   #mega-menu-wrapper .nav li.join-us a {text-align: center;margin-bottom: 10px;}
   .theme-sidebar,.shop-sidebar {margin-top: 60px;}
   .our-feature h2,.course-search-form.shape-style {margin-top: 0;}
