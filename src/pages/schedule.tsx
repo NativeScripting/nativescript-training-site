@@ -15,6 +15,7 @@ import {
 } from '../domain/converters';
 import { SessionsCard } from '../components/sessions/sessions-card';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface SchedulePageProps {
   data: {
@@ -57,7 +58,7 @@ export default class extends React.Component<SchedulePageProps, any> {
     const pageTitle = `Schedule | NativeScript Training`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -90,7 +91,7 @@ export default class extends React.Component<SchedulePageProps, any> {
         <div className="our-events section-margin-top section-margin-bottom">
           <div className="container">{sessionsCardsHtml}</div>
         </div>
-      </div>
+      </MainLayout>
     );
   }
 }

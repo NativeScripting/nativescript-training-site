@@ -4,6 +4,7 @@ import { OfferingsJsonConnection } from '../domain/graphql-types';
 import { offeringFromOfferingsJsonEdge } from '../domain/converters';
 import { OfferingSummaries } from '../components/offerings/offering-summaries';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface TrainingPageProps {
   data: {
@@ -24,7 +25,7 @@ export default class extends React.Component<TrainingPageProps, any> {
     const pageTitle = `Training | NativeScript Training`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -47,7 +48,7 @@ export default class extends React.Component<TrainingPageProps, any> {
           </div>
         </div>
         <OfferingSummaries offerings={offerings} />
-      </div>
+      </MainLayout>
     );
   }
 }

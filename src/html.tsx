@@ -21,9 +21,7 @@ interface HtmlProps {
 }
 
 // Use `module.exports` to be compliante with `webpack-require` import method
-module.exports = React.createClass<HtmlProps, void>({
-  componentDidMount() {},
-
+export default class extends React.Component<HtmlProps, void> {
   render() {
     const head = Helmet.rewind();
 
@@ -124,5 +122,5 @@ module.exports = React.createClass<HtmlProps, void>({
         </body>
       </html>
     );
-  },
-});
+  }
+}

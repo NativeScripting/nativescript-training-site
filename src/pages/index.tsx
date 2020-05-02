@@ -5,6 +5,7 @@ import { HomeFeatures } from '../components/home/home-features';
 import { OfferingsJsonConnection } from '../domain/graphql-types';
 
 import '../css/index.css';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface IndexPageProps {
   data: {
@@ -21,7 +22,7 @@ export default class extends React.Component<IndexPageProps, any> {
     const pageTitle = `NativeScript Training`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -61,8 +62,9 @@ export default class extends React.Component<IndexPageProps, any> {
                         <p className="">
                           NativeScript.training provides just-in-time training
                           on NativeScript all over the world, on-site at your
-                          office, and remotely. <br />We also provide
-                          consulting, mentoring &amp; training options.
+                          office, and remotely. <br />
+                          We also provide consulting, mentoring &amp; training
+                          options.
                         </p>
                         <Link className="theme-solid-button" to="/training">
                           Training
@@ -118,7 +120,7 @@ export default class extends React.Component<IndexPageProps, any> {
         />
 
         <div className="course-search-form shape-style" />
-      </div>
+      </MainLayout>
     );
   }
 }

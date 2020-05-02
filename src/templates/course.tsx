@@ -14,6 +14,7 @@ import { CourseInstructors } from '../components/courses/course-instructors';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
 import { CourseDetailSidebarPrivateClassesBox } from '../components/courses/course-detail-sidebar-private/course-detail-sidebar-private';
 import { CourseDetailSidebarDownloadsBox } from '../components/courses/course-detail-sidebar-downloads';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface CourseTemplateProps {
   data: {
@@ -29,7 +30,7 @@ interface CourseTemplateState {
 class CourseTemplate extends React.Component<
   CourseTemplateProps,
   CourseTemplateState
-  > {
+> {
   constructor(props: CourseTemplateProps) {
     super(props);
 
@@ -42,8 +43,11 @@ class CourseTemplate extends React.Component<
     const course = this.state.course;
 
     const sessions = this.props.data.sessionsConnection.edges
-      .filter(s => s.node.courseId === this.state.course.id &&
-        new Date(s.node.dateStart) > new Date())
+      .filter(
+        s =>
+          s.node.courseId === this.state.course.id &&
+          new Date(s.node.dateStart) > new Date()
+      )
       .map(s => {
         return sessionFromSessionsJsonEdge(s, [], [], []);
       });
@@ -57,10 +61,11 @@ class CourseTemplate extends React.Component<
     ];
 
     const pageTitle = `${course.title} | NativeScript Training`;
-    const subTitle = course.courseType === 'course' ? 'Course Details' : 'Workshop Details';
+    const subTitle =
+      course.courseType === 'course' ? 'Course Details' : 'Workshop Details';
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -88,13 +93,12 @@ class CourseTemplate extends React.Component<
                   />
                 </div>
 
-                {(course.prerequisites && (
+                {course.prerequisites && (
                   <div className="course-description">
                     <h5>STUDENT PREREQUISITES</h5>
                     <p>{course.prerequisites}</p>
                   </div>
-                ))}
-
+                )}
 
                 <div className="course-panel">
                   <div className="panel-group theme-accordion" id="accordion">
@@ -113,7 +117,7 @@ class CourseTemplate extends React.Component<
             </div>
           </div>
         </div>
-      </div>
+      </MainLayout>
     );
   }
 }

@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+import { MainLayout } from '../layouts/MainLayout';
 
 function NotFoundPage() {
   const pageTitle = `Page not Found | NativeScript Training`;
 
   return (
-    <div>
+    <MainLayout>
       <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
@@ -15,7 +16,7 @@ function NotFoundPage() {
       <p>
         Take a look at <a href="/courses">our courses</a>.
       </p>
-    </div>
+    </MainLayout>
   );
 }
 

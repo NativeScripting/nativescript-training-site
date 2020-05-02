@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { ContactComponent } from '../components/contact/contact.component';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface ContactPageProps {}
 
@@ -15,7 +16,7 @@ export default class extends React.Component<ContactPageProps, any> {
     const pageTitle = `Contact Us | NativeScript Training`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -26,7 +27,7 @@ export default class extends React.Component<ContactPageProps, any> {
           bannerImg="/images/contact/banner.jpg"
         />
         <ContactComponent />
-      </div>
+      </MainLayout>
     );
   }
 }

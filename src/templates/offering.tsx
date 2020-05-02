@@ -11,6 +11,7 @@ import { SidebarPhone } from '../components/global/sidebar-phone/sidebar-phone';
 import { OfferingDetailSidebarPrivateClassesBox } from '../components/offerings/offering-detail-sidebar-private';
 import { OfferingDetailSidebarOnsiteRequestBox } from '../components/offerings/offering-detail-sidebar-onsite-request';
 import { OfferingDetailOnsiteRequestForm } from '../components/offerings/offering-detail-onsite-request';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface OfferingTemplateProps {
   data: {
@@ -43,7 +44,7 @@ class OfferingTemplate extends React.Component<
     });
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -96,7 +97,7 @@ class OfferingTemplate extends React.Component<
             </div>
           </div>
         </div>
-      </div>
+      </MainLayout>
     );
   }
 }

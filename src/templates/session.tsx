@@ -21,6 +21,7 @@ import {
   EMAIL_TRAINING_NUVIOUS,
   CONST_PHONE_NUMBER,
 } from '../constants/constants';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface SessionTemplateProps {
   data: {
@@ -113,7 +114,7 @@ class SessionTemplate extends React.Component<
     const telLink = `tel:${CONST_PHONE_NUMBER}`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -285,7 +286,7 @@ class SessionTemplate extends React.Component<
             </div>
           </div>
         </div>
-      </div>
+      </MainLayout>
     );
   }
 

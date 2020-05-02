@@ -6,6 +6,7 @@ import { courseFromCoursesJsonEdge } from '../domain/converters';
 import { CourseSummariesTable } from '../components/courses/course-summaries-table';
 import { CoursesCard } from '../components/courses/courses-card';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface CoursesPageProps {
   data: {
@@ -30,7 +31,7 @@ export default class extends React.Component<CoursesPageProps, any> {
     const pageTitle = `Courses | NativeScript Training`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -70,7 +71,7 @@ export default class extends React.Component<CoursesPageProps, any> {
             </div>
           </div>
         </div>
-      </div>
+      </MainLayout>
     );
   }
 }
