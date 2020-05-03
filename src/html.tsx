@@ -6,6 +6,7 @@ import Helmet from 'react-helmet';
 
 // Load production style
 let styles: string;
+/*
 if (process.env.NODE_ENV === `production`) {
   try {
     styles = require('!raw-loader!../public/styles.css');
@@ -13,6 +14,9 @@ if (process.env.NODE_ENV === `production`) {
     console.log(err);
   }
 }
+*/
+
+styles = require('!raw-loader!./css/styles.css');
 
 interface HtmlProps {
   body: any;
