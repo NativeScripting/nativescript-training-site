@@ -16,7 +16,11 @@ import {
   locationFromLocationsJsonEdge,
 } from '../domain/converters';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
-import { monthNameFromDate, dateFormat } from '../util/date-utils';
+import {
+  monthNameFromDate,
+  dateFormat,
+  isDateBeforeToday,
+} from '../util/date-utils';
 import {
   EMAIL_TRAINING_NUVIOUS,
   CONST_PHONE_NUMBER,
@@ -113,6 +117,17 @@ class SessionTemplate extends React.Component<
     const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email`;
     const telLink = `tel:${CONST_PHONE_NUMBER}`;
 
+    const sessionLinkHtml = !isDateBeforeToday(session.dateEnd) ? (
+      <a
+        href={session.registerLink}
+        className="theme-solid-button  float-right"
+      >
+        Register Now
+      </a>
+    ) : (
+      <a className="theme-solid-button  float-right">Event ended</a>
+    );
+
     return (
       <MainLayout>
         <Helmet>
@@ -148,14 +163,7 @@ class SessionTemplate extends React.Component<
                         {session.timeStart} - {session.timeEnd}
                       </li>
                     </ul>
-                    {session.registerLink && (
-                      <a
-                        href={session.registerLink}
-                        className="theme-solid-button float-right"
-                      >
-                        Register Now
-                      </a>
-                    )}
+                    {session.registerLink && sessionLinkHtml}
                   </div>
 
                   <p

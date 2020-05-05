@@ -14,7 +14,7 @@ export default class extends React.Component<ContactPageProps, any> {
   }
 
   public render() {
-    const pageTitle = `Contact Us | NativeScript Training`;
+    const pageTitle = `Code Review | NativeScript Training`;
 
     return (
       <MainLayout>
@@ -23,12 +23,12 @@ export default class extends React.Component<ContactPageProps, any> {
         </Helmet>
 
         <InnerBanner
-          title="Contact Us"
-          subtitle="Get in Touch. We'll get back to you within 24 hours."
+          title="Request Code Review"
+          subtitle="Get in Touch about your code review. We'll get back to you within 24 hours."
           bannerImg="/images/contact/banner.jpg"
         />
 
-        <ContactComponent />
+        <ContactComponent title={"Let's review your code!"} />
       </MainLayout>
     );
   }

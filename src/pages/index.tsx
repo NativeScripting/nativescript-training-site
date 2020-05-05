@@ -103,7 +103,7 @@ export default class extends React.Component<IndexPageProps, any> {
                 </p>
                 <Link
                   className="wow fadeInUp animated theme-solid-button theme-button"
-                  to="/contact"
+                  to="/contact-code-review"
                 >
                   Request Code Review
                 </Link>

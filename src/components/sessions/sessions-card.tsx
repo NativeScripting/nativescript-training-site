@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { Session } from '../../domain/models';
 import { sessionUrlFrom } from '../../util/urls';
-import { dateFormat, monthNameFromDate } from '../../util/date-utils';
+import {
+  dateFormat,
+  monthNameFromDate,
+  isDateBeforeToday,
+} from '../../util/date-utils';
 
 interface SessionsCardProps {
   session: Session;
@@ -11,6 +15,16 @@ export const SessionsCard: React.StatelessComponent<SessionsCardProps> = (
   props: SessionsCardProps
 ) => {
   const session = props.session;
+
+  const now = Date.now();
+
+  const sessionLinkHtml = !isDateBeforeToday(session.dateEnd) ? (
+    <a href={session.registerLink} className="theme-solid-button">
+      Register Now
+    </a>
+  ) : (
+    <a className="theme-solid-button">Event ended</a>
+  );
 
   return (
     <div className="single-event-figure row">
@@ -34,11 +48,7 @@ export const SessionsCard: React.StatelessComponent<SessionsCardProps> = (
         </ul>
         <p dangerouslySetInnerHTML={{ __html: session.descriptionHtml }} />
 
-        {session.registerLink && (
-          <a href={session.registerLink} className="theme-solid-button">
-            Register Now
-          </a>
-        )}
+        {session.registerLink && sessionLinkHtml}
       </div>
       <div className="col-md-5 col-sm-6 col-xs-12">
         <img

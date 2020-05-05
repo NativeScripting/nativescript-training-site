@@ -18,5 +18,15 @@
     "city": "Washington",
     "state": "DC",
     "country": "United States"
+  },
+  {
+    "id": "remote",
+    "title": "Remote",
+    "facilityTitle": "Nuvious Cove",
+    "facilityDescHtml": "This is a remote course",
+    "address": "522 F St. NE",
+    "city": "Washington",
+    "state": "DC",
+    "country": "United States"
   }
 ]

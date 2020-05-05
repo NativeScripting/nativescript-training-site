@@ -5,14 +5,19 @@ import {
   EMAIL_TRAINING_NUVIOUS,
   CONST_PHONE_NUMBER,
 } from '../../constants/constants';
+import { InstantBooking } from '../global/InstantBooking/InstantBooking';
 
-interface ContactComponentProps {}
+interface ContactComponentProps {
+  title?: string;
+}
 
 export const ContactComponent: React.StatelessComponent<
   ContactComponentProps
 > = (props: ContactComponentProps) => {
   const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email`;
   const telLink = `tel:${CONST_PHONE_NUMBER}`;
+
+  const title = props.title ? props.title : "Let's get your team trained!";
 
   return (
     <div className="contact-page">
@@ -21,11 +26,12 @@ export const ContactComponent: React.StatelessComponent<
           <div className="row">
             <div className="col-md-6 col-xs-12">
               <div className="theme-form-style-one">
-                <h3>Let's get your team trained!</h3>
+                <h3>{title}</h3>
                 <ContactPageForm />
               </div>
             </div>
             <div className="col-md-6 col-xs-12">
+              <InstantBooking />
               <div className="contact-address">
                 <ul className="address">
                   <li>

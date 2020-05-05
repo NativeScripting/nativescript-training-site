@@ -36,3 +36,7 @@ export function dateFormat(t: Date) {
 export function monthNameFromDate(t: Date) {
   return `${MONTH_NAMES[t.getMonth()]}`;
 }
+
+export function isDateBeforeToday(date: Date) {
+  return new Date(date.toDateString()) < new Date(new Date().toDateString());
+}
