@@ -19,7 +19,7 @@ export const CourseCurriculumChapter: React.StatelessComponent<
         </h5>
         <p>{chapter.description} </p>
 
-        <p dangerouslySetInnerHTML={{ __html: chapter.lessonsHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: chapter.lessonsHtml }} />
       </div>
     </div>
   );

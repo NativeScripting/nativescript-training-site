@@ -88,7 +88,7 @@ class CourseTemplate extends React.Component<
 
                 <div className="course-description">
                   <h5>DESCRIPTION</h5>
-                  <p
+                  <div
                     dangerouslySetInnerHTML={{ __html: course.descriptionHtml }}
                   />
                 </div>

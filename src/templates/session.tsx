@@ -166,7 +166,7 @@ class SessionTemplate extends React.Component<
                     {session.registerLink && sessionLinkHtml}
                   </div>
 
-                  <p
+                  <div
                     dangerouslySetInnerHTML={{
                       __html: session.course.descriptionHtml,
                     }}
@@ -252,7 +252,7 @@ class SessionTemplate extends React.Component<
                 <div className="col-lg-8 col-md-9 col-xs-12">
                   <h5>Event Venue</h5>
 
-                  <p
+                  <div
                     dangerouslySetInnerHTML={{
                       __html: session.location.facilityDescHtml,
                     }}

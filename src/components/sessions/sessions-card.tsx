@@ -46,7 +46,7 @@ export const SessionsCard: React.StatelessComponent<SessionsCardProps> = (
             {session.timeStart} - {session.timeEnd}
           </li>
         </ul>
-        <p dangerouslySetInnerHTML={{ __html: session.descriptionHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: session.descriptionHtml }} />
 
         {session.registerLink && sessionLinkHtml}
       </div>

@@ -13,9 +13,10 @@ export const OfferingDetailSection: React.StatelessComponent<
   return (
     <div>
       <h3 className="sub-heading">{section.title}</h3>
-      <p
+      <div
+        className="section-html"
         dangerouslySetInnerHTML={{
-          __html: section.contentHtml,
+          __html: `<div>${section.contentHtml}</div>`,
         }}
       />
     </div>

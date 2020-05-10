@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { OfferingsJson } from '../domain/graphql-types';
 
-import { Offering } from '../domain/models';
+import { Offering, OfferingSection } from '../domain/models';
 import { offeringFromOfferingsJson } from '../domain/converters';
 import { InnerBanner } from '../components/global/inner-banner/inner-banner';
 import { OfferingDetailSection } from '../components/offerings/offering-detail-section';
@@ -39,9 +39,11 @@ class OfferingTemplate extends React.Component<
     const offering = this.state.offering;
     const pageTitle = `${offering.title} | NativeScript Training`;
 
-    const sectionsHtml = offering.sections.map((s, i) => {
-      return <OfferingDetailSection key={i} section={s} />;
-    });
+    const sectionsHtml = offering.sections.map(
+      (s: OfferingSection, i: number) => {
+        return <OfferingDetailSection key={s.id} section={s} />;
+      }
+    );
 
     return (
       <MainLayout>
@@ -67,12 +69,12 @@ class OfferingTemplate extends React.Component<
                     <li> </li>
                   </ul>
                   <h3>{offering.subtitle}</h3>
-                  <p
+                  <div
                     className="bold-text"
                     dangerouslySetInnerHTML={{ __html: offering.introHtml }}
                   />
 
-                  <p
+                  <div
                     dangerouslySetInnerHTML={{
                       __html: offering.descriptionHtml,
                     }}

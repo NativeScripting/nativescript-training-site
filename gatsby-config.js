@@ -4,8 +4,10 @@ module.exports = {
     siteUrl: `https://nativescript.training`,
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     `gatsby-transformer-json`,
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -67,7 +69,22 @@ module.exports = {
         exclude: [],
       },
     },
-    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+        ],
+      },
+    },
+
     // Parse all images files
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

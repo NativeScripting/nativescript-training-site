@@ -38,17 +38,17 @@
     "icon": "flaticon-book4",
     "summary": "If you are not able to attend one of our public open enrollment classes in person, we provide you with the ability to attend the class remotely from your home or office. All offerings scheduled for Washington, DC are available via Remote. All you need is a computer and a fast, reliable Internet connection.",
     "introHtml": "We understand that sometimes it's just not possible to travel in order to attend a class. That is why NativeScript Training has invested in developing virtual training options that provide you with the ability to gain in-depth knowledge wherever you are based.",
-    "descriptionHtml": "All classes delivered in Washington, DC offer the ability to participate virtually, from anywhere on earth. These solutions blend traditional classroom instruction, multiple training locations, and the best-of-class conferencing technology - into what we refer to as Remote Classroom Instruction (RCI). It was designed from inception to bring the benefits of traditional instructor-led training to convenient locations on a predictable schedule.",
+    "descriptionHtml": "With the remote option, classes are delivered online, from anywhere on earth. These solutions blend traditional classroom instruction and the best-of-class conferencing technology - into what we refer to as Remote Classroom Instruction (RCI). It was designed from inception to bring the benefits of traditional instructor-led training to convenient locations on a predictable schedule.",
     "sections": [
       {
         "id": "1",
         "title": "What to Expect in an RCI Class?",
-        "contentHtml": "<p>An RCI class is hands-on, instructor-led training. The training is live and interactive. Before the class begins, you will receive an electronic version of the course manual with slides and lab exercises. While you are working on lab exercises, you can share your screen with the instructor and get help if you run into trouble.</p>"
+        "contentHtml": "An RCI class is hands-on, instructor-led training. The training is live and interactive. Before the class begins, you will receive an electronic version of the course manual with slides and lab exercises. While you are working on lab exercises, you can share your screen with the instructor and get help if you run into trouble."
       },
       {
         "id": "2",
         "title": "What you'll be able to do?",
-        "contentHtml": "<p><ul class=\"text-list\"><li>View the Instructor’s Presentation: Using Web conferencing tools, you are able to see the instructor’s desktop as he or she steps you through demonstrations or displays PowerPoint presentations.</li><li>Listen and Participate: Using voice over IP (VOIP) technology, you can listen to the instructor and participate, just as in a regular class!</li><li>Get help from the Instructor: Web conferencing software enables the instructor to access to your computer and view your desktop.</li><li>Have Face-to-Face Interaction: Web cameras are positioned in the classroom so you can view your instructor. And of course, if there are others attending at your location, you’ll be able to interact with those students.</li></ul></p>"
+        "contentHtml": "<div><ul class=\"text-list\"><li>View the Instructor’s Presentation: Using Web conferencing tools, you are able to see the instructor’s desktop as he or she steps you through demonstrations or displays PowerPoint presentations.</li><li>Listen and Participate: Using voice over IP (VOIP) technology, you can listen to the instructor and participate, just as in a regular class!</li><li>Get help from the Instructor: Web conferencing software enables the instructor to access to your computer and view your desktop.</li><li>Have Face-to-Face Interaction: Web cameras are positioned in the classroom so you can view your instructor. And of course, if there are others attending at your location, you’ll be able to interact with those students.</li></ul></div>"
       },
       {
         "id": "3",
